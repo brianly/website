@@ -2,11 +2,11 @@
 # This is your configuration file.  Please write valid python!
 # See http://posativ.org/acrylamid/conf.py.html
 
-SITENAME = 'A descriptive blog title'
-WWW_ROOT = 'http://example.com/'
+SITENAME = 'Brian Lyttle'
+WWW_ROOT = 'http://www.brianlyttle.com'
 
-AUTHOR = 'Anonymous'
-EMAIL = 'mail@example.com'
+AUTHOR = 'Brian Lyttle'
+EMAIL = 'blog@brianlyttle.com'
 
 FILTERS = ['markdown+codehilite(css_class=highlight)', 'hyphenate', 'h1']
 VIEWS = {
@@ -23,8 +23,8 @@ VIEWS = {
     # '/tag/:name/atom/': {'filters': ['h2', 'nohyphenate'], 'view': 'atompertag'},
     # '/tag/:name/rss/': {'filters': ['h2', 'nohyphenate'], 'view': 'rsspertag'},
 
-    '/atom/': {'filters': ['h2', 'nohyphenate'], 'view': 'atom'},
-    '/rss/': {'filters': ['h2', 'nohyphenate'], 'view': 'rss'},
+    '/feed/atom/': {'filters': ['h2', 'nohyphenate'], 'view': 'atom'},
+    '/feed/': {'filters': ['h2', 'nohyphenate'], 'view': 'rss'},
 
     '/articles/': {'view': 'articles'},
 
