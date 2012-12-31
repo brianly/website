@@ -1,0 +1,137 @@
+/* -------------------------------------------------- 
+   Colours
+-----------------------------------------------------
+#B83B3F red
+#D66145 orange
+#D6BE6B dust
+#067A73 green
+#08425C blue ->0A506E  ---------- 08445E 0A506E / 094763
+*/
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+@font-face {
+  font-family: '[set]Foundicons';
+  src: url('fonts/[set]_foundicons.eot');
+  src: url('fonts/[set]_foundicons.eot?#iefix') format('embedded-opentype'),
+       url('fonts/[set]_foundicons.woff') format('woff'),
+       url('fonts/[set]_foundicons.ttf') format('truetype'),
+       url('fonts/[set]_foundicons.svg#[set]Foundicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+a:hover {
+	color: #B83B3F;
+}
+
+a {
+	color: #08425C;
+}
+
+/* -----------------------------------------
+   Top Bar
+----------------------------------------- */
+
+.top-bar {
+	background: #08425C;
+	margin: 0px 0 10px 0;
+}
+
+.top-bar ul > li:not(.name):hover a, .top-bar ul > li:not(.name).active a {
+	color: white;
+}
+
+.top-bar ul > li.active, .top-bar ul > li:hover {
+	background: #0A506E;
+	
+}
+
+.top-bar ul > li:not(.name):hover, .top-bar ul > li:not(.name).active { 
+	background: #0A506E;
+}
+
+.top-bar ul > li.has-dropdown .dropdown { 
+	background: #08425C;
+}
+.top-bar ul > li.has-dropdown .dropdown li { 
+	background: #08425C;
+}
+.top-bar ul > li.has-dropdown .dropdown li a:hover {
+	background: #0A506E; 
+}
+.top-bar ul > li.has-dropdown .dropdown li label {
+	color: #CBDDEF; 
+}
+
+/* -----------------------------------------
+   Logo Area
+----------------------------------------- */
+#logo {
+	margin: 15px 0 5px 0;
+}
+
+#logo-left {
+	float: left;
+
+}
+
+#logo-right {
+	float: left;
+	margin-left:8px;
+}
+#logo-left img {
+	border-radius: 2px;
+}
+
+#logo-right a {
+	font-family: "ff-meta-web-pro","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+	font-weight: bolder;
+	font-size: 28px;
+	float:left;
+	font-color: black;
+	margin-top:-8px;
+}
+#logo-right a:active {
+	font-color: black;
+}
+
+#logo-right h2 {
+	font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+	margin-top:15px;
+	font-size: 16px;
+	clear:both;
+	font-weight:normal;
+}
+
+/* -----------------------------------------
+   Sidebar Styles
+----------------------------------------- */
+
+#sidebar {
+	padding-top: 12px;
+}
+
+#sidebar ul {
+	list-style-type: none;
+}
+
+#sidebar h5, article h3 a {
+	font-family: "ff-meta-web-pro",sans-serif;
+}
+
+.twitter-meta  {
+	padding: 3px 0px 10px 0px;
+	font-size: 12px;
+	line-height: 1.2;
+}
+
+.archive-posts li, .links li, .recent-posts li  {
+	padding: 0px 0px 5px 0px;
+}
+
+.twitter li:last-child, .recent-posts li:last-child, 
+.links li:last-child, .archive-posts li:last-child {
+	padding-bottom: 0px;
+}
