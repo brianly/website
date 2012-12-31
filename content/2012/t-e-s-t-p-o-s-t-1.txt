@@ -1,0 +1,9 @@
+---
+title: Test   post 1
+date: 29.12.2012, 23:37
+---
+
+This is my first post
+=====================
+
+This is an example of a post with next to no content.
