@@ -1,20 +1,41 @@
 <!DOCTYPE html>
-<html lang="{{ conf.lang }}">
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ conf.lang }}"> <!--<![endif]-->
 <head>
   {% block head -%}
   <meta charset="utf-8" />
+
+    <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
   <title>{% block title %}{% endblock %}</title>
-  <link media="all" href="{{ env.path + '/style.css' }}" rel="stylesheet" />
-  <link href="/favicon.ico" rel="shortcut icon" />
-    {% if 'sitemap' in env.views -%}
-        <link href="{{ env.views.sitemap.path }}" type="application/xml" rel="sitemap" title="Sitemap">
-    {%- endif%}
-  <link href="{{ env.path + '/' }}" rel="home" />
-  <link href="{{ env.path + '/atom/' }}" type="application/atom+xml" rel="alternate" title="Atom Feed" />
-  <link href="{{ env.path + '/rss/' }}" type="application/rss+xml" rel="alternate" title="RSS Feed" />
+
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="{{ env.path + 'stylesheets/foundation.min.css' }}">
+  <link rel="stylesheet" href="{{ env.path + 'stylesheets/social_foundicons.css' }}">
+  <link rel="stylesheet" href="{{ env.path + 'stylesheets/app.css' }}">
+
+  <script src="{{ env.path + 'javascripts/modernizr.foundation.js' }}"></script>
+
+  <!-- IE Fix for HTML5 Tags -->
   <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+  <script type="text/javascript" src="//use.typekit.net/dsg0qbk.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <meta name="description" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="{{ conf.sitename }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="" />
+  <meta property='og:url' content="http://www.brianlyttle.com" />
+  <link rel="shortcut icon" href="{{ env.path + 'favicon.ico' }}">
+  <link rel="openid2.provider" href="https://www.google.com/accounts/o8/ud" />
+
   {%- endblock %}
 </head>
 <body>
