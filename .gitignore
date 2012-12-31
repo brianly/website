@@ -1,4 +1,10 @@
 #################
+## Acrylamid
+#################
+
+output/
+
+#################
 ## Eclipse
 #################
 
@@ -158,6 +164,10 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+# virtualenv
+include/
+lib/
 
 # Mac crap
 .DS_Store
