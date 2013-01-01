@@ -13,7 +13,7 @@ VIEWS = {
     '/': {'filters': 'summarize', 'view': 'index',
           'pagination': '/page/:num'},
 
-    '/:year/:slug/': {'view': 'entry'},
+    '/:year/:month/:slug/': {'view': 'entry'},
 
     '/tag/:name/': {'filters': 'summarize', 'view':'tag',
                     'pagination': '/tag/:name/:num'},
@@ -29,6 +29,9 @@ VIEWS = {
     '/articles/': {'view': 'articles'},
 
     '/sitemap.xml': {'view': 'sitemap'},
+
+    "/:slug/": {"view": "page",
+                'template': 'page.html'},
 
     # Here are some more examples
 
@@ -49,4 +52,5 @@ VIEWS = {
 
 THEME = 'theme'
 ENGINE = 'acrylamid.templates.jinja2.Environment'
-DATE_FORMAT = '%d.%m.%Y, %H:%M'
+DATE_FORMAT = '%Y-%m-%d %H:%M'
+SUMMARIZE_LINK = '<span>&#8230; <a href="%s" class="continue">Continue reading</a></span>'
