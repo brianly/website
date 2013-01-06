@@ -47,7 +47,7 @@
           <img src="{{ env.path + '/images/logo05c.png' }}" />
       </div>
       <div id="logo-right">
-          <h1><a href="#">Brian Lyttle</a></h1>
+          <h1><a href="{{ env.path + '/' }}">Brian Lyttle</a></h1>
           <h2>Personal blog about programming and life. Written and developed since 1999.</h2>
       </div>
     </div>
@@ -60,7 +60,7 @@
               <a href="{{ env.path + '/' }}">Home</a>
             </li>
             <li class="has-dropdown">
-              <a class="active" href="#">Travel &amp; Photos</a>
+              <a class="active" href="{{ env.path + '/photos/' }}">Photography</a>
               <ul class="dropdown">
                 <li><label>2012</label></li>
                 <li><a href="#">Peru</a></li>
@@ -107,151 +107,15 @@
   {%- block content -%}
   {%- endblock -%}
 
-      <article>
-        <h3><a href="#">Speeding up archive operations on OS X and Linux</a></h3>
-        <h6>August 12, 2012</h6>
-
-        <div class="row">
-          <div class="twelve columns">
-
-      <p>I work with a lot of virtual machine images and other big data sets that needed to be archived, or moved around. If I run a command like <em>tar -cjf archive.tar.bz2 directory</em> it will churn away on a single core. </p>
-      <p>Given that all my machines have a lot of cores, it would be better if the tar command made use of all available cores. Thankfully someone created a tool called <a href="http://zlib.net/pigz/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','zlib.net']);">pigz</a> (pronounced "pig-zee") that will allow the use of these CPU cores.</p>
-      <p>There are 2 parts to the setup for pigz: get the utility, and force tar to use it. On my Mac I grabbed pigz from brew:</p>
-
-          </div>
-        </div>
-
-      </article>
-
-      <hr />
-
-      <article>
-
-        <h3><a href="#">Blog Post Title</a></h3>
-        <h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
-
-        <div class="row">
-          <div class="six columns">
-            <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.</p>
-            <p>Boudin aliqua adipisicing rump corned beef. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-          </div>
-          <div class="six columns">
-            <img src="http://placehold.it/400x240&text=[img]" />
-          </div>
-        </div>
-
-        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-
-        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-
-      </article>
-
-      <article>
-
-        <h3><a href="#">Blog Post Title</a></h3>
-        <h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
-
-        <div class="row">
-          <div class="six columns">
-            <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.</p>
-            <p>Boudin aliqua adipisicing rump corned beef. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-          </div>
-          <div class="six columns">
-            <img src="http://placehold.it/400x240&text=[img]" />
-          </div>
-        </div>
-
-        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-
-        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-
-      </article>
-
-      <article>
-
-        <h3><a href="#">Blog Post Title</a></h3>
-        <h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
-
-        <div class="row">
-          <div class="six columns">
-            <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.</p>
-            <p>Boudin aliqua adipisicing rump corned beef. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-          </div>
-          <div class="six columns">
-            <img src="http://placehold.it/400x240&text=[img]" />
-          </div>
-        </div>
-
-        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-
-        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-
-      </article>
-
-
-
-
-
-
     </div>
     <!-- End Main Content -->
 
     <!-- Sidebar -->
     <aside id="sidebar" class="three columns">
-      <div class="panel recent-posts">
-      <h5>Recent Posts</h5>
-      <ul>
-            <li><a href="#">Speeding up archive operations on OS X and Linux</a></li>
-            <li><a href="#">Building Mobile Web Apps with jQM and Cordova on Azure</a></li>
-            <li><a href="#">RedSnakePhilly 2012</a></li>
-            <li><a href="#">Python interpreter tab completion on OS X</a></li>
-            <li><a href="#">Old, but interesting news</a></li>
-          </ul>
-    </div>
 
-    <div class="panel twitter">
-          <h5>On Twitter</h5>
-          <ul>
-            <li><div>TIL Apache Cocoon still exists. See for yourself at http://t.co/epKXgv5Y.</div>
-            <div class="twitter-meta">Posted <a href="#">about 3 days ago</a></div></li>
+        {%- block sidebar -%}
+        {%- endblock -%}
 
-            <li><div>Persisting the contents of the clipboard over restarts is a nice touch #ios</div>
-            <div class="twitter-meta">Posted <a href="#">about 5 days ago</a></div></li>
-
-            <li><div>@kennethreitz the Marmara Guesthouse is a fabulous place to stay in an excellent location. Next time we’ll also go to Cappadocia.</div>
-            <div class="twitter-meta">Posted <a href="#">about 14 days ago</a></div></li>
-          </ul>
-    </div>
-
-
-
-      <div class="panel archive-posts">
-      <h5>Archives</h5>
-      <ul>
-            <li><a href="#">December 2012</a> (1)</li>
-            <li><a href="#">September 2012</a> (2)</li>
-            <li><a href="#">March 2012</a> (2)</li>
-            <li><a href="#">January 2012</a> (3)</li>
-            <li><a href="#">November 2011</a> (4)</li>
-            <li><a href="#">June 2011</a> (2)</li>
-            <li><a href="#">April 2011</a> (6)</li>
-            <li><a href="#">February 2011</a> (1)</li>
-          </ul>
-    </div>
-
-       <div class="panel links">
-      <h5>Links</h5>
-      <ul>
-            <li><a href="http://www.graphitedigital.com/">Graphite Digital</a></li>
-            <li><a href="http://www.mediatonic.co.uk/">Mediatonic</a></li>
-            <li><a href="http://www.devlogged.com/">Dev Logged</a></li>
-            <li><a href="http://www.sensacom.com/">Sensacom</a></li>
-            <li><a href="http://www.itadmintools.com/">IT Admin Tools</a></li>
-            <li><a href="http://www.tedwise.com/">Ted Wise</a></li>
-            <li><a href="http://www.mukalian.com/blog/">Mike Mukalian</a></li>
-            <li><a href="http://www.sensagroup.com/">SensaGroup</a></li>
-          </ul>
-    </div>
     </aside>
     <!-- End Sidebar -->
   </div>
