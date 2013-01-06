@@ -13,7 +13,8 @@ VIEWS = {
     '/': {'filters': 'summarize', 'view': 'index',
           'pagination': '/page/:num'},
 
-    '/:year/:month/:slug/': {'view': 'entry'},
+    '/:year/:month/:slug/': {'view': 'entry',
+                    'template': 'archive.html'},
 
     '/tag/:name/': {'filters': 'summarize', 'view':'tag',
                     'pagination': '/tag/:name/:num'},
@@ -26,7 +27,7 @@ VIEWS = {
     '/feed/atom/': {'filters': ['h2', 'nohyphenate'], 'view': 'atom'},
     '/feed/': {'filters': ['h2', 'nohyphenate'], 'view': 'rss'},
 
-    '/articles/': {'view': 'articles'},
+    # '/articles/': {'view': 'articles'},
 
     '/sitemap.xml': {'view': 'sitemap'},
 
