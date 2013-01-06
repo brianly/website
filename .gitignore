@@ -166,6 +166,7 @@ pip-log.txt
 .mr.developer.cfg
 
 # virtualenv
+.Python
 include/
 lib/
 
