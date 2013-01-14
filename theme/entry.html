@@ -9,7 +9,7 @@
     {{ entry.content }}
 
     {% if 'tag' in env.views and entry.tags %}
-        <p>Tags:
+        <p>Tagged as
             {% for link in entry.tags | tagify -%}
                 <a href="{{ env.path + link.href }}">{{ link.title }}</a>
                 {%- if loop.revindex > 2 -%}

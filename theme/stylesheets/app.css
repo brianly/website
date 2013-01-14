@@ -1,4 +1,4 @@
-/* -------------------------------------------------- 
+/* --------------------------------------------------
    Colours
 -----------------------------------------------------
 #B83B3F red
@@ -30,6 +30,14 @@ a {
 	color: #08425C;
 }
 
+.floatright {
+    float: right;
+}
+
+.floatleft {
+    float: left;
+}
+
 /* -----------------------------------------
    Top Bar
 ----------------------------------------- */
@@ -45,24 +53,24 @@ a {
 
 .top-bar ul > li.active, .top-bar ul > li:hover {
 	background: #0A506E;
-	
+
 }
 
-.top-bar ul > li:not(.name):hover, .top-bar ul > li:not(.name).active { 
+.top-bar ul > li:not(.name):hover, .top-bar ul > li:not(.name).active {
 	background: #0A506E;
 }
 
-.top-bar ul > li.has-dropdown .dropdown { 
+.top-bar ul > li.has-dropdown .dropdown {
 	background: #08425C;
 }
-.top-bar ul > li.has-dropdown .dropdown li { 
+.top-bar ul > li.has-dropdown .dropdown li {
 	background: #08425C;
 }
 .top-bar ul > li.has-dropdown .dropdown li a:hover {
-	background: #0A506E; 
+	background: #0A506E;
 }
 .top-bar ul > li.has-dropdown .dropdown li label {
-	color: #CBDDEF; 
+	color: #CBDDEF;
 }
 
 /* -----------------------------------------
@@ -131,7 +139,7 @@ a {
 	padding: 0px 0px 5px 0px;
 }
 
-.twitter li:last-child, .recent-posts li:last-child, 
+.twitter li:last-child, .recent-posts li:last-child,
 .links li:last-child, .archive-posts li:last-child {
 	padding-bottom: 0px;
 }

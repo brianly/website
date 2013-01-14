@@ -20,30 +20,29 @@
     {% for entry in env.entrylist %}
         {% include 'entry.html' %}
     {% endfor %}
+
+
     {% if env.prev is not none %}
-        <a href="{{ env.path ~ env.prev ~ '/' }}" class="page floatright">
-        <!-- {{ env.prev.title }} -->
-        Previous Post
+        <a href="{{ env.path ~ env.prev ~ '/' }}" class="page floatleft">
+        &laquo; Older Posts
         </a>
     {% endif %}
     {% if env.next is not none %}
-        <a href="{{ env.path ~ env.next ~ '/' }}" class="page floatleft">
-        <!-- {{ env.next.title }} -->
-        Next Post
+        <a href="{{ env.path ~ env.next ~ '/' }}" class="page floatright">
+        Newer Posts &raquo;
         </a>
     {%- endif  %}
 {% endblock %}
 
-
 {%- macro render_recent_post(entry) -%}
-<li><a href="#">{{ entry.title }}</a></li>
+<li><a href="{{ env.path + entry.permalink }}">{{ entry.title }}</a></li>
 {%- endmacro -%}
 
 {% block sidebar %}
 
 
 
-      <div class="panel recent-posts">
+    <div class="panel recent-posts">
       <h5>Recent Posts</h5>
       <ul>
             {%- for entry in env.entrylist %}
