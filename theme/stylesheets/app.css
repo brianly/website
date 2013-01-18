@@ -38,6 +38,35 @@ a {
     float: left;
 }
 
+.blog-nav {
+    border: solid 1px #e6e6e6;
+    padding: 10px;
+}
+
+pre {
+    margin-bottom: 15px;
+    border: solid 1px #e6e6e6;
+    padding: 5px;
+    font-size: 80%;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+.img-left {
+    float: left;
+    margin: 0 5px 10px 0;
+}
+
+.img-right {
+    float: right;
+    margin: 0 5px 0 10px;
+}
+
+.img-left, .img-right {
+    box-sizing: border-box;
+    padding: 3px;
+    border: 1px solid #e6e6e6;
+}
+
 /* -----------------------------------------
    Top Bar
 ----------------------------------------- */

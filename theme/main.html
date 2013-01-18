@@ -23,12 +23,12 @@
 
 
     {% if env.prev is not none %}
-        <a href="{{ env.path ~ env.prev ~ '/' }}" class="page floatleft">
+        <a href="{{ env.path ~ env.prev ~ '/' }}" class="page floatleft blog-nav">
         &laquo; Older Posts
         </a>
     {% endif %}
     {% if env.next is not none %}
-        <a href="{{ env.path ~ env.next ~ '/' }}" class="page floatright">
+        <a href="{{ env.path ~ env.next ~ '/' }}" class="page floatright blog-nav">
         Newer Posts &raquo;
         </a>
     {%- endif  %}
@@ -39,13 +39,11 @@
 {%- endmacro -%}
 
 {% block sidebar %}
-
-
-
     <div class="panel recent-posts">
       <h5>Recent Posts</h5>
+
       <ul>
-            {%- for entry in env.entrylist %}
+            {%- for entry in env.globals.entrylist[0:7] %}
                 {{ render_recent_post(entry) | indent(8)}}
             {% endfor -%}
           </ul>
@@ -64,8 +62,6 @@
             <div class="twitter-meta">Posted <a href="#">about 14 days ago</a></div></li>
           </ul>
     </div>
-
-
 
       <div class="panel archive-posts">
       <h5>Archives</h5>

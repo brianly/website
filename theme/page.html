@@ -21,8 +21,20 @@
     {% endfor %}
 {% endblock %}
 
-{% block sidebar %}
+{%- macro render_recent_post(entry) -%}
+<li><a href="{{ env.path + entry.permalink }}">{{ entry.title }}</a></li>
+{%- endmacro -%}
 
+{% block sidebar %}
+    <div class="panel recent-posts">
+      <h5>Recent Posts</h5>
+
+      <ul>
+            {%- for entry in env.globals.entrylist[0:7] %}
+                {{ render_recent_post(entry) | indent(8)}}
+            {% endfor -%}
+          </ul>
+    </div>
 
       <div class="panel links">
       <h5>Links</h5>
