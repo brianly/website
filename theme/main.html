@@ -38,10 +38,21 @@
 <li><a href="{{ env.path + entry.permalink }}">{{ entry.title }}</a></li>
 {%- endmacro -%}
 
-{% block sidebar %}
-    <div class="panel recent-posts">
-      <h5>Recent Posts</h5>
+{%- macro render_month_archive(entry) -%}
+<li>{{ entry }}</li>
+{%- endmacro -%}
 
+{% block sidebar %}
+
+    <div class="panel recent-posts">
+      <ul>
+            {%- for entry in env.globals.entrylist[0:3] %}
+                {{ render_month_archive(entry)}}
+            {% endfor -%}
+          </ul>
+
+
+      <h5>Recent Posts</h5>
       <ul>
             {%- for entry in env.globals.entrylist[0:7] %}
                 {{ render_recent_post(entry) | indent(8)}}
