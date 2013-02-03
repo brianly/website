@@ -1,0 +1,51 @@
+---
+title: "RedSnakePhilly 2012"
+date: 2012-02-25 15:27
+tags: [philadelphia, photography, python]
+---
+I was asked to take <a href="http://www.flickr.com/photos/brianly/sets/72157629426130039/">a few photos</a> for this <a href="http://redsnakephilly.org/about/">event</a> by fellow pythonista <a href="https://twitter.com/#!/tpanzarella">Tom Panzarella</a>. I think they turned out OK for the most part - although the EF 70-200 L saved my arse in the end. It was difficult shooting with the lighting setup at the venue, but I'll be back there to get some more practice.
+
+<div class="orbit-wrapper" style="width: inherit; height: inherit;"><div id="featured" class="orbit" style="width: inherit; height: inherit;">
+<img src="http://farm8.staticflickr.com/7070/6773517118_73536b5d98.jpg" class="orbit-slide fluid-placeholder">
+            <img src="http://farm8.staticflickr.com/7196/6919637765_5e9ee91319.jpg" class="orbit-slide" style="z-index: 1; opacity: 0; display: block; left: 691px;">
+            <img src="http://farm8.staticflickr.com/7053/6773520580_4d298315db.jpg" class="orbit-slide" style="display: block;">
+            <img src="http://farm8.staticflickr.com/7202/6919635183_443c158d19.jpg" class="orbit-slide" style="display: block; left: 0px; z-index: 3; opacity: 1;">
+          </div><div class="timer"><span class="mask"><span class="rotator" style="-webkit-transform: rotate(92deg);"></span></span><span class="pause active"></span></div><div class="orbit-caption"></div><div class="slider-nav hide-for-small"><span class="right">Right</span><span class="left">Left</span></div></div>
+
+<script type="text/javascript">
+   $(window).load(function() {
+       $('#featured').orbit();
+       $('#featuredContent').orbit({ fluid: '2x1' });
+       $('#featuredBullets').orbit({
+        animation: 'horizontal-slide',                  // fade, horizontal-slide, vertical-slide, horizontal-push
+        animationSpeed: 800,                // how fast animtions are
+        timer: true,       // true or false to have the timer
+        advanceSpeed: 4000,     // if timer is enabled, time between transitions
+        pauseOnHover: false,      // if you hover pauses the slider
+        startClockOnMouseOut: false,    // if clock should start on MouseOut
+        startClockOnMouseOutAfter: 1000,    // how long after MouseOut should the timer start again
+        directionalNav: false,      // manual advancing directional navs
+        captions: true,       // do you want captions?
+        captionAnimation: 'fade',     // fade, slideOpen, none
+        captionAnimationSpeed: 800,   // if so how quickly should they animate in
+        bullets: true,       // true or false to activate the bullet navigation
+        bulletThumbs: true,    // thumbnails for the bullets
+        bulletThumbLocation: '../images/orbit-demo/bullets/',    // location from this file where thumbs will be
+        afterSlideChange: $.noop    // empty function
+      });
+   });
+</script>
+
+
+
+<div id="slides">
+  <img src="http://farm8.staticflickr.com/7070/6773517118_73536b5d98.jpg" alt="Beer Talk" />
+  <img src="http://farm8.staticflickr.com/7196/6919637765_5e9ee91319.jpg" alt="Hunter Blanks" />
+  <img src="http://farm8.staticflickr.com/7189/6773518210_c0038e5af9.jpg" alt="Redsnake Attendees" />
+  <img src="http://farm8.staticflickr.com/7181/6773521364_b10bb6fae4.jpg" alt="Dustin Getz" />
+  <img src="http://farm8.staticflickr.com/7053/6773520580_4d298315db.jpg" alt="Kyle Gorman" />
+  <img src="http://farm8.staticflickr.com/7062/6919634927_acdd8100da.jpg" alt="John Granieri" />
+  <img src="http://farm8.staticflickr.com/7202/6919635183_443c158d19.jpg" alt="Monetate" />
+</div>
+
+All of the photos are <a href="http://www.flickr.com/photos/brianly/sets/72157629426130039/">over on Flickr</a> and they were even <a href="http://technicallyphilly.com/2012/02/24/10-presenters-bring-ruby-and-python-knowledge-to-second-annual-redsnake-philly-meetup-video">linked to</a> by Technically Philly!

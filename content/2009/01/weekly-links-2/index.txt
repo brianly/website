@@ -1,0 +1,13 @@
+---
+title: "Weekly Links #2"
+date: 2009-01-27 04:18
+tags: [mac, python, retlang, unix, windows, wpf]
+---
+<ul>
+	<li><a href="http://blogs.msdn.com/dan_fay/archive/2008/12/09/infomesa-project-whiteboard-for-your-data.aspx">Microsoft InfoMesa Project Whiteboard for your data</a></li>
+	<li><a href="http://www.nongnu.org/fab/">Fabric - like Capistrano but written in Python</a></li>
+	<li><a href="http://blogamundo.net/code/screen/">A Visual Introduction to Screen</a></li>
+	<li><a href="http://code.google.com/p/retlang/">retlang - Google Code</a></li>
+	<li><a href="http://blogs.msdn.com/tims/archive/2009/01/12/the-bumper-list-of-windows-7-secrets.aspx">Tim Sneath : The Bumper List of Windows 7 Secrets</a></li>
+	<li><a href="http://code.google.com/p/update-engine/">update-engine - Google Code</a></li>
+</ul>

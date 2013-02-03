@@ -1,0 +1,8 @@
+---
+title: "No RailsConf this year"
+date: 2007-02-20 02:05
+tags: [rails, rubyonrails]
+---
+Last year I had the opportunity to attend the first RailsConf and had a great time. This year <a href="http://conferences.oreillynet.com/rails/">it's back</a> with a much bigger venue and support from O'Reilly. Alas the timing is not so good as I'll be helping the folks at <a href="http://www.savoy.org">Savoy</a> prepare for <a href="http://en.wikipedia.org/wiki/H.M.S._Pinafore">HMS Pinafore</a>, but I'll be able to tune into many podcasts and whatnot. If you are thinking of attending and can't make up your mind I would thoroughly recommend attending RailsConf 2007. It'll give you a great opportunity to network with a great bunch of people who are highly skilled, yet open to newbies.
+
+The second half of the year is open for conferences and the like so maybe <a href="http://conferences.oreillynet.com/os2007/">OSCON</a> would be fun. Microsoft are running their <a href="http://msdn.microsoft.com/events/pdc/">PDC</a>, but I'm not sure I'd get as much from that as I have done previously. I'll have to have a think about it...

@@ -1,0 +1,47 @@
+---
+title: "Using the WTL CListBox class"
+date: 2011-02-04 05:09
+tags: [c, win32, windows, wtl]
+---
+Working with Win32 listbox controls is fairly simple but the code can be quite convoluted and get tedious after a while. I decided to use the WTL library to simplify some listbox handling code but it wasn't initially obvious how to do this. Hopefully this blog post will help someone else understand the basics.
+<h3>Manual message processing</h3>
+The majority of Win32 programming involves working with messages of various types that are basically #defines in header files. The Listbox control responds to messages like these:
+<ul>
+	<li>LB_GETCURSEL (get the selected item)</li>
+	<li>LB_DELETESTRING (delete a string)</li>
+	<li>LB_INSERTSTRING (add a string)</li>
+</ul>
+..but you also have to make sure you use the correct WPARAM and LPARAMs.
+
+The resulting code for adding an item to a Listbox looks like this:
+<pre>TCHAR szBuffer[80] = {0};
+UINT chars = GetDlgItemText(IDC_EDIT1, szBuffer, 80);
+SendDlgItemMessage(IDC_LIST1, LB_INSERTSTRING, (WPARAM) 0, (LPARAM)szBuffer);</pre>
+As you can see this requires a lot of work that I’ve grown tired of with years of C# coding.
+<h3>Simplifying with WTL</h3>
+It is best to thinking of simplification here with a view to the long term. You are writing C++ so this is not as straightforward as WinForms or WPF.
+
+First of all you need to create a member variable in your window class. I'm assuming you have installed the WTL AppWizard into Visual Studio and have created a Dialog application, but the steps are similar for other types of window. The code looks something like this:
+<pre>class CMainDlg : public CDialogImpl&lt;CMainDlg&gt;, public CUpdateUI&lt;CMainDlg&gt;, public CMessageFilter, public CIdleHandler
+{
+private:
+    CListBox m_ListBox;
+public:
+    enum { IDD = IDD_MAINDLG };
+....</pre>
+As you can see we have private called m_ListBox that we can reference elsewhere. Next an instance of CListBox needs to be attached to a Listbox that has been added to your dialog resource file. You do this in the OnInitDialog() method:
+<pre>LRESULT OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL&amp; /*bHandled*/)
+{
+    m_ListBox.Attach(GetDlgItem(IDC_LIST1));
+....</pre>
+The IDC_LIST1 parameter is the name defined in my resource file and messages are now being routed between the instance variable and the actual control.
+
+Now in the event handling code it is possible to call the AddString() method without having to worry about message types:
+<pre>LRESULT OnAddItem(WORD /*wNotifyCode*/, WORD wID, HWND /*hWndCtl*/, BOOL&amp; /*bHandled*/)
+{
+    TCHAR szBuffer[80] = {0};
+    UINT chars = GetDlgItemText(IDC_EDIT1, szBuffer, 80);
+    m_ListBox.AddString(szBuffer);
+    return 0;
+}</pre>
+This is a rather naïve example as I’m not taking advantage of WTL for the Edit control, but that’ll be the subject of a future blog post.

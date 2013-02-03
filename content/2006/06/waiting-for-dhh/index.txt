@@ -1,0 +1,6 @@
+---
+title: "Waiting for DHH and O'Reilly hosting the next RailsConf!"
+date: 2006-06-24 23:04
+tags: [rails, rubyonrails]
+---
+It's been a great second day of presentations at RailsConf and I'm waiting with <a href="http://deprecated.libsyn.com">Mike Bailey</a> and Jim Freeze for a speech from <a href="http://www.loudthinking.com">David Heinemeier Hansson</a>. Chad Fowler has just announced that O'Reilly are hosting the next RailsConf. So book some time off for May 17-20, 2007 in Portland, Oregon!

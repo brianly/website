@@ -1,0 +1,12 @@
+---
+title: "RailsConf - Day One"
+date: 2006-06-24 03:23
+tags: [rails, rubyonrails]
+---
+On Wednesday night I arrived in Chicago, IL for the first ever Ruby on Rails conference. My Southwest flight from Philly was delayed for two hours so I didn't get to my hotel till 2.30am on Thursday. After less sleep than I had planned for, I went along to the Rails Guidebook. This was a cut down version of the Pragmatic Programmers course developed by Ruby legend Dave Thomas. Dave presented along with Mike Clark and they didn't disappoint. If you ever get a chance to see these guys present make an effort to go see them, they are very entertaining. Thanks to <a href="http://www.chadfowler.com/">Chad Fowler</a> for enlightening me on the Ruby Gems system during the 'installfest'!
+
+Day one of the real conference kicked off today with a keynote from Dave Thomas on what he feels are areas where Rails can improve. He didn't spend a long time covering it, but support for other data sources behind a model is an important addition. Having improved database key support would also be nice to have for those working with legacy systems.
+
+The best sessions of the day were on <a href="http://manuals.rubyonrails.com/read/book/17">Capistrano</a>, a Rails deployment engine, and <a href="http://www.asterisk.org/">Asterisk</a>. The integration of VoIP with Web applications is surprisingly simple with this open source platform. I felt the Open ID session was a miss because the information had been presented in a similar way to Dick Hardt's identity presentation, and there was little on the Rails specifics.
+
+A very useful notion from the world of Rails are <em>migrations</em>. These help you update your database based on changes to your application, and are very much automated by the platform. Unfortunately these are not fully transactional since MySql and friends do not have support for transactions around DDL. I wonder when they are going to catch up with SQL Server in this regard?

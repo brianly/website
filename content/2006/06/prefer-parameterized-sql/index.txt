@@ -1,0 +1,8 @@
+---
+title: "Don't forget about Parameterized SQL"
+date: 2006-06-07 17:15
+tags: [performance, security, sql]
+---
+It's common to see .NET developers and SQL Server DBAs arguing over <a href="http://www.simple-talk.com/2006/06/06/to-sp-or-not-to-sp-in-sql-server-an-argument-for-stored-procedures/">the merits of stored procedures versus inline (ad hoc) SQL</a>. It's unfortunate that these folks are so polarised since there is a solution that meets somewhere in the middle. It's called parameterised SQL and it's similar to inline SQL, except that it's based on templates. You effectively have the SQL  that exists in a stored procedure, and you specify input/output parameters in the same way as you do for stored procedures. This SQL is then placed in the data access layer of your application.
+
+From what I understand, Microsoft are using this for <a href="http://msdn.microsoft.com/data/ref/linq/">DLinq</a> and have dropped their recommendation on the use of stored procedure. I'm all in favour of this method since it makes upgrading applications so much simpler, and reduces your dependency on the DBA whilst maintaining a level of protection from SQL injection attacks. There is the point about setting security on individual stored procedures - but how many people <em>really</em> do that? Even when they do they often leave themselves open to other attack vectors.

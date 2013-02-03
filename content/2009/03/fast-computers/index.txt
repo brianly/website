@@ -1,0 +1,50 @@
+---
+title: "Get fast computers for your developers"
+date: 2009-03-08 18:42
+tags: [antivirus, computer, directx, intel, nvidia, vista]
+---
+<p>I've just been through an office move at a client site and packing it up got me thinking about the choices that companies make for their staff when it comes to computer hardware. Most users can benefit in some way from having <strong>faster computers</strong>, with <strong>bigger screens</strong>, and <strong>better input peripherals</strong>. Corporations have a tendency to make conservative choices and to pay above the market price for standard hardware. Whilst frustrating for normal users, this is an absolute performance killer for developers like me.</p>
+<p>Compare the specifications of my home machine to my work computer:</p>
+<table width="450" border="0" style="font-size:0.75em;margin-bottom:10px;font-family:Verdana, Geneva, sans-serif">
+  <tr>
+    <td width="210"><strong>Home</strong></td>
+    <td> </td>
+    <td width="210"><strong>Work</strong></td>
+  </tr>
+  <tr>
+    <td width="210">2.4  GHZ Quad Core CPU (Intel Q6600)</td>
+    <td> </td>
+    <td width="210">2.0  GHZ Core Duo CPU</td>
+  </tr>
+  <tr>
+    <td width="210">8 GB  RAM</td>
+    <td> </td>
+    <td width="210">2  GB RAM</td>
+  </tr>
+  <tr>
+    <td width="210">150  GB 10,000 RPM boot drive and several 1 TB 7,200 storage drives </td>
+    <td> </td>
+    <td width="210">160  GB 5,400 RPM boot drive</td>
+  </tr>
+  <tr>
+    <td width="210">NVidia  DirectX 10 graphics card</td>
+    <td> </td>
+    <td width="210">Intel  discrete graphic card</td>
+  </tr>
+  <tr>
+    <td width="210">Dual  24 inch TFT monitors</td>
+    <td> </td>
+    <td width="210">17  inch monitor</td>
+  </tr>
+  <tr>
+    <td width="210">Windows  Vista without Antivirus</td>
+    <td> </td>
+    <td width="210">Windows  2000 with Antivirus and other security tools.</td>
+  </tr>
+</table>
+
+<p>My home configuration can be purchased for around $1200 today, and is many times more powerful than the work configuration. The ability to run multiple virtual machines as if they are real desktops gives a fantastic boost to my developer productivity. The screen real estate is beneficial for rapidly updating web pages, and the fast hard drives ensures that Windows keeps up with what I'm doing.</p>
+
+<p>Since I don't run Antivirus at home I run as a user without administrative rights. If I need to test out new pieces of software from the Internet I use a Windows XP Virtual Machine running Windows OneCare Antivirus. Removing the performance overhead of antivirus means that I get the most performance out of my hardware whilst still staying safe. Did you know that simply running Windows with a standard user account can eliminate the threat of most Windows malware?</p>
+
+<p>My advice to anyone buying hardware for development use is to <strong>buy the best performing hardware</strong> you can afford. Don't focus on any single component as <strong>skipping a dual screen configuration is not worth the price of a faster processor</strong>.</p>

@@ -1,0 +1,20 @@
+---
+title: "Looking forward to PyCon 2010!"
+date: 2010-02-17 05:04
+tags: [atlanta, pycon, python]
+---
+On Thursday I'm making the yearly pilgrimage to <a href="http://us.pycon.org/2010/about/">PyCon in Atlanta</a>. This will be my third year and I'm sure it'll be better than ever. 
+
+For me the real highlights of this conference are the legendary open space sessions. The level of interaction and learning at these really sets it apart from other conferences. Last year I attended a number of crackers including one on <a href="http://incubator.apache.org/cassandra/">Cassandra</a> and big data scalability with <a href="http://spyced.blogspot.com/">Jonathan Ellis</a>. It's great to see that Jonathan is delivering a <a href="http://us.pycon.org/2010/conference/schedule/event/28/">scheduled talk on database scalability</a>, and I'm sure there will be a fair number of open space sessions dedicated to NoSQL databases.
+
+Looking at the <a href="http://us.pycon.org/2010/conference/schedule/">2010 schedule</a> these are my other top picks:
+
+<ol>
+<li><a href="http://us.pycon.org/2010/conference/schedule/event/19/">Deployment, development, packaging, and a little bit of the cloud</a> (Ian Bicking)</li>
+<li><a href="http://us.pycon.org/2010/conference/schedule/event/47/">Powerful Pythonic Patterns</a> (Alex Martelli)</li>
+<li><a href="http://us.pycon.org/2010/conference/schedule/event/76/">Understanding the Python GIL</a> (David Beazley)</li>
+<li><a href="http://us.pycon.org/2010/conference/schedule/event/86/">Mastering Team Play: Four powerful examples of composing Python tools</a> (Raymond Hettinger)</li>
+<li><a href="http://us.pycon.org/2010/conference/schedule/event/71/">Unladen Swallow: fewer coconuts, faster Python</a> (Collin Winter)</li>
+</ol>
+
+I'll have my camera with me again this year so watch out for pics under the pycon and pycon2010 tags on Flickr.

@@ -1,0 +1,12 @@
+---
+title: "Data Access Pain"
+date: 2006-03-15 00:44
+tags: [databases, llblgen, nhibernate]
+---
+One of the things that I find most frustrating about on .NET projects is working with relational data sources. My experience with DataSets in the 1.x days was far from positive. They proved too inefficient and difficult to debug. This has changed in 2.0 with the many improvements to the API and the introduction of visualizers to the integrated debugger. I'm still not sold on this solution, but at least things are improving ;)
+
+My preference has been to develop a layer of custom objects which get called from the upper layers of the application. This is very flexible and easy to debug. In addition, you can create these objects without having any back end developed so that prototyping is simpler. To be fair this can be a bit time consuming, and I have tried to augment this with code generation using <a href="http://www.codesmithtools.com/">CodeSmith</a>. Working this way lets me deal with objects in a fashion native to the .NET platform, take advantage to intelliense and simplify unit testing.
+
+I'm looking at two other solutions - <a href="http://www.llblgen.com">LLBLGen Pro</a> and <a href="http://www.nhibernate.org/">NHibernate</a>. LLBLGen seems to be better suited to my needs at present since it has a better user experience. Both of these tools map generated objects to the tables in the database, so you can avoid switching back and forth between programming models. Complex queries are expressed using custom syntax and this is where the story sours for NHibernate and LLBGen to a lesser extent. LLBGen makes it simple to wrap existing stored procedures so this is potentially useful when the the SQL gets complex. Ideally I'd like to rid myself of the relational model and SQL altogether but I guess we're going to have to live with it forever.
+
+On this topic it's worth reading <a href="http://msdn.microsoft.com/netframework/default.aspx?pull=/library/en-us/dndotnet/html/linqcomparisons.asp">a paper</a> by <a href="http://blogs.tedneward.com/">Ted Neward</a> on the object-relational divide and various technologies that have been developed to bridge it. The paper was for <a href="http://msdn.microsoft.com">MSDN</a> so it covers the LINQ technology that will likely be part of C# 3.0.

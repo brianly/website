@@ -1,0 +1,12 @@
+---
+title: "Multiple Monitor/Screen Information Example"
+date: 2010-03-20 17:59
+tags: [multiple-monitors, windows, winforms]
+---
+Microsoft made it very simple to get information about the displays available to Windows with the <a href="http://msdn.microsoft.com/en-us/library/system.windows.forms.screen.aspx">Screen</a> class in Windows Forms. Using this class you can identify the primary screen, and get properties like size from any display device.
+
+<img src="http://brianlyttle.com/wp-content/uploads/2010/03/ScreenInfoSample.png" alt="Screenshot of monitor/display information sample. Try it with multiple=" />
+
+For anyone developing an application which supports multiple monitors the <a href="http://msdn.microsoft.com/en-us/library/system.windows.forms.screen.bounds.aspx">Screen.Bounds</a> property may be useful in finding screen offsets. If you have multiple monitors attached try the Get Current Screen Info button on your secondary display.
+
+Download the <a href="/downloads/examples/ScreenInfoSample.zip">C# sample code and binaries</a> to explore further. Like all good API examples I have omitted error handling ;)

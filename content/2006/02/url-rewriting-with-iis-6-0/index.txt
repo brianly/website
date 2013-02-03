@@ -1,0 +1,10 @@
+---
+title: "URL Rewriting with IIS 6.0"
+date: 2006-02-25 20:05
+tags: [iis, url-rewriting]
+---
+Unlike the <a title="World famous Web server" href="http://httpd.apache.org">Apache HTTP server</a>, Microsoft's IIS currently doesn't have a built-in extension 			offering support for URL rewriting and 'proxying' of server requests. This means that you have to  			hack up some code to manually process URLs with ASP.NET or implement a nasty 404 handler in 			classic ASP.
+
+Recently, I needed to centralise a number of services under a single domain name on one  			of my machines. Normally, an Apache user would use <em>mod_rewrite</em> to proxy requests 			through to another machine. I wanted to do this on IIS so I evaluated a number of ISAPI filters which 			purport to offer similar functionality. The candidates were <a href="http://www.sourcefx.org/wp-admin/post.php#">ISAPI Rewrite</a>,  			<a href="http://www.sourcefx.org/wp-admin/post.php#">IISRewrite</a> and <a href="http://www.opcode.co.uk/components/rewrite.asp">OpUrl</a>. After some spelunking in my Win2K3 virtual machine I decided to purchase an ISAPI Rewrite license. It fairly cheap and questions posted to the <a href="http://www.helicontech.com/forum/">support forum</a> are answered promptly.
+
+I posted some setup instructions for <a href="http://forums.kerio.com/index.php?t=msg&amp;goto=33684">proxying requests to a Kerio webmail server</a> on their forums.

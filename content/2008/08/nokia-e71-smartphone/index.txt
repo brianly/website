@@ -1,0 +1,25 @@
+---
+title: "Nokia E71 Smartphone"
+date: 2008-08-06 01:38
+tags: [e71, nokia, review]
+---
+Last week <a href="http://www.expansys-usa.com/p.aspx?i=169950">Expansys shipped me a shiny new Nokia E71</a>. This is a follow on to the popular E61/E62, and a significant step up from my E60 which also lacked 3G support on AT&amp;T's network.
+
+I was thinking about getting an iPhone, but the poor battery life and lack of real keys were a problem for me. It turns out Joel Spolsky got an E71 too - maybe great minds think alike?
+
+<strong>The Good</strong>
+<ul>
+	<li>Great battery life with a mixture of voice, WiFi, HSDPA (3G), and GPS usage. It only needs to be charged every third day.</li>
+	<li>Some very solid applications are available including Mail by Google, Google Maps with GPS integration, and a decent Web Browser (based on Safari/KHTML). It plays Flash in the the browser, so YouTube doesn't need it's own application. The device supports Java (J2ME), Python, and Symbian C++ applications so there is a big market.</li>
+	<li>Camera. Whilst users of the consumer Nseries phones may have a better camera in their phones, the 3 megapixels works pretty well for me. I was able to post to Flickr without downloading another application.</li>
+	<li>Bling factor! It's lighter and slightly thinner than an iPhone. It's stainless steel outer shell is also a nice touch.</li>
+</ul>
+<strong>The Bad</strong>
+<ul>
+	<li>Application market is likely to grow faster in the iPhone and Windows Mobile world. Nokia need to improve their development tools and documentation. Python support is a nice touch but they can do better.</li>
+	<li>Locking the device can be a pain since the default option when you tap the power button is to switch off. Perhaps there is an application that can hook this button?</li>
+	<li>Headphone socket is 2.5mm instead of the regular 3.5mm size. It means you need to carry a convertor or a second set of headphones.</li>
+	<li>Flash Lite 3 seems to be integrated with the File Manager. This can be annoying if the Flash doesn't fully support a device without a touch screen.</li>
+	<li>No touch screen. Sometimes it's nice to be able to do things with a stylus or your finger. You won't miss this if you are coming from a Nokia phone.</li>
+</ul>
+So that's it for my E71 review. I'll update this post as I get more experience with the device.

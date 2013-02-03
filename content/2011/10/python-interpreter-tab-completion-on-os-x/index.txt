@@ -1,0 +1,13 @@
+---
+title: "Python interpreter tab completion on OS X"
+date: 2011-10-09 04:28
+tags: [mac, osx, python]
+---
+This is mainly for me own reference, but it is probably something that other people will find useful. If you attempt to use the <a href="http://docs.python.org/library/rlcompleter.html">rlcompleter</a> module on the Mac you'll find that tab completion does not work correctly. Apparently this is because Apple ship a neutered version of readline.
+
+To get completion working you have to use a different argument to readline.parse_and_bind(). The base example uses:
+<pre>readline.parse_and_bind("tab: complete")</pre>
+
+Change that line to: 
+
+<pre>readline.parse_and_bind ("bind ^I rl_complete")</pre>

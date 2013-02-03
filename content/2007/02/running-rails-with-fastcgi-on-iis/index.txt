@@ -1,0 +1,8 @@
+---
+title: "Running Rails with FastCGI on IIS"
+date: 2007-02-20 01:52
+tags: [iis, rails, ruby, rubyonrails]
+---
+With a little help from Mike Volodarksy's <a href="http://mvolo.com/blogs/serverside/archive/2007/02/18/10-steps-to-get-Ruby-on-Rails-running-on-Windows-with-IIS-FastCGI.aspx">tutorial</a> I'm up and running with RubyOnRails using a native FastCGI implementation. This is a big deal because it'll mean that Microsoft will provide a supported way of running Rails applications. In addition, PHP applications will be able to run with greater performance and reliability thanks to the work that Zend and other PHP devs have put into improving their Windows story.
+
+This is a good job since I'm doing more work with these open source technologies at the moment since Microsoft have done little to improve the ASP.NET platform. For .NET developers, <a href="http://www.castleproject.org/monorail/index.html">MonoRail</a> is the only usable framework for development. Additions such as ASP.NET AJAX do little to make the platform better for the applications I am working on. The problem with AJAX is that it's not an end in itself. You need to have a reason to use it and a design to match, or you end up on the road to poor performance and usability.

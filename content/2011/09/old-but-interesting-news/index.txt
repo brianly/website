@@ -1,0 +1,14 @@
+---
+title: "Old but interesting news"
+date: 2011-09-28 01:38
+tags: [marketing, search, search-engine-optimization, sem, seo]
+---
+<p>I've spent a fairly big chunk of my professional career building public websites for a number of clients. One of the things that comes up again and again is search engine optimisation.</p><p>Surprisingly there is very little coverage of this is in business and marketing journals. <a href="http://www.isensa.com/about_us/">Patrick Reid</a> wanted to start raise awareness, and needed my technical help in preparing a paper. We finished it up earlier this year and it was published in the <a href="http://www.senatehall.com/strategic-management">Journal of Strategic Management Education</a>.</p>
+<blockquote style="font-size:0.9em;">
+<p>Corporate Communications in the FTSE 100: Evidence using Search Engines<br />
+JSME Vol 7: Issue 1, 2011<br />
+Patrick Reid (Greenwich School of Management, UK), Brian Lyttle (LiquidHub, Inc., USA)</p>
+<p>Search engines have become an essential tool for information seekers on the world wide web. This makes it critical that company websites are optimised to achieve the highest possible ranking across the major search engines, in particular Google, ensuring maximum exposure and subsequent awareness. This paper identifies key factors in search engine optimisation and then analyses a sample of the largest 10 firms listed on the London Stock Exchange.</p>
+<p>The findings reveal a lack of adoption of best practices which will impact on their search rankings. The paper also discusses tradeoffs inherent in search engine optimisation and draws out key implications for managers and academics.</p>
+</blockquote>
+<p>The full paper is available from the <a href="http://www.senatehall.com/strategic-management?article=409">Senate Hall</a> site.</p>

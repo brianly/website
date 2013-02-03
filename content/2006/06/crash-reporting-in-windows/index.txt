@@ -1,0 +1,20 @@
+---
+title: "Crash reporting in Windows"
+date: 2006-06-08 17:58
+tags: [debugging, error-handling, windows]
+---
+Microsoft have been collecting crash data using a system known as Windows Error Reporting ("Dr Watson") since the release of Windows XP (and possibly earlier). When a usermode error occurs in an application, a minidump and other pertinent is extracted. The user is then prompted as to whether they wish to report this information. After the reboot that follows a kernal mode error (bugcheck) you are prompted to send this information to a secure Microsoft server.
+
+If the information is reported, a back end process does some analysis to see if it matches other error messages and might offer you some feedback. I've certainly benefited from this in the past, as a buggy D-Link driver caused numerous bugchecks (blue screens) and WER pointed me to a source of newer drivers.
+
+I've observed the use of this feature by many people and there seems to be a fairly even split between those that send the crash data and those who cancel out. It appears that many people don't provide feedback because they fear Microsoft getting getting access to private information. This fear is justifiable, but I think that Microsoft could encourage more people to submit bug reports if they improved their UI design and branding.
+
+The current implementation on Windows XP and 2003 has these faults:
+<ul>
+	<li>The UI is simplistic. Although it offers some information on why you might submit, it fails to reinforce the benefits.</li>
+	<li>Technical information cannot be easily copied to the clipboard. It would also be good to be able to save this to a file.</li>
+	<li>There is little help provided to help decipher the technical information provided.</li>
+	<li>Lack of Windows UI integration. If you are using a shared computer, an administrator cannot see all of the issues which have been submitted to spot problem applications. The settings for crash reporting are hidden away from most users in the system applet.</li>
+	<li>If you are offline you cannot submit a report.</li>
+</ul>
+Thankfully there are some improvements on the way. Windows Vista will include support for centralised crash reporting management, and improved UI. I will post a review of this in Beta 2 soon. Users of Office 2007 will notice that the bug and usage data collector is more advanced, and allows you to submit later. This is enabled when you sign up for the application improvement programme when prompted in the task notification area.

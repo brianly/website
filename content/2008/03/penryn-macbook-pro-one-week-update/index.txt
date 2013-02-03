@@ -1,0 +1,12 @@
+---
+title: "Penryn MacBook Pro: One week update"
+date: 2008-03-14 01:13
+tags: [mac, macbookpro]
+---
+With the dollar to sterling exchange rate reaching the 2:1 point I decided it was time to take the plunge on a new laptop. My last Mac was a PowerBook G4 and it still serves Sarah and I well - but it's really awful for running Windows virtual machines. The regular MacBook is a nice machine, but I prefer a higher screen resolution and Sarah has had some bad things to say about the build quality. So the only option is the MBP. Apple were rumoured to be releasing an update based on their 45nm Penryn CPU in January, but it was pushed back to a few weeks ago. When they did update the line they also added a multi-touch trackpad like that found on the MacBook Air.
+
+I bought the base MBP with a view to upgrading the RAM myself. I was going to go with the regular matte screen but I got the glossy one instead. In some conditions there are definitely reflections, but I was used to this on my Dell XPS M1710. Photographs and video are gorgeous. I haven't tried any games yet so I'm not sure how the 256MB graphics card will run them.
+
+Battery life is much better than my Dell machine. This is good because unlike the Dell, I can actually use this machine on the move. Apparently the Penryn chip uses a lot less power than the one used in previous versions. The Leopard operating system has some nice additions such as Spaces and Time Machine. These definitely run better on an Intel Mac.
+
+Perhaps the biggest test has been running Windows 2008 in a VMware Fusion virtual machine. The configuration is virtually the same as that on Windows or Linux, but they have added some 3D rendering capabilities which are not present in the workstation product. Obviously the user interface is very Mac-friendly and fits in well. Performance has been more than acceptable on the 5400 RPM internal drive. My next test will be running Visual Studio 2008 under Unity. Whilst it sounds neat to be able to use Windows applications interchangeably with Mac ones, I'm wondering if there will be major startup delays and the like.

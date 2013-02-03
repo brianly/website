@@ -1,0 +1,40 @@
+---
+title: "First impressions of Windows 7 Beta 1"
+date: 2009-01-11 20:52
+tags: [internet-explorer, task-bar, dell, geforce, nvidia, review, windows, windows7]
+---
+<p>After a very quick install on a <a href="http://www.notebookreview.com/default.asp?newsID=2887">Dell XPS M1710</a> laptop, and a few hours of messing around, I have come to the conclusion that this is going to be the best release of Windows yet. At the same time, it's not very exciting for the alpha geek in me. Perhaps it is good to have regular stable releases and leave the fireworks to user applications?</p>
+
+<p>Before I list some of the things that I like, or didn't as the case may be, I have a tip for anyone trying to get Aero running on the M1710. For some reason, Beta 1 doesn't have drivers in the box for the NVIDIA GeForce 9700M GT. Just download the mobile drivers from the <a href="http://www.nvidia.com/object/notebook_drivers.html">NVIDIA website</a> and install the Vista version using the "Have a disk..." option. Ignore any warnings about compatibility, the Vista drivers are close enough and I would expect NVIDIA to release some beta drivers for Windows 7.</p>
+
+<p><strong>What I liked</strong></p>
+
+<p><em>Performance improvements</em></p>
+
+<p>This has been a problem for a large number of Vista users and Microsoft have made big strides according to my unscientific testing. Little things like searching for programs on the Start menu is noticeably quicker than Vista on the same machine. No doubt anti-virus vendors are working on ways to reduce the performance.</p>
+
+<p><em>System protection</em></p>
+
+<p>You can now reserve a percentage of disk space to storage of old versions of user and system files (just like Recycle Bin has done since Windows 95). This is something I would want to increase for someone like my Mum.</p>
+
+<p><em>Task bar application integration</em></p>
+
+<p>The thumbnails introduced in Vista are now more useful since you view individual tabs in an application like Internet Explorer 8. When you have a long running task like a file copy, the progress is shown directly on the task bar when minimised.</p>
+
+<p><em>Easier wireless network access</em></p>
+
+<p>Clicking the network icon in the task notification area now shows a list of network connections. This makes it much easier to connect, and is similar to the experience in Apple OS X.</p>
+
+<p><em>Notification area grouping</em></p>
+
+<p>I find the pollution of the task notification area to be a real pain. Every application thinks it belongs there and needs to be visible. With Vista you could force some items to be hidden, in Windows 7 they are grouped under a single icon. It only takes simple stuff to improve the overall experience.</p>
+
+<p><strong>Requires more thought</strong></p>
+
+<p><em>Taskbar application identification</em></p>
+
+<p>So is Internet Explorer running, or do you have a shortcut pinned to the task bar? It's hard to see on the task bar, but I can see the rationale for this design decision. It would be nice if there was an option for clearer identification, such as the name of the application appearing on the task bar. I suspect more use of Windows 7 will result in a change in my expectation for this aspect of task bar operation.</p>
+
+<p><em>IE 8 rendering issues</em></p>
+
+<p>There is a still a lot of work to do here. I suspect that a lot of people will enable compatibility mode to enable sites to load. One site with problems was GMail (I'm using Google Apps for e-mail).</p>

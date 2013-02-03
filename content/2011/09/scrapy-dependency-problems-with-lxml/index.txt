@@ -1,0 +1,188 @@
+---
+title: "Scrapy dependency problems with lxml"
+date: 2011-09-18 19:31
+tags: [lxml, python, scrapy, scripting]
+---
+<p>Following the recent <a href="http://www.meetup.com/phillypug/events/31432902/">PhillyPUG</a> meetup I was trying to install <a href="http://scrapy.org/">scrapy</a> on an old MacBook Pro running OS X 10.6 (Snow Leopard) and ran into a  number of problems with the <a href="http://lxml.de/">lxml</a> dependency. This is the parser used to extract data from pages that scrapy downloads so you are not going to get very far without it.</p>
+<p>It seems that the compilation problems experienced when installing with <em>pip</em> result from an attempt to build a universal binary. If you have Xcode 4 installed then you lose some of this capability and need to make sure that the correct architecture is specified.</p>
+<h3>Architecture Fix</h3>
+<p>Setting the architecture is something you can do in your bash profile, executing it under a new bash ensures that the build script picks it up.</p>
+<pre>
+sudo bash
+export ARCHFLAGS='-arch i386 -arch x86_64'
+pip install lxml # test it
+pip install scrapy --upgrade # fix the failed scrapy install
+</pre>
+
+<h3>Original Error</h3>
+
+<pre>
+brianly$ sudo pip install lxml --upgrade
+Downloading/unpacking lxml
+  Downloading lxml-2.3.tar.gz (3.2Mb): 3.2Mb downloaded
+  Running setup.py egg_info for package lxml
+    Building lxml version 2.3.
+    Building without Cython.
+    Using build configuration of libxslt 1.1.24
+    warning: no previously-included files found matching '*.py'
+Installing collected packages: lxml
+  Found existing installation: lxml 2.2.2
+    Uninstalling lxml:
+      Successfully uninstalled lxml
+  Running setup.py install for lxml
+    Building lxml version 2.3.
+    Building without Cython.
+    Using build configuration of libxslt 1.1.24
+    building 'lxml.etree' extension
+    gcc-4.2 -fno-strict-aliasing -fno-common -dynamic -DNDEBUG -g -fwrapv -Os -Wall -Wstrict-prototypes -DENABLE_DTRACE -arch i386 -arch ppc -arch x86_64 -pipe -I/usr/include/libxml2 -I/System/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6 -c src/lxml/lxml.etree.c -o build/temp.macosx-10.6-universal-2.6/src/lxml/lxml.etree.o -w -flat_namespace
+    /usr/libexec/gcc/powerpc-apple-darwin10/4.2.1/as: assembler (/usr/bin/../libexec/gcc/darwin/ppc/as or /usr/bin/../local/libexec/gcc/darwin/ppc/as) for architecture ppc not installed
+    Installed assemblers are:
+    /usr/bin/../libexec/gcc/darwin/x86_64/as for architecture x86_64
+    /usr/bin/../libexec/gcc/darwin/i386/as for architecture i386
+    src/lxml/lxml.etree.c:161594: fatal error: error writing to -: Broken pipe
+    compilation terminated.
+    lipo: can't open input file: /var/tmp//ccYr9GpX.out (No such file or directory)
+    error: command 'gcc-4.2' failed with exit status 1
+    Complete output from command /usr/bin/python -c "import setuptools;__file__='/Users/brianly/dev/github/pyconscrape/build/lxml/setup.py';exec(compile(open(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" install --single-version-externally-managed --record /tmp/pip-axeEA7-record/install-record.txt:
+    Building lxml version 2.3.
+
+Building without Cython.
+
+Using build configuration of libxslt 1.1.24
+
+running install
+
+running build
+
+running build_py
+
+creating build
+
+creating build/lib.macosx-10.6-universal-2.6
+
+creating build/lib.macosx-10.6-universal-2.6/lxml
+
+copying src/lxml/__init__.py -> build/lib.macosx-10.6-universal-2.6/lxml
+
+copying src/lxml/_elementpath.py -> build/lib.macosx-10.6-universal-2.6/lxml
+
+copying src/lxml/builder.py -> build/lib.macosx-10.6-universal-2.6/lxml
+
+copying src/lxml/cssselect.py -> build/lib.macosx-10.6-universal-2.6/lxml
+
+copying src/lxml/doctestcompare.py -> build/lib.macosx-10.6-universal-2.6/lxml
+
+copying src/lxml/ElementInclude.py -> build/lib.macosx-10.6-universal-2.6/lxml
+
+copying src/lxml/pyclasslookup.py -> build/lib.macosx-10.6-universal-2.6/lxml
+
+copying src/lxml/sax.py -> build/lib.macosx-10.6-universal-2.6/lxml
+
+copying src/lxml/usedoctest.py -> build/lib.macosx-10.6-universal-2.6/lxml
+
+creating build/lib.macosx-10.6-universal-2.6/lxml/html
+
+copying src/lxml/html/__init__.py -> build/lib.macosx-10.6-universal-2.6/lxml/html
+
+copying src/lxml/html/_dictmixin.py -> build/lib.macosx-10.6-universal-2.6/lxml/html
+
+copying src/lxml/html/_diffcommand.py -> build/lib.macosx-10.6-universal-2.6/lxml/html
+
+copying src/lxml/html/_html5builder.py -> build/lib.macosx-10.6-universal-2.6/lxml/html
+
+copying src/lxml/html/_setmixin.py -> build/lib.macosx-10.6-universal-2.6/lxml/html
+
+copying src/lxml/html/builder.py -> build/lib.macosx-10.6-universal-2.6/lxml/html
+
+copying src/lxml/html/clean.py -> build/lib.macosx-10.6-universal-2.6/lxml/html
+
+copying src/lxml/html/defs.py -> build/lib.macosx-10.6-universal-2.6/lxml/html
+
+copying src/lxml/html/diff.py -> build/lib.macosx-10.6-universal-2.6/lxml/html
+
+copying src/lxml/html/ElementSoup.py -> build/lib.macosx-10.6-universal-2.6/lxml/html
+
+copying src/lxml/html/formfill.py -> build/lib.macosx-10.6-universal-2.6/lxml/html
+
+copying src/lxml/html/html5parser.py -> build/lib.macosx-10.6-universal-2.6/lxml/html
+
+copying src/lxml/html/soupparser.py -> build/lib.macosx-10.6-universal-2.6/lxml/html
+
+copying src/lxml/html/usedoctest.py -> build/lib.macosx-10.6-universal-2.6/lxml/html
+
+creating build/lib.macosx-10.6-universal-2.6/lxml/isoschematron
+
+copying src/lxml/isoschematron/__init__.py -> build/lib.macosx-10.6-universal-2.6/lxml/isoschematron
+
+creating build/lib.macosx-10.6-universal-2.6/lxml/isoschematron/resources
+
+creating build/lib.macosx-10.6-universal-2.6/lxml/isoschematron/resources/rng
+
+copying src/lxml/isoschematron/resources/rng/iso-schematron.rng -> build/lib.macosx-10.6-universal-2.6/lxml/isoschematron/resources/rng
+
+creating build/lib.macosx-10.6-universal-2.6/lxml/isoschematron/resources/xsl
+
+copying src/lxml/isoschematron/resources/xsl/RNG2Schtrn.xsl -> build/lib.macosx-10.6-universal-2.6/lxml/isoschematron/resources/xsl
+
+copying src/lxml/isoschematron/resources/xsl/XSD2Schtrn.xsl -> build/lib.macosx-10.6-universal-2.6/lxml/isoschematron/resources/xsl
+
+creating build/lib.macosx-10.6-universal-2.6/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+
+copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_abstract_expand.xsl -> build/lib.macosx-10.6-universal-2.6/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+
+copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_dsdl_include.xsl -> build/lib.macosx-10.6-universal-2.6/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+
+copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_message.xsl -> build/lib.macosx-10.6-universal-2.6/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+
+copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_skeleton_for_xslt1.xsl -> build/lib.macosx-10.6-universal-2.6/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+
+copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_svrl_for_xslt1.xsl -> build/lib.macosx-10.6-universal-2.6/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+
+copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/readme.txt -> build/lib.macosx-10.6-universal-2.6/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+
+running build_ext
+
+building 'lxml.etree' extension
+
+creating build/temp.macosx-10.6-universal-2.6
+
+creating build/temp.macosx-10.6-universal-2.6/src
+
+creating build/temp.macosx-10.6-universal-2.6/src/lxml
+
+gcc-4.2 -fno-strict-aliasing -fno-common -dynamic -DNDEBUG -g -fwrapv -Os -Wall -Wstrict-prototypes -DENABLE_DTRACE -arch i386 -arch ppc -arch x86_64 -pipe -I/usr/include/libxml2 -I/System/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6 -c src/lxml/lxml.etree.c -o build/temp.macosx-10.6-universal-2.6/src/lxml/lxml.etree.o -w -flat_namespace
+
+/usr/libexec/gcc/powerpc-apple-darwin10/4.2.1/as: assembler (/usr/bin/../libexec/gcc/darwin/ppc/as or /usr/bin/../local/libexec/gcc/darwin/ppc/as) for architecture ppc not installed
+
+Installed assemblers are:
+
+/usr/bin/../libexec/gcc/darwin/x86_64/as for architecture x86_64
+
+/usr/bin/../libexec/gcc/darwin/i386/as for architecture i386
+
+src/lxml/lxml.etree.c:161594: fatal error: error writing to -: Broken pipe
+
+compilation terminated.
+
+lipo: can't open input file: /var/tmp//ccYr9GpX.out (No such file or directory)
+
+error: command 'gcc-4.2' failed with exit status 1
+
+----------------------------------------
+  Rolling back uninstall of lxml
+Exception:
+Traceback (most recent call last):
+  File "/Library/Python/2.6/site-packages/pip-1.0.1-py2.6.egg/pip/basecommand.py", line 126, in main
+    self.run(options, args)
+  File "/Library/Python/2.6/site-packages/pip-1.0.1-py2.6.egg/pip/commands/install.py", line 228, in run
+    requirement_set.install(install_options, global_options)
+  File "/Library/Python/2.6/site-packages/pip-1.0.1-py2.6.egg/pip/req.py", line 1104, in install
+    requirement.rollback_uninstall()
+  File "/Library/Python/2.6/site-packages/pip-1.0.1-py2.6.egg/pip/req.py", line 487, in rollback_uninstall
+    self.uninstalled.rollback()
+  File "/Library/Python/2.6/site-packages/pip-1.0.1-py2.6.egg/pip/req.py", line 1417, in rollback
+    pth.rollback()
+AttributeError: 'str' object has no attribute 'rollback'
+
+Storing complete log in /Users/brianly/.pip/pip.log
+</pre>

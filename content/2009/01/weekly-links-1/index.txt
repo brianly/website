@@ -1,0 +1,22 @@
+---
+title: "Weekly Links #1"
+date: 2009-01-11 19:36
+tags: [agile, fonts, mvc, rails, sharepoint, textmate, vertebra, wpf]
+---
+<p>I manage <a href="http://delicious.com/BrianLy">my bookmarks</a> using a <a href="http://delicious.com/help/bookmarklets">Delicious Bookmarklet</a>, and I'll post some of the best on my blog each week.</p>
+
+<ul>
+  <li><a href="http://jrothman.com/blog/htp/2009/01/hiring-for-an-agile-team-possible-questions.html">Hiring for an Agile Team: Possible Questions</a> </li>
+
+  <li><a href="http://www.fontexplorerx.com/">FontExplorerÂ® X - The new professional font management software</a> </li>
+
+  <li><a href="http://blog.macromates.com/2008/working-with-history-in-bash/">TextMate Blog Â» Working With History in Bash</a> </li>
+
+  <li><a href="http://www.codeproject.com/KB/WPF/MVCtoUnitTestinWPF.aspx">Using MVC to Unit Test WPF Applications</a> </li>
+
+  <li><a href="http://karlshifflett.wordpress.com/mole-for-visual-studio/">Mole v4.2 For Visual Studio Â« Karl On WPF - .Net</a> </li>
+
+  <li><a href="http://msdn.microsoft.com/en-us/library/aa981226.aspx">SharePoint How To: Create a Custom Media Player Field Control</a> </li>
+
+  <li><a href="http://www.engineyard.com/vertebra">Vertebra from Engine Yard</a> </li>
+</ul>

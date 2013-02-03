@@ -1,0 +1,10 @@
+---
+title: "Experiences with Atalasoft DotImage controls"
+date: 2006-03-15 00:44
+tags: [net, atalasoft, imaging]
+---
+I've been evaluating some imaging controls from Atalasoft for a client project. The application uses Windows Forms which poses some licencing issues with many imaging components out there. After some searching I ended up on the <a href="http://www.atalasoft.com/">Atalasoft site</a> and downloaded a trial. What you get in the box is impressive: hybrid <a href="http://www.atalasoft.com/dotnet/">managed C++/C# assemblies</a> that don't rely on native code, excellent online help and a number of sample applications that cover useful areas of the API. These haven't been updated to support .NET 2.0 features such as <a href="http://msdn2.microsoft.com/en-US/library/system.componentmodel.backgroundworker.aspx">BackgroundWorker </a>but this is simple, if tedious to code yourself.
+
+Unlike vendors that have carried a product forward from the COM days, Atalasoft have implemented an object model which is close to the framework guidelines. Base functionality in the toolkit is good, but DotImage Pro is where the cool WinForms bits live. They include ThumbnailView and FolderThumbnailView classes which can load from custom objects or watch the filesystem respectively. I'd imagine most people just need to load thumbnails from disk, but my application needs to load images from a range of sources.
+
+I used the <a href="http://www.atalasoft.com/products/dotimage/pdf/">PDF Rasterizer extension</a> to extract thumbnails from an Acrobat document and was pleasantly surprised by the results. Memory consumption was low and didn't increase massively even with large numbers of thumbnails. You can find out more about the memory management on the Atalasoft site. As I use more features of the toolkit I'll probably post some snippets online.

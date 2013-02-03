@@ -1,0 +1,24 @@
+---
+title: "Are data grid controls good for end users?"
+date: 2006-06-06 18:49
+tags: [datagrid, usability, wpf]
+---
+Rod Paddock recently posted on <a title="WPF (Avalon) Adventures: The Good, the Bad and the Ugly Revisited" href="http://codebetter.com/blogs/rodpaddock/archive/2006/05/07/144230.aspx" target="_blank">his experiences with WPF</a>. Something that jumped out at me was his criticism of Microsoft for omitting a Datagrid control, although a basic grid control is included. The lack of a traditional Datagrid doesn't bother me too much, but I can see how it might impact a lot of developers. <a title="Windows Presentation Foundation page on MSDN" href="http://msdn.microsoft.com/winfx/technologies/presentation/default.aspx">WPF</a> is at least six months from release so it's likely a third-party will fill this gap, if Microsoft aren't pressured into writing one.
+
+In case you don't know, the <a href="http://en.wikipedia.org/wiki/Grid_view">data grid</a> is a UI control for Web and Windows development included with every release of .NET so far. It's a staple for UI control vendors and has been replicated in many other development environments. At a base level it displays data in a tabular format. However most incorporate in-place editing and control hosting features.
+
+Perhaps the lack of this control in WPF is a blessing in disguise since developers might stop to think for once. From my experience the data grid control is:
+<ol>
+	<li>Often misused by developers</li>
+	<li>Too heavyweight on the client</li>
+	<li>Complex for the developer to implement and maintain</li>
+</ol>
+Misuse is the biggest concern for me. Time after time I see projects where a developer has slapped on a grid as the UI, without concern for the end user. I refer you to the hideous multi-coloured grids with full editing enabled that litter business applications today. Vista is supposed to make us re-think the user interface to some degree - should we carry forward some of the rubbish that is produced today in the name of software UI design?
+
+As an aside, I'm a big fan of FogBugz and it includes a grid UI for listing cases. However, it also includes a list view, which must be popular with some end users for FogCreek to include this functionality.
+
+Onto point two which is only valid when you really care about your users (most line of business developers need not apply!). Grids are heavy on the client if thought is not put into their operation in production. I'm all for avoiding premature optimisation, but avoiding optimisation altogether is something else entirely. Costs for grids on Windows include the memory for the control and data. On the Web you often produce a lot of HTML tables and other junk which has to be delivered to the browser. If ASP.NET is used there is also likely to be superfluous viewstate information. As you cram more features in you are penalised for each one unless you can selectively control their use.
+
+My final point, number three, relates to the complexity that you heap upon yourself as you strive to make your application more complex for end users. Why try to combine editing, deletion and creation of records into one screen? It's often a false economy on behalf of the developer that all of this can be rolled into a single application form. If I had a penny for the number of a reasonable developer struggles with getting access to the value cell in an ASP.NET Datagrid, I would be very rich.
+
+Getting back to WPF and Vista, I think that developers like Rod need to start looking at how they visualise information. Until now, .NET programming has been about ramping up productivity on the parts of an application a user shouldn't experience directly. With WPF it's about how the user interacts with the application, and this requires the attention to user experience that Web applications have had for years. If the current generation of developers don't wise up and appreciate the implications of this technology they will deservedly end up on the scrap heap.

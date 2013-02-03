@@ -1,0 +1,16 @@
+---
+title: "Speeding up archive operations on OS X and Linux"
+date: 2012-09-27 15:46
+tags: []
+---
+I work with a lot of virtual machine images and other big data sets that needed to be archived, or moved around. If I run a command like <em>tar -cjf archive.tar.bz2 directory</em> it will churn away on a single core. 
+
+Given that all my machines have a lot of cores, it would be better if the tar command made use of all available cores. Thankfully someone created a tool called <a href="http://zlib.net/pigz/">pigz</a> (pronounced "pig-zee") that will allow the use of these CPU cores.
+
+There are 2 parts to the setup for pigz: get the utility, and force tar to use it. On my Mac I grabbed pigz from brew:
+
+<pre>brew install pigz</pre>
+
+Then I added an alias so that tar uses this by default. 
+<pre>alias tar='tar --use-compress-program=pigz'</pre>
+Remember that you might not want to use an alias if your profile travels with you to environments where the use of all cores could create problems.

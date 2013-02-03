@@ -1,0 +1,15 @@
+---
+title: "Support proxy servers in your applications"
+date: 2006-03-31 18:07
+tags: [authentication, ntlm, webproxy]
+---
+Much of the software I use on a day-to-day basis requires a HTTP connection to the Internet. Unfortunately, not all of this software includes reliable Web proxy support for Windows Authentication (NTLM). Whilst many people are connecting to the Internet from networks without proxy servers, I'm often connecting from corporate networks through Microsoft ISA Server.
+
+Here is some advice for anyone writing software that uses that needs uses the Internet:
+<ul>
+	<li>Include proxy support in your application. You'll not believe how many applications get un-installed because they don't support proxy servers.</li>
+	<li>Ensure that your proxy supports <a title="Navigator Proxy Auto-Config File Format" href="http://wp.netscape.com/eng/mozilla/2.0/relnotes/demo/proxy-live.html">auto-configuration (.pac) files</a>. If you don't go this far make it clear how the proxy host name should be specified, whether to include "http://" at the beginning and what port number to use.</li>
+	<li>Provide support for various authentication mechanisms. Many corporate networks use NTLM authentication. If your application runs on the Microsoft CLR you have support for this authentication with the <a title="CredentialClass documentation on MSDN" href="http://msdn2.microsoft.com/en-US/library/system.net.credentialcache.aspx">CredentialCache</a> class. Native applications can use the support available in <a title="WinInet documentation on MSDN" href="http://msdn2.microsoft.com/en-us/library/sb35xf67.aspx">WinInet</a> or the more recent <a title="WinHttp documentation on MSDN" href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winhttp/http/winhttp_start_page.asp">WinHttp</a>. The latter includes a proxy configuration tool to make life a little easier.</li>
+	<li>Respect user credentials. If a user has to explicitly provide their NT logon credentials to your application make sure to store them securely.</li>
+	<li>When requests fail provide useful error messages and server names to the user. This will help them figure out how to make connections work. A lot of times setup is a process of trial and error for users who aren't provided information by network administrators.</li>
+</ul>

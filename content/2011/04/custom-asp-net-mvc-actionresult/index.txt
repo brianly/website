@@ -1,0 +1,28 @@
+---
+title: "Custom ASP.NET MVC ActionResult classes"
+date: 2011-04-22 02:11
+tags: []
+---
+ASP.NET MVC provides a way for developers to extend and create custom <a href="http://msdn.microsoft.com/en-us/library/system.web.mvc.actionresult.aspx">ActionResults</a> for controllers. Normally you return a view from a controller and the runtime goes off and hunts down the appropriate view based on the name of your action. This make sense for normal web pages but sometimes you need to build something in code or you don't want to write a view for it. In this case you can extend ActionResult, set a content type, and render the result to the output stream.
+
+<pre>
+public OpenLayersActionResult MapData()
+{
+    var myPoints = new List<MapPoint>();
+
+    var p = new MapPoint
+                {
+                    Title = "Title for point on the map",
+                    Icon = "marker.png",
+                    IconSize = "21,25",
+                    LatLon = "12.9715987,77.5945627",
+                    Description = "This is the long description for a point on the map"
+    };
+
+    myPoints.Add(p);
+
+    return new OpenLayersActionResult { Points = myPoints };
+}
+</pre>
+
+Over on GitHub you can find some <a href="https://github.com/brianly/Killaloo.Web.Mvc">sample ActionResult classes</a> including one that replicates the built-in <a href="http://msdn.microsoft.com/en-us/library/system.web.mvc.jsonresult.aspx">JsonResult</a>. The one that will probably be most useful to someone is the <a href="https://github.com/brianly/Killaloo.Web.Mvc/blob/master/OpenLayersActionResult.cs">OpenLayersActionResult</a> which simplifies generation of layer data. I'm digging through various projects and building out that library with other helper code from various projects so keep an eye out for more snippets.

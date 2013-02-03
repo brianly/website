@@ -1,0 +1,89 @@
+---
+title: "Twitter to blog script"
+date: 2009-05-24 17:37
+tags: [cron, python, scripting, twitter]
+---
+<img src="/wp-content/uploads/2009/05/twitter_logo_header.png" alt="Twitter logo" class="imgright" />Based on <a href="http://code.google.com/p/python-twitter/source/browse/trunk/examples/twitter-to-xhtml.py">an example</a> provided with the <a href="http://code.google.com/p/python-twitter/">Twitter library for Python</a> I cobbled together the following script to add my latest tweets to this site. It's called from a cron job that I run on an occasional basis. My script linkifies hashtags and @username tokens in tweets so that you can see search results or user information.
+
+Why did I not use one of the WordPress widgets? Well writing scripts like this is fun, and some widgets don't seem to play too well with my Thesis theme. One thing to note is that getting the shell script setup under some cron configurations can take a while if you aren't using it on a regular basis. It's operation is also different between Ubuntu Server and Joyent's Accelerator platform.
+
+Up next: a similar script to process my latest bookmarks on <a href="http://delicious.com/brianly">Delicious.com</a>.
+
+<strong>Main script (tweets.py)</strong>
+
+<pre>
+#!/usr/bin/python
+
+import codecs, re, getopt, sys, twitter
+
+TEMPLATE = &quot;&quot;&quot;
+&lt;li&gt;
+  &lt;span class=&quot;twitter-text&quot;&gt;%s&lt;/span&gt;
+  &lt;span class=&quot;twitter-relative-created-at&quot;&gt;&lt;a href=&quot;http://twitter.com/%s/statuses/%s&quot;&gt;Posted %s&lt;/a&gt;&lt;/span&gt;
+&lt;/li&gt;
+&quot;&quot;&quot;
+
+def Usage():
+  print 'Usage: %s [options] twitterid' % __file__
+  print
+  print '  This script fetches a users latest twitter update and stores'
+  print '  the result in a file as an XHTML fragment'
+  print
+  print '  Options:'
+  print '    --help -h : print this help'
+  print '    --output : the output file [default: stdout]'
+
+
+def FetchTwitter(user, output):
+  assert user
+  statuses = twitter.Api().GetUserTimeline(user=user, count=7)
+  
+  xhtml = []
+  for status in statuses:
+  	  status.text = Linkify(status.text)
+  	  xhtml.append(TEMPLATE % (status.text, status.user.screen_name, status.id, status.relative_created_at))
+  
+  if output:
+    Save(''.join(xhtml), output)
+  else:
+    print ''.join(xhtml)
+
+def Linkify(tweet):
+    tweet = re.sub(r'(\A|\s)@(\w+)', r'\1@<a href="http://www.twitter.com/\2">\2</a>', tweet)
+    return re.sub(r'(\A|\s)#(\w+)', r'\1#<a href="http://search.twitter.com/search?q=%23\2">\2</a>', tweet)
+
+def Save(xhtml, output):
+  out = codecs.open(output, mode='w', encoding='utf-8',
+                    errors='xmlcharrefreplace')
+  out.write(xhtml)
+  out.close()
+
+def main():
+  try:
+    opts, args = getopt.gnu_getopt(sys.argv[1:], 'ho', ['help', 'output='])
+  except getopt.GetoptError:
+    Usage()
+    sys.exit(2)
+  try:
+    user = args[0]
+  except:
+    Usage()
+    sys.exit(2)
+  output = None
+  for o, a in opts:
+    if o in ("-h", "--help"):
+      Usage()
+      sys.exit(2)
+    if o in ("-o", "--output"):
+      output = a
+  FetchTwitter(user, output)
+
+if __name__ == "__main__":
+  main()
+</pre>
+
+<strong>Shell script executed as cron job (tweets.sh)</strong>
+
+<pre>
+/usr/bin/python /path/to/tweets.py brianly --output /path/to/output/twittertimeline.htm
+</pre>

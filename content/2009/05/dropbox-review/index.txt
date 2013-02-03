@@ -1,0 +1,10 @@
+---
+title: "Keeping files in sync with Dropbox"
+date: 2009-05-23 22:25
+tags: [dropbox, sync, synchronization]
+---
+<img src="http://brianlyttle.com/wp-content/uploads/2009/05/dropbox.png" alt="Dropbox logo" class="imgright"/>When you use more than one computer on a daily basis, keeping files in sync between them is a constant problem. I'm familiar with tools like <a href="http://subversion.tigris.org/">Subversion</a> and <a href="http://www.selenic.com/mercurial/wiki/">Mercurial</a> that make it relatively easy to keep code in sync between machines, but these require explicit actions that I often want to control. When it comes to photos, office documents, and other binary files that I don't want to actively manage these developer tools just get in my way. Thankfully a <a href="http://ycombinator.com/">Y Combinator</a> startup called <a href="http://www.getdropbox.com/">Dropbox</a> is trying to solve this problem and doing a pretty good job at it.
+
+Dropbox is very simple to use. Just drop a file in a folder and it'll be uploaded to the central server. If your other computer is connected to Dropbox it'll be updated with the file almost immediately. It is worth noting that these updates are almost instant, even for large files. Whilst a sync tool like this is all very simple in theory, the execution is near flawless. I've tried out other tools in the past and none of them had seen the attention to detail that the Dropbox team made for their application. It get's better when you discover that Dropbox works just as well across Windows, Mac, and Linux.
+
+I'm just about to shell out for one of their paid accounts so that I can keep my photos in sync between my Mac and Windows desktop. I'll post an update on my experience in a couple of months. I'm sure I'll try out some of the <a href="http://wiki.getdropbox.com/TipsAndTricks/RemoteControl">neat tricks</a> detailed on their wiki.

@@ -1,0 +1,10 @@
+---
+title: "Essential Utility: htop"
+date: 2009-02-09 03:46
+tags: [dell, htop, linux, server, ubuntu]
+---
+<p><a href="/wp-content/uploads/2009/05/htop.png"><img src="http://htop.sourceforge.net/affinity.png" alt="Screenshot of htop in action." class="imgright" width="225" /></a>I've been rebuilding my Dell PowerEdge 830 server after a meltdown last week. This time I decided to go with Ubuntu Server 8.10 as the base operating system with Windows running under VMware Server 2.0.</p>
+
+Since this is a pretty small server, I'm always checking up on resource usage and <a href="http://linux.about.com/od/commands/l/blcmdl1_top.htm">top</a> is a useful tool for this purpose. I find that I'd like to take actions based on what is happening in top and need to keep another shell open to issue commands. Wouldn't it be nice if there was a better version of <a href="http://linux.about.com/od/commands/l/blcmdl1_top.htm">top</a>, that acted a little like the Windows Task Manager?
+
+On Linux, there is an improved version of this tool called <a href="http://htop.sourceforge.net">htop</a>. This offers colour coding, CPU meters, and other nice things through the shell. Go check it out if you run Linux servers.

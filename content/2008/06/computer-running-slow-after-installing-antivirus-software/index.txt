@@ -1,0 +1,15 @@
+---
+title: "Computer running slow after installing Antivirus software?"
+date: 2008-06-01 16:17
+tags: [antivirus, performance, windows]
+---
+Almost everyone I know complains about the performance of their computer when an anti-virus (A/V) product has installed, and thinks they need more memory or a faster processor. Wrong! You need to get a faster hard disk, or disable scanning of certain files.
+
+You'll see from Task Manager that memory and other resources are plentiful on a modern computer, but page faults and other disk I/O (hidden by default) are occurring at very high levels. Disk I/O is still slow on modern computers and you'll get better performance gains from improving this aspect.
+
+Most A/V software has settings that let you control:
+<ul>
+	<li>Scanning inside archives like .zip files. Only files downloaded from the Internet or via other media are major threats. Consider tweaking these settings to avoid scanning too deeply into archives, or only scan in risky locations (external drives or downloads folder).</li>
+	<li>Directories that excluded from automatic scanning. Real-time protection is valuable for certain users, but there may be files that a user must access very frequently. These include databases or virtual machines. Consider disabling real-time scanning of these files/folders.</li>
+</ul>
+Making changes to these settings will benefit performance, and security can still be maintained to a very high level. You are running Windows under a normal user account, aren't you?

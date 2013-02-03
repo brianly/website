@@ -1,0 +1,10 @@
+---
+title: "Relog Utility"
+date: 2006-07-05 22:43
+tags: [perfmon, windows]
+---
+Relog.exe isn't some new fad amongst Bloggers - it's a tool from the Windows Resource Kit that helps you convert performance counter logs produced by Performance Monitor (perfmon.exe) into common text formats such as CSV. Earlier today I ran perfmon.exe and forgot to change the logging format from the default binary format to CSV. I searched the Web for a tool to convert to a format acceptable to <a href="http://www.logparser.com/">LogParser </a>and I found Relog. This utility saved me having to redo five hours of monitoring to get the data that I needed to analyse. Cheers to the Resource Kit team!
+
+Syntax: <em>relog input.blg -f CSV -o output.csv </em>
+
+Where can I get it? Download <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=f043c2f5-2a48-41ed-951b-ba7f62cf51d6&amp;displaylang=en">relog.exe</a> for free from the Microsoft Download Center (requires a genuine Windows installation).

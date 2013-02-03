@@ -1,0 +1,20 @@
+---
+title: "RailsConf Review"
+date: 2006-07-02 21:22
+tags: [rails, railsconf, rubyonrails]
+---
+<a href="http://www.flickr.com/photos/brianly/sets/72157594184662714/"><img class="portrait" src="/images/railsconf_mike+dei.jpg" alt="My RailsConf photos on Flickr" /></a>It's just over a week since I returned from the <a href="http://www.railsconf.org">First International Rails Conference</a> in Chicago and I've had some time to reflect on my experiences and put a few photos online. This was the first open source conference I have attended and it was a truly enlightening experience. I had the pleasure of meeting some very interesting people from <a href="http://www.deprecated.org">Mike Bailey</a> to <a href="http://blogs.pragprog.com/cgi-bin/pragdave.cgi">Dave Thomas</a> and <a href="http://www.martinfowler.com/bliki/">Martin Fowler</a>.
+
+The crowd at RailsConf was very different from that at Microsoft events which I have regularly attended in recent years. This was refreshing but also a challenge as I'm not a UNIX guru by any means. It's clear that there is little interest in the community to actively support Windows and provide a bridge for .NET developers to migrate. This schism is something that the veterans like Dave Thomas are looking to cross as there is a lot of time and effort invested in other technologies. <a href="http://www.loudthinking.com">DHH</a>'s keynote address railed against support of XML Web Services and legacy database schemas. It will be interesting to see if <a href="http://www.thoughtworks.com/">ThoughtWorks</a>, or another vendor, will step up and provide more support for working with enterprise technologies.
+
+Deployment seemed to be a hot topic for all users at the conference and it was interesting to see the capabilities with Rails. <a href="http://clarkware.com/cgi/blosxom">Mike Clark</a>'s talk on <a href="http://manuals.rubyonrails.com/read/book/17">Capistrano</a> was wonderfully presented. The simplicity of being able to pull together a build system which integrates source control and remote deployment was amazing. This is something that is sorely missed in the .NET community and could probably be built on top of NAnt in a less elegant way than Capistrano.
+
+<a href="http://jan.kneschke.de/">Jan Kneschke</a> provided an interesting insight into building a Web server to handle a massive number of connections. His Web server, <a href="http://www.lighttpd.net/">LightTPD</a>, was popular with the Rails community due to its FastCGI implementation but now has competition from <a href="http://mongrel.rubyforge.org/">Mongrel</a>. He's planning on improving the mod_proxy support so that "Lighty" will work with Mongrel in a similar way to Apache.
+
+On the final day of the conference, <a href="http://relevancellc.com/main/about">Stuart Holloway</a> of <a href="http://relevancellc.com/">Relevance</a>, and former Java junkie at DevelopMentor, provides an insight into some of the Ruby techniques used by the Rails team. Stuart has spent a lot of time going through the Rails internals to figure out what the Rails core team has done to provide such cool functionality. Since I haven't spent too much time with Ruby a lot of this was very deep, but the explanation of analogues in the Java world helped a lot. This talk provided me with a lot of food for thought and is the reason I signed up for RailsConf.
+
+If you are interested in other sessions I attended, I've posted <a href="/downloads/railsconf-notes.txt">my incomplete notes</a> for download.
+
+Regards the venue, facilities, and catering I think that the RailsConf organisers did a good job. Providing wireless internet access for 550 people is not an easy task, and the fact I could check mail from time to time was good enough for me.
+
+Overall RailsConf was an excellent event, and I'm lucky to have attended the first conference. <a href="http://conferences.oreillynet.com/">RailsConf II</a> is likely to be a lot bigger next May, and the overall feeling will be different. It will be really interesting if Mike, Oliver and Dei come along and we can catch up on a year of Rails development.

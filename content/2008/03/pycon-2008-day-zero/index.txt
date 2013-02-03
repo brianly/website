@@ -1,0 +1,22 @@
+---
+title: "PyCon 2008 - Day Zero"
+date: 2008-03-14 00:41
+tags: [pycon, pycon2008, python]
+---
+Today was the Python tutorial day. Given that I haven't spent a lot of time reading or writing Python code I thought it would be a good idea to attend some of these tutorials. Since they kicked off at 9am it was a bit of a challenge making it on time. My Southwest flight from Philly last night arrived late, and then I had a big trip around to the other side of Chicago. If you need to attend a conference near O'Hare, try to fly into that airport. All I wanted to do was to lie in bed for a few more hours :)
+
+When I made my tutorial selections I was hoping to attend a Python for Java Developers session. This would have been useful given my experience with C# but it seems that I was in the minority and it was cancelled. I switched to the Django session but I think I may have been better attending the session on performance optimisation.
+
+Registration wasn't too busy today since the main conference crew won't arrive till Friday. I got a PyCon bag and some flyers but the T-Shirts weren't ready. Apparently they'll be available tomorrow, I'd hate to miss out on one!
+
+<strong>Python 101 Tutorial (Steve Holden)</strong>
+
+It turns out that Steve was another British ex-pat living here in the US. It gets weirder in that he lectured at Manchester University for a number of years. Given Steve's position in the community I expected a sharp introduction to Python. It didn't disappoint and I picked up a fair bit. The 'slice' mechanism looks really useful, I wonder if it can be implemented with any of the new C# features?
+
+<strong>Getting Started with Django (Jacob Kaplan-Moss)</strong>
+
+I was expecting this session to be a little more exciting. Jacob has some fine ideas about how Python frameworks should be built but his presentation style is not as striking as DHH. Since this was an introductory session I can't complain too much but I really want to hear some more about Django deployment and debugging over the next few days.
+
+<strong>Internet Programming with Python (Wesley Chun)</strong>
+
+At this point I was pretty exhausted. This tutorial seemed to be geared toward newbies to network programming, rather than a best practice session on leveraging Python for internet programming.

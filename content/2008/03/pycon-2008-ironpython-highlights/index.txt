@@ -1,0 +1,18 @@
+---
+title: "PyCon 2008 - IronPython Highlights"
+date: 2008-03-18 02:42
+tags: [ironpython, pycon, pycon2008, python]
+---
+<a href="http://www.codeplex.com/IronPython">IronPython</a> was one of the factors that impacted my decision to attend PyCon. Microsoft are approaching the release of version 2.0 which will have parity with CPython 2.5. The production versions already are close to full Python 2.4 support making it a viable platform for use in a lot of places where I would typically use C#.
+
+<img style="float: right; margin-top: 5px;" src="/images/openspace-python.net.jpg" alt="Open space session" />Going into the conference I was looking forward to the Sunday session with Jim Hugunin but there turned out to be some more treats for the IronPython developer. <a href="http://feihonghsu.blogspot.com/">Feihong Hsu</a> ran a session on Python.NET and how you can bridge from CPython to the .NET platform, taking advantage of rich Windows APIs. <a href="http://www.voidspace.org.uk/">Michael Foord</a> spoke on Silverlight as well as <a href="http://www.resolversystems.com/">his company's spreadsheet</a> which embeds IronPython.
+
+Feihong organised an open space session for Saturday evening after the PyWin32 gathering to talk about Python.NET and we were joined by the IronPython developers and management (<a href="http://blogs.msdn.com/dinoviehland/">Dino Viehland</a>, <a href="http://www.devhawk.net/">Harry Pierson</a>, <a href="http://blogs.msdn.com/hugunin/">Jim Hugunin</a> and others). We discussed a number of aspects of IronPython and progress towards the 2.0 release. It looks like this may be complete in October given that they released the first beta last week. Again Michael Foord had something interesting to say on what Resolver Systems are doing.
+
+<img style="float: left; margin-top: 5px; margin-right: 5px;" src="/images/ironclad.jpg" alt="Michael Foord presents IronClad" />Michael presented an open source project called <a href="http://code.google.com/p/ironclad/">IronClad</a>. This is quite an insane assortment of code from C# to Python to assembler all in the name of accessing Python modules written in C. To date they have the bzip2 module running but are working on support for modules like NumPy which are important to their customers.
+
+After the open space session we headed into Chicago for dinner at <a href="http://chicago.citysearch.com/profile/39551968/chicago_il/india_house.html">India House</a>. This gave us a chance to find out some more stuff about the IronPython implementation, and other factoids. Dino hinted that he was working on getting Django up and running. Little did we know he was going to be demoing this to the crowd on Sunday.
+
+<img style="float: right; margin-top: 5px;" src="/images/hugunin.jpg" alt="Jim Hugunin and Dino Viehland" />Sunday saw Jim's big talk and I managed to get a few photos. It wasn't easy, but I think these turned out a bit better than earlier shots at the conference. Dino showed off the fairly minimal changes needed to get Django running on IronPython and Jim demoed the IronPython interpreter running under Dynamic Silverlight.
+
+After the keynote, Dino gave a me a quick run through of the IronPython and DLR source code. This was very interesting and it gave me a real step up in understanding what goes on under the covers. Thanks Dino!
