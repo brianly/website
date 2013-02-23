@@ -18,6 +18,8 @@ VIEWS = {
     '/:year/:month/:slug/': {'view': 'entry',
                     'template': 'archive.html'},
 
+    '/:year/:month/': {'view': 'archive'},
+
     '/tag/:name/': {'filters': 'summarize',
                     'view':'tag',
                     'pagination': '/tag/:name/:num'},

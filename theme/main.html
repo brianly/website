@@ -21,7 +21,6 @@
         {% include 'entry.html' %}
     {% endfor %}
 
-
     {% if env.prev is not none %}
         <a href="{{ env.path ~ env.prev ~ '/' }}" class="page floatleft blog-nav">
         &laquo; Older Posts
@@ -38,19 +37,9 @@
 <li><a href="{{ env.path + entry.permalink }}">{{ entry.title }}</a></li>
 {%- endmacro -%}
 
-{%- macro render_month_archive(entry) -%}
-<li>{{ entry }}</li>
-{%- endmacro -%}
-
 {% block sidebar %}
 
     <div class="panel recent-posts">
-      <ul>
-            {%- for entry in env.globals.entrylist[0:3] %}
-                {{ render_month_archive(entry)}}
-            {% endfor -%}
-          </ul>
-
 
       <h5>Recent Posts</h5>
       <ul>
@@ -77,14 +66,17 @@
       <div class="panel archive-posts">
       <h5>Archives</h5>
       <ul>
-            <li><a href="#">December 2012</a> (1)</li>
-            <li><a href="#">September 2012</a> (2)</li>
-            <li><a href="#">March 2012</a> (2)</li>
-            <li><a href="#">January 2012</a> (3)</li>
-            <li><a href="#">November 2011</a> (4)</li>
-            <li><a href="#">June 2011</a> (2)</li>
-            <li><a href="#">April 2011</a> (6)</li>
-            <li><a href="#">February 2011</a> (1)</li>
+        {% for year in env.globals.entrylist | archivesfor %}
+
+            {% for month in year %}
+            <li>
+                <a href="{{ env.path ~ '/' ~ year ~ '/' ~ month ~ '/'  }}">{{ month.full }} {{ year }}</a>
+                ({{  month | count }})
+            </li>
+            {% endfor %}
+
+        {% endfor %}
+
           </ul>
     </div>
 
