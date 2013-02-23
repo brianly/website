@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+{% endblock %}
+
+{%- macro render_recent_post(entry) -%}
+<li><a href="{{ env.path + entry.permalink }}">{{ entry.title }}</a></li>
+{%- endmacro -%}
+
+{% block sidebar %}
+    <div class="panel recent-posts">
+      <h5>Recent Posts</h5>
+
+      <ul>
+            {%- for entry in env.globals.entrylist[0:7] %}
+                {{ render_recent_post(entry) | indent(8)}}
+            {% endfor -%}
+          </ul>
+    </div>
+
+      <div class="panel links">
+      <h5>Links</h5>
+      <ul>
+            <li><a href="http://www.graphitedigital.com/">Graphite Digital</a></li>
+            <li><a href="http://www.mediatonic.co.uk/">Mediatonic</a></li>
+            <li><a href="http://www.devlogged.com/">Dev Logged</a></li>
+            <li><a href="http://www.sensacom.com/">Sensacom</a></li>
+            <li><a href="http://www.itadmintools.com/">IT Admin Tools</a></li>
+            <li><a href="http://www.tedwise.com/">Ted Wise</a></li>
+            <li><a href="http://www.mukalian.com/blog/">Mike Mukalian</a></li>
+            <li><a href="http://www.sensagroup.com/">SensaGroup</a></li>
+          </ul>
+    </div>
+{% endblock %}
