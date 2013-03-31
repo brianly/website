@@ -1,20 +1,40 @@
 {% extends "base.html" %}
 
-
 {% block title %}{{ entry.title }} - {{ conf.sitename }}{% endblock %}
 
 {% block content %}
     {% for entry in env.entrylist %}
       <article>
-        <h3><a href="{{ env.path + entry.permalink }}">{{ entry.title }}</a></h3>
-        <div class="row">
-          <div class="twelve columns">
-            {{ entry.content }}
-          </div>
+
+      <h3><a href="{{ env.path + entry.permalink }}">{{ entry.title }}</a></h3>
+
+      <h6>{{ entry.date.strftime("%B")}}&nbsp;{{ entry.date.day }}, {{entry.date.year}}</h6>
+
+      <div class="row">
+        <div class="twelve columns">
+
+          {{ entry.content }}
+
         </div>
+      </div>
+
+    {% if 'tag' in env.views and entry.tags %}
+        <p>Tagged as
+            {% for link in entry.tags | tagify -%}
+                <a href="{{ env.path + link.href }}">{{ link.title }}</a>
+                {%- if loop.revindex > 2 -%}
+                ,
+                {%- elif loop.revindex == 2 %}
+                and
+                {% endif %}
+            {% endfor %}
+        </p>
+    {% endif %}
+
       </article>
     {% endfor %}
 {% endblock %}
+
 
 {%- macro render_recent_post(entry) -%}
 <li><a href="{{ env.path + entry.permalink }}">{{ entry.title }}</a></li>
@@ -30,6 +50,20 @@
             {% endfor -%}
           </ul>
     </div>
+
+  <div class="panel archive-posts">
+  <h5>Archives</h5>
+  <ul>
+    {% for year in env.globals.entrylist | archivesfor %}
+        {% for month in year %}
+        <li>
+            <a href="{{ env.path ~ '/' ~ year ~ '/' ~ month ~ '/'  }}">{{ month.full }} {{ year }}</a>
+            ({{  month | count }})
+        </li>
+        {% endfor %}
+    {% endfor %}
+  </ul>
+  </div>
 
       <div class="panel links">
       <h5>Links</h5>
