@@ -11,8 +11,7 @@ FILTERS = ['markdown+codehilite(css_class=highlight)',
            'hyphenate', 'h1']
 VIEWS = {
     # Home
-    '/': {'filters': 'summarize',
-          'view': 'index',
+    '/': {'view': 'index',
           'pagination': '/page/:num',
           'items_per_page': 5},
 
@@ -25,10 +24,9 @@ VIEWS = {
                        'template': 'archive.html'},
 
     # Tags
-    '/tag/:name/': {'filters': 'summarize',
-                    'view': 'tag',
+    '/tag/:name/': {'view': 'tag',
                     'pagination': '/tag/:name/:num',
-                    'template': 'archive.html'},
+                    'template': 'tag.html'},
 
     # Pages
     "/:slug/": {'view': 'page',

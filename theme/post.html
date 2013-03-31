@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}{{ entry.title }} - {{ conf.sitename }}{% endblock %}
+{% block ogtitle %}{{ entry.title }} - {{ conf.sitename }}{% endblock %}
 
 {% block content %}
     {% for entry in env.entrylist %}
@@ -12,70 +13,17 @@
 
       <div class="row">
         <div class="twelve columns">
-
           {{ entry.content }}
-
         </div>
       </div>
 
-    {% if 'tag' in env.views and entry.tags %}
-        <p>Tagged as
-            {% for link in entry.tags | tagify -%}
-                <a href="{{ env.path + link.href }}">{{ link.title }}</a>
-                {%- if loop.revindex > 2 -%}
-                ,
-                {%- elif loop.revindex == 2 %}
-                and
-                {% endif %}
-            {% endfor %}
-        </p>
-    {% endif %}
+      {% include "fragments/tagged-with.html" ignore missing %}
 
       </article>
     {% endfor %}
 {% endblock %}
 
-
-{%- macro render_recent_post(entry) -%}
-<li><a href="{{ env.path + entry.permalink }}">{{ entry.title }}</a></li>
-{%- endmacro -%}
-
 {% block sidebar %}
-    <div class="panel recent-posts">
-      <h5>Recent Posts</h5>
-
-      <ul>
-            {%- for entry in env.globals.entrylist[0:7] %}
-                {{ render_recent_post(entry) | indent(8)}}
-            {% endfor -%}
-          </ul>
-    </div>
-
-  <div class="panel archive-posts">
-  <h5>Archives</h5>
-  <ul>
-    {% for year in env.globals.entrylist | archivesfor %}
-        {% for month in year %}
-        <li>
-            <a href="{{ env.path ~ '/' ~ year ~ '/' ~ month ~ '/'  }}">{{ month.full }} {{ year }}</a>
-            ({{  month | count }})
-        </li>
-        {% endfor %}
-    {% endfor %}
-  </ul>
-  </div>
-
-      <div class="panel links">
-      <h5>Links</h5>
-      <ul>
-            <li><a href="http://www.graphitedigital.com/">Graphite Digital</a></li>
-            <li><a href="http://www.mediatonic.co.uk/">Mediatonic</a></li>
-            <li><a href="http://www.devlogged.com/">Dev Logged</a></li>
-            <li><a href="http://www.sensacom.com/">Sensacom</a></li>
-            <li><a href="http://www.itadmintools.com/">IT Admin Tools</a></li>
-            <li><a href="http://www.tedwise.com/">Ted Wise</a></li>
-            <li><a href="http://www.mukalian.com/blog/">Mike Mukalian</a></li>
-            <li><a href="http://www.sensagroup.com/">SensaGroup</a></li>
-          </ul>
-    </div>
+  {% include "fragments/recent-posts.html" ignore missing %}
+  {% include "fragments/links.html" ignore missing %}
 {% endblock %}

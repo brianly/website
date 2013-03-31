@@ -1,0 +1,13 @@
+<div class="panel archive-posts">
+<h5>Archives</h5>
+<ul>
+  {% for year in env.globals.entrylist | archivesfor %}
+      {% for month in year %}
+      <li>
+          <a href="{{ env.path ~ '/' ~ year ~ '/' ~ month ~ '/'  }}">{{ month.full }} {{ year }}</a>
+          ({{  month | count }})
+      </li>
+      {% endfor %}
+  {% endfor %}
+</ul>
+</div>

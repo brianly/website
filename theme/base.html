@@ -19,7 +19,6 @@
 
   <script src="{{ env.path + '/javascripts/foundation.min.js' }}"></script>
 
-
   <!-- IE Fix for HTML5 Tags -->
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,12 +27,18 @@
   <script type="text/javascript" src="//use.typekit.net/dsg0qbk.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-  <meta name="description" content="" />
-  <meta property="og:description" content="" />
+
+  {%- if entry is defined %}
+    <meta name="description" content="{{ entry.description | e }}" />
+    <meta name="keywords" content="{{ entry.tags | join(', ') }}, brian, lyttle, brian lyttle" />
+    <meta property="og:title" content="{% block ogtitle %}{% endblock %}" />
+    <meta property="og:type" content="article" />
+  {%- endif -%}
+
   <meta property="og:site_name" content="{{ conf.sitename }}" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="" />
-  <meta property='og:url' content="http://www.brianlyttle.com" />
+  <meta property="og:image" content="{{ conf.www_root + '/images/bl2011_bw_225x150.jpg' }}" />
+  <meta property="og:url" content="{{ conf.www_root + env.route }}" />
+
   <link rel="shortcut icon" href="{{ env.path + '/images/favicon.ico' }}">
   <link rel="openid2.provider" href="https://www.google.com/accounts/o8/ud" />
 
