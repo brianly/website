@@ -1,9 +1,12 @@
 {% extends "base.html" %}
 
 
-{% block title %}{{ entry.title }} - {{ conf.sitename }}{% endblock %}
+{% block title %} - {{ conf.sitename }}{% endblock %}
 
 {% block content %}
+
+
+
     {% for entry in env.entrylist %}
       <article>
 
@@ -34,6 +37,10 @@
 
       </article>
     {% endfor %}
+
+
+
+
 {% endblock %}
 
 
@@ -44,7 +51,6 @@
 {% block sidebar %}
     <div class="panel recent-posts">
       <h5>Recent Posts</h5>
-
       <ul>
             {%- for entry in env.globals.entrylist[0:7] %}
                 {{ render_recent_post(entry) | indent(8)}}
@@ -52,19 +58,19 @@
           </ul>
     </div>
 
-      <div class="panel archive-posts">
-      <h5>Archives</h5>
-      <ul>
-            <li><a href="#">December 2012</a> (1)</li>
-            <li><a href="#">September 2012</a> (2)</li>
-            <li><a href="#">March 2012</a> (2)</li>
-            <li><a href="#">January 2012</a> (3)</li>
-            <li><a href="#">November 2011</a> (4)</li>
-            <li><a href="#">June 2011</a> (2)</li>
-            <li><a href="#">April 2011</a> (6)</li>
-            <li><a href="#">February 2011</a> (1)</li>
-          </ul>
-    </div>
+  <div class="panel archive-posts">
+  <h5>Archives</h5>
+  <ul>
+    {% for year in env.globals.entrylist | archivesfor %}
+        {% for month in year %}
+        <li>
+            <a href="{{ env.path ~ '/' ~ year ~ '/' ~ month ~ '/'  }}">{{ month.full }} {{ year }}</a>
+            ({{  month | count }})
+        </li>
+        {% endfor %}
+    {% endfor %}
+  </ul>
+  </div>
 
       <div class="panel links">
       <h5>Links</h5>

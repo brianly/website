@@ -1,19 +1,10 @@
 {% extends "base.html" %}
 
 
-{% block title %}{{ entry.title }} - {{ conf.sitename }}{% endblock %}
+{% block title %}{% endblock %}
 
 {% block content %}
-    {% for entry in env.entrylist %}
-      <article>
-        <h3><a href="{{ env.path + entry.permalink }}">{{ entry.title }}</a></h3>
-        <div class="row">
-          <div class="twelve columns">
-            {{ entry.content }}
-          </div>
-        </div>
-      </article>
-    {% endfor %}
+
 {% endblock %}
 
 {%- macro render_recent_post(entry) -%}
