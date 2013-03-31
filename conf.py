@@ -1,5 +1,4 @@
 # -*- encoding: utf-8 -*-
-# This is your configuration file.  Please write valid python!
 # See http://posativ.org/acrylamid/conf.py.html
 
 SITENAME = 'Brian Lyttle'
@@ -8,38 +7,48 @@ WWW_ROOT = 'http://www.brianlyttle.com'
 AUTHOR = 'Brian Lyttle'
 EMAIL = 'blog@brianlyttle.com'
 
-FILTERS = ['markdown+codehilite(css_class=highlight)', 'hyphenate', 'h1']
+FILTERS = ['markdown+codehilite(css_class=highlight)',
+           'hyphenate', 'h1']
 VIEWS = {
+    # Home
     '/': {'filters': 'summarize',
           'view': 'index',
           'pagination': '/page/:num',
           'items_per_page': 5},
 
+    # Individual posts
     '/:year/:month/:slug/': {'view': 'entry',
+                             'template': 'post.html'},
+
+    # Monthly archives
+    '/:year/:month/': {'view': 'archive',
+                       'template': 'archive.html'},
+
+    # Tags
+    '/tag/:name/': {'filters': 'summarize',
+                    'view': 'tag',
+                    'pagination': '/tag/:name/:num',
                     'template': 'archive.html'},
 
-    '/:year/:month/': {'view': 'archive'},
-
-    '/tag/:name/': {'filters': 'summarize',
-                    'view':'tag',
-                    'pagination': '/tag/:name/:num'},
-
-    # per tag Atom or RSS feed. Just uncomment to generate them.
-
-    # '/tag/:name/atom/': {'filters': ['h2', 'nohyphenate'], 'view': 'atompertag'},
-    # '/tag/:name/rss/': {'filters': ['h2', 'nohyphenate'], 'view': 'rsspertag'},
-
-    '/feed/atom/': {'filters': ['h2', 'nohyphenate'], 'view': 'atom'},
-    '/feed/': {'filters': ['h2', 'nohyphenate'], 'view': 'rss'},
-
-    # '/articles/': {'view': 'articles'},
-
-    '/sitemap.xml': {'view': 'sitemap'},
-
-    "/:slug/": {"view": "page",
+    # Pages
+    "/:slug/": {'view': 'page',
                 'template': 'page.html'},
 
-    # Here are some more examples
+    # Feeds
+    '/feed/atom/': {'filters': ['h2', 'nohyphenate'],
+                    'view': 'atom'},
+    '/feed/': {'filters': ['h2', 'nohyphenate'],
+               'view': 'rss'},
+
+    # '/tag/:name/atom/': {'filters': ['h2', 'nohyphenate'],
+    #                      'view': 'atompertag'},
+    # '/tag/:name/rss/': {'filters': ['h2', 'nohyphenate'],
+    #                     'view': 'rsspertag'},
+
+    # Sitemap
+    '/sitemap.xml': {'view': 'sitemap'},
+
+    # More examples
 
     # # '/:slug/' is a slugified url of your static page's title
     # '/:slug/': {'view': 'page'}
