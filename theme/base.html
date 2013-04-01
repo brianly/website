@@ -16,8 +16,7 @@
   <link rel="stylesheet" href="{{ env.path + '/stylesheets/foundation.min.css' }}">
   <link rel="stylesheet" href="{{ env.path + '/stylesheets/social_foundicons.css' }}">
   <link rel="stylesheet" href="{{ env.path + '/stylesheets/app.css' }}">
-
-  <script src="{{ env.path + '/javascripts/foundation.min.js' }}"></script>
+  <link rel="stylesheet" href="{{ env.path + '/stylesheets/brianlyttle.css' }}">
 
   <!-- IE Fix for HTML5 Tags -->
   <!--[if lt IE 9]>
@@ -26,7 +25,6 @@
 
   <script type="text/javascript" src="//use.typekit.net/dsg0qbk.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
 
   {%- if entry is defined %}
     <meta name="description" content="{{ entry.description | e }}" />
@@ -44,7 +42,7 @@
 
   {%- endblock %}
 </head>
-<body id="page" class="off-canvas">
+<body id="page" class="antialiased">
   <!-- Nav Bar -->
   <header id="header" class="row">
     <div class="ten columns phone-two" id="logo">
@@ -103,8 +101,6 @@
   </header>
   <!-- End Nav -->
 
-
-
   <!-- Main Page Content and Sidebar -->
   <div class="row">
     <!-- Main Blog Content -->
@@ -125,19 +121,6 @@
     </aside>
     <!-- End Sidebar -->
   </div>
-
-
-    <nav id="bottomMenu" role="navigation" class="show-for-small">
-      <ul id="bottomNav" class="nav-bar">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Photos</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-
-
-
 
   <!-- Footer -->
   <footer class="row">
@@ -160,5 +143,17 @@
   </div>
   </footer>
   <!-- End Footer -->
+  <!-- Check for Zepto support, load jQuery if necessary -->
+  <script>
+  document.write('<script src=/javascripts/vendor/'
+    + ('__proto__' in {} ? 'zepto' : 'jquery')
+    + '.js><\/script>');
+</script>
+  <script src="{{ env.path + '/javascripts/foundation/foundation.js' }}"></script>
+
+  <script src="{{ env.path + '/javascripts/foundation/foundation.clearing.js' }}"></script>
+<script>
+  $(document).foundation();
+</script>
 </body>
 </html>
