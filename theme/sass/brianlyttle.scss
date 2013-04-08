@@ -11,16 +11,6 @@
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
-@font-face {
-  font-family: '[set]Foundicons';
-  src: url('fonts/[set]_foundicons.eot');
-  src: url('fonts/[set]_foundicons.eot?#iefix') format('embedded-opentype'),
-       url('fonts/[set]_foundicons.woff') format('woff'),
-       url('fonts/[set]_foundicons.ttf') format('truetype'),
-       url('fonts/[set]_foundicons.svg#[set]Foundicons') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
 
 a:hover {
     color: #B83B3F;
@@ -49,6 +39,11 @@ pre {
     padding: 5px;
     font-size: 80%;
     font-family: Consolas, "Liberation Mono", Courier, monospace;
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
 .img-left {
@@ -106,40 +101,48 @@ pre {
    Logo Area
 ----------------------------------------- */
 #logo {
-    margin: 15px 0 5px 0;
+ /*    height: 100px;
+*/overflow:hidden;
+margin-bottom:6px;
 }
 
-#logo-left {
-    float: left;
-
+#logo .outer {
+    font-size: 22px;
+    width:100%;
+    margin-bottom:5px;
 }
 
-#logo-right {
-    float: left;
-    margin-left:8px;
-}
-#logo-left img {
-    border-radius: 2px;
-}
-
-#logo-right a {
-    font-family: "ff-meta-web-pro","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
-    font-weight: bolder;
-    font-size: 28px;
+#logo .inner {
+    width: 70px;
     float:left;
-    font-color: black;
-    margin-top:-8px;
-}
-#logo-right a:active {
-    font-color: black;
+
 }
 
-#logo-right h2 {
+#logo .inner img {
+    border-radius: 2px;
+    margin: 10px 10px 0px 15px;
+}
+
+#logo .bits {
+  margin-left: 82px;
+  padding-top: 16px;
+}
+
+#logo .outer p {
     font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
-    margin-top:15px;
     font-size: 16px;
-    clear:both;
     font-weight:normal;
+}
+
+#logo .outer a {
+    font-family: "stratum-2-web", "klavika-web-condensed","ff-meta-web-pro","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+    font-weight: bolder;
+    font-size: 54px;
+    letter-spacing:-3px;
+}
+
+#logo .outer a:hover {
+    color: #08425C;;
 }
 
 /* -----------------------------------------
@@ -154,8 +157,36 @@ pre {
     list-style-type: none;
 }
 
-#sidebar h5, article h3 a {
-    font-family: "ff-meta-web-pro",sans-serif;
+#sidebar h5, article h1 {
+    font-family: "stratum-2-web","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+}
+
+article h1 {
+  font-size: 26px;
+}
+
+article h2 {
+  font-size: 20px;
+}
+
+article h3 {
+  font-size: 17px;
+}
+
+article h4 {
+  font-size: 17px;
+}
+
+article h5 {
+  font-size: 14px;
+}
+
+article h6 {
+  font-size: 12px;
+}
+
+#sidebar h5 {
+  font-size: 20px;
 }
 
 .twitter-meta  {
@@ -173,17 +204,18 @@ pre {
     padding-bottom: 0px;
 }
 
+.panel {
+/*border-bottom:2px solid #08425C;*/
+border-top:4px solid #B83B3F;
+}
+
+.panel .links {
+  border-top:thick solid #08425C;
+}
+
 /* -----------------------------------------
    The shits inline
 ----------------------------------------- */
-pre {
-    white-space: pre-wrap;       /* css-3 */
-    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-    white-space: -pre-wrap;      /* Opera 4-6 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
-    word-wrap: break-word;       /* Internet Explorer 5.5+ */
-}
-
 article blockquote {
     margin: 0 0 1px;
     padding: 9px 18px 0 17px;
@@ -191,10 +223,86 @@ article blockquote {
 }
 
 article h6 {
-    margin-top: 5px;
+    margin-top: -5px;
 }
 
 article h6 {
     margin-bottom: 10px;
 }
 
+aside img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul, ol, dl {
+  list-style-position: inside;
+}
+
+ul {
+  list-style-type:square;
+}
+
+/* -----------------------------------------
+   SlidesJS
+----------------------------------------- */
+
+#slides {
+  display: none
+}
+
+#slides .slidesjs-navigation {
+  margin-top:3px;
+}
+
+#slides .slidesjs-previous {
+  margin-right: 5px;
+  float: left;
+}
+
+#slides .slidesjs-next {
+  margin-right: 5px;
+  float: left;
+}
+
+.slidesjs-pagination {
+  margin: 6px 0 0;
+  float: right;
+  list-style: none;
+}
+
+.slidesjs-pagination li {
+  float: left;
+  margin: 0 1px;
+}
+
+.slidesjs-pagination li a {
+  display: block;
+  width: 13px;
+  height: 0;
+  padding-top: 13px;
+  background-image: url(/images/pagination.png);
+  background-position: 0 0;
+  float: left;
+  overflow: hidden;
+}
+
+.slidesjs-pagination li a.active,
+.slidesjs-pagination li a:hover.active {
+  background-position: 0 -13px
+}
+
+.slidesjs-pagination li a:hover {
+  background-position: 0 -26px
+}
+
+#slides a:link,
+#slides a:visited {
+  color: #333
+}
+
+#slides a:hover,
+#slides a:active {
+  color: #9e2020
+}
