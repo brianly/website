@@ -23,72 +23,21 @@
     {% endfor %}
 
     {% if env.prev is not none %}
-        <a href="{{ env.path ~ env.prev ~ '/' }}" class="page floatleft blog-nav">
+        <a href="{{ env.path ~ env.prev ~ '' }}" class="page floatleft blog-nav">
         &laquo; Older Posts
         </a>
     {% endif %}
     {% if env.next is not none %}
-        <a href="{{ env.path ~ env.next ~ '/' }}" class="page floatright blog-nav">
+        <a href="{{ env.path ~ env.next ~ '' }}" class="page floatright blog-nav">
         Newer Posts &raquo;
         </a>
     {%- endif  %}
 {% endblock %}
 
-{%- macro render_recent_post(entry) -%}
-  <li><a href="{{ env.path + entry.permalink }}">{{ entry.title }}</a></li>
-{%- endmacro -%}
-
 {% block sidebar %}
-  <div class="panel recent-posts">
-    <h5>Recent Posts</h5>
-    <ul>
-      {%- for entry in env.globals.entrylist[0:7] %}
-          {{ render_recent_post(entry) | indent(8)}}
-      {% endfor -%}
-    </ul>
-  </div>
-
-  <div class="panel twitter">
-    <h5>On Twitter</h5>
-    <ul>
-      <li><div>TIL Apache Cocoon still exists. See for yourself at http://t.co/epKXgv5Y.</div>
-      <div class="twitter-meta">Posted <a href="#">about 3 days ago</a></div></li>
-
-      <li><div>Persisting the contents of the clipboard over restarts is a nice touch #ios</div>
-      <div class="twitter-meta">Posted <a href="#">about 5 days ago</a></div></li>
-
-      <li><div>@kennethreitz the Marmara Guesthouse is a fabulous place to stay in an excellent location. Next time we’ll also go to Cappadocia.</div>
-      <div class="twitter-meta">Posted <a href="#">about 14 days ago</a></div></li>
-    </ul>
-  </div>
-
-  <div class="panel archive-posts">
-  <h5>Archives</h5>
-  <ul>
-    {% for year in env.globals.entrylist | archivesfor %}
-        {% for month in year %}
-        <li>
-            <a href="{{ env.path ~ '/' ~ year ~ '/' ~ month ~ '/'  }}">{{ month.full }} {{ year }}</a>
-            ({{  month | count }})
-        </li>
-        {% endfor %}
-    {% endfor %}
-  </ul>
-  </div>
-
-  <div class="panel links">
-    <h5>Links</h5>
-    <ul>
-      <li><a href="http://www.graphitedigital.com/">Graphite Digital</a></li>
-      <li><a href="http://www.mediatonic.co.uk/">Mediatonic</a></li>
-      <li><a href="http://www.devlogged.com/">Dev Logged</a></li>
-      <li><a href="http://www.sensacom.com/">Sensacom</a></li>
-      <li><a href="http://www.itadmintools.com/">IT Admin Tools</a></li>
-      <li><a href="http://www.tedwise.com/">Ted Wise</a></li>
-      <li><a href="http://www.mukalian.com/blog/">Mike Mukalian</a></li>
-      <li><a href="http://www.sensagroup.com/">SensaGroup</a></li>
-    </ul>
-  </div>
+  {% include "fragments/recent-posts.html" ignore missing %}
+  {% include "fragments/month-archives.html" ignore missing %}
+  {% include "fragments/links.html" ignore missing %}
 {% endblock %}
 
 {% block footer %}

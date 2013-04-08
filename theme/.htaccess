@@ -1,0 +1,62 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^(www\.)?brianlyttle\.net
+RewriteRule (.*) http://www.brianlyttle.com/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(www\.)?brianlyttle\.org
+RewriteRule (.*) http://www.brianlyttle.com/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^brianlyttle\.com
+RewriteRule (.*) http://www.brianlyttle.com/$1 [R=301,L]
+
+#RewriteCond %{HTTP_HOST} ^(www\.)?brian\.ly
+#RewriteRule (.*) http://www.brianlyttle.com/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(www\.)?ot\.io
+RewriteRule (.*) http://www.brianlyttle.com/$1 [R=301,L]
+
+# Redirect old wordpress URLs
+Redirect 301 //2006/03/experiences-with-atalasoft-dotimage/ /2006/03/experiences-with-atalasoft-dotimage-controls/
+Redirect 301 //2006/03/support-ntlm-proxies/ /2006/03/support-proxy-servers-in-your-applications/
+Redirect 301 //2006/06/datagrid-in-wpf/ /2006/06/are-data-grid-controls-good-for-end-users/
+Redirect 301 //2006/06/prefer-parameterized-sql/ /2006/06/don-t-forget-about-parameterized-sql/
+Redirect 301 //2006/06/protect-your-windows-network/ /2006/06/review-of-protect-your-windows-network-from-perimeter-to-data/
+Redirect 301 //2006/06/waiting-for-dhh/ /2006/06/waiting-for-dhh-and-o-reilly-hosting-the-next-railsconf/
+Redirect 301 //2009/01/powershell-and-svnadmin/ /2009/01/powershell-and-svnadmin-dump-load/
+Redirect 301 //2009/03/fast-computers/ /2009/03/get-fast-computers-for-your-developers/
+Redirect 301 //2009/05/dropbox-review/ /2009/05/keeping-files-in-sync-with-dropbox/
+Redirect 301 //2010/03/monitor-screen-info-example/ /2010/03/multiple-monitor-screen-information-example/
+Redirect 301 //2011/03/installing-python-imaging-on-64bit-windows/ /2011/03/installing-python-imaging-on-windows-64-bit-amd64-python/
+Redirect 301 //2011/04/appengine-with-python-talk/ /2011/04/introduction-to-google-app-engine-with-python/
+Redirect 301 //2011/04/custom-asp-net-mvc-actionresult/ /2011/04/custom-asp-net-mvc-actionresult-classes/
+Redirect 301 //2011/04/delet-by-id-fluent-nh/ /2011/04/deleting-by-id-or-primary-key-with-fluent-nhibernate/
+Redirect 301 //2012/02/redsnakephilly/ /2012/02/redsnakephilly-2012/
+
+Redirect 301 //2006/03/experiences-with-atalasoft-dotimage /2006/03/experiences-with-atalasoft-dotimage-controls/
+Redirect 301 //2006/03/support-ntlm-proxies /2006/03/support-proxy-servers-in-your-applications/
+Redirect 301 //2006/06/datagrid-in-wpf /2006/06/are-data-grid-controls-good-for-end-users/
+Redirect 301 //2006/06/prefer-parameterized-sql /2006/06/don-t-forget-about-parameterized-sql/
+Redirect 301 //2006/06/protect-your-windows-network /2006/06/review-of-protect-your-windows-network-from-perimeter-to-data/
+Redirect 301 //2006/06/waiting-for-dhh /2006/06/waiting-for-dhh-and-o-reilly-hosting-the-next-railsconf/
+Redirect 301 //2009/01/powershell-and-svnadmin /2009/01/powershell-and-svnadmin-dump-load/
+Redirect 301 //2009/03/fast-computers /2009/03/get-fast-computers-for-your-developers/
+Redirect 301 //2009/05/dropbox-review /2009/05/keeping-files-in-sync-with-dropbox/
+Redirect 301 //2010/03/monitor-screen-info-example /2010/03/multiple-monitor-screen-information-example/
+Redirect 301 //2011/03/installing-python-imaging-on-64bit-windows /2011/03/installing-python-imaging-on-windows-64-bit-amd64-python/
+Redirect 301 //2011/04/appengine-with-python-talk /2011/04/introduction-to-google-app-engine-with-python/
+Redirect 301 //2011/04/custom-asp-net-mvc-actionresult /2011/04/custom-asp-net-mvc-actionresult-classes/
+Redirect 301 //2011/04/delet-by-id-fluent-nh /2011/04/deleting-by-id-or-primary-key-with-fluent-nhibernate/
+Redirect 301 //2012/02/redsnakephilly /2012/02/redsnakephilly-2012/
+
+# Redirect weird 404s
+Redirect 301 //admin.php /
+Redirect 301 //wp-login.php /
+Redirect 301 //wp-admin.php /
+Redirect 301 ^/wp-content/ /
+
+</IfModule>
+
+ErrorDocument 404 /404/
+ErrorDocument 500 /500/

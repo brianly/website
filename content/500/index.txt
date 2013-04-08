@@ -1,0 +1,8 @@
+---
+title: 500
+type: page
+date: 2014-04-07 14:02
+---
+It looks like the wheels have come off. Wait a bit, and try again.
+
+<img src="/images/500a.gif" />

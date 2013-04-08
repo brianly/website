@@ -12,8 +12,9 @@ FILTERS = ['markdown+codehilite(css_class=highlight)',
 VIEWS = {
     # Home
     '/': {'view': 'index',
-          'pagination': '/page/:num',
-          'items_per_page': 5},
+          'pagination': '/page/:num/',
+          'items_per_page': 5,
+          'template': 'main.html'},
 
     # Individual posts
     '/:year/:month/:slug/': {'view': 'entry',
@@ -67,3 +68,10 @@ THEME = 'theme'
 ENGINE = 'acrylamid.templates.jinja2.Environment'
 DATE_FORMAT = '%Y-%m-%d %H:%M'
 SUMMARIZE_LINK = '<span>&#8230; <a href="%s" class="continue">Continue reading</a></span>'
+
+DEPLOYMENT = {
+    "ls": "ls $OUTPUT_DIR",
+    "echo": "echo '$OUTPUT_DIR'",
+    "production": "rsync -av --delete $OUTPUT_DIR brianly@brianlyttle.com:~/sites/blweb/www",
+    "default": "rsync -av --delete $OUTPUT_DIR brianly@brianlyttle.com:~/sites/beta/www"
+}
