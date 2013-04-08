@@ -26,6 +26,6 @@ tags: [conferences, pycon, pycon2010]
 <p>Second, make sure to pack up your laptop and other things in your bag before    exiting. It's kind of annoying to get clobbered with a laptop as someone exits    past you. The same thing goes for anyone sitting in the row. Don't make    unnecessary obstacles for anyone that gets out. Move your power cord and move    closer to power strips rather than pulling them out of place.</p>
 <h3>Find a group for    dinner in Atlanta</h3>
 <p>Watch the <a href="https://convore.com/pycon-2011/">Convore</a> and <a href="http://twitter.com/#search?q=%23pycon">Twitter</a> for information    on groups who are going out for the evening in Atlanta. In many cases an open    space session will continue over dinner!</p>
-<h3>Don't have too good    a time at night</h3>
-<p>It is way too easy to have a good time on Friday and Saturday nights, but    don't stay out too late or get too hammered. This seems like a bit silly but you    need quite a bit of energy to make it all the way through a conference like PyCon.</p>
-<p>I'm sure there are many things that I've missed here. Please post other tips    on Twitter under the <a href="http://twitter.com/#search?q=%23pycon">#pycon</a> hash tag, on your blog, or post a comment below    for others to read.</p>
+<h3>Don't have too good a time at night</h3>
+<p>It is way too easy to have a good time on Friday and Saturday nights, but don't stay out too late or get too hammered. This seems like a bit silly but you need quite a bit of energy to make it all the way through a conference like PyCon.</p>
+<p>I'm sure there are many things that I've missed here. Please post other tips on Twitter under the <a href="http://twitter.com/#search?q=%23pycon">#pycon</a> hash tag, on your blog, or post a comment below for others to read.</p>

@@ -5,6 +5,8 @@ tags: [appengine, codecamp, google, googleappengine, talk]
 ---
 Thanks to everyone who attended my talk. I hope it was useful! If you haven't done so already please <a href="http://codecamp.phillydotnet.org/2011-1/Lists/Evaluation/Item/newifs.aspx?source=/2011-1/sitepages/thankyou.aspx">complete an evaluation form</a>.
 
-I've uploaded the presentation to <a href="http://www.slideshare.net/blytt/introduction-to-google-app-engine-with-python">SlideShare</a> and you can <a href="GoogleAppEngineIntroPythonCodeCamp2011.pdf">download a PDF</a> from my site too. The <a href="http://hg.killaloo.org/bookmarkz/src">code sample</a> I used during the presentation is available on BitBucket, and I'm going to be making various improvements to it over the coming weeks.
+<script async class="speakerdeck-embed" data-id="5428db80814e013083ca22000a9d03e8" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
-<div style="width:425px" id="__ss_7581355"> <strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/blytt/introduction-to-google-app-engine-with-python" title="Introduction to Google App Engine with Python">Introduction to Google App Engine with Python</a></strong> <iframe src="http://www.slideshare.net/slideshow/embed_code/7581355" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> <div style="padding:5px 0 12px"> View more <a href="http://www.slideshare.net/">presentations</a> from <a href="http://www.slideshare.net/blytt">blytt</a> </div> </div>
+I've uploaded the presentation to <a href="https://speakerdeck.com/brianly/google-app-engine-programming">Speaker Deck</a> and you can <a href="/downloads/GoogleAppEngineIntroPythonCodeCamp2011.pdf">download a PDF</a> from my site too. The <a href="http://hg.killaloo.org/bookmarkz/src">code sample</a> I used during the presentation is available on BitBucket, and I'm going to be making various improvements to it over the coming weeks.
+
+

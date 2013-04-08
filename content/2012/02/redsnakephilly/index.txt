@@ -3,20 +3,18 @@ title: "RedSnakePhilly 2012"
 date: 2012-02-25 15:27
 tags: [philadelphia, photography, python]
 ---
-I was asked to take <a href="http://www.flickr.com/photos/brianly/sets/72157629426130039/">a few photos</a> for this <a href="http://redsnakephilly.org/about/">event</a> by fellow pythonista <a href="https://twitter.com/#!/tpanzarella">Tom Panzarella</a>. I think they turned out OK for the most part - although the EF 70-200 L saved my arse in the end. It was difficult shooting with the lighting setup at the venue, but I'll be back there to get some more practice.
+I was asked to take <a href="http://www.flickr.com/photos/brianly/sets/72157629426130039/">a few photos</a> for this <a href="http://redsnakephilly.org/about/">event</a> by fellow pythonista <a href="https://twitter.com/#!/tpanzarella">Tom Panzarella</a>.
+<div id="slides">
+  <img src="http://farm8.staticflickr.com/7195/6919638651_a2739e9416_z.jpg" alt="" />
+  <img src="http://farm8.staticflickr.com/7070/6773517118_73536b5d98.jpg" alt="" />
+  <img src="http://farm8.staticflickr.com/7055/6919633107_a7e5490d65_z.jpg" alt="" />
+  <img src="http://farm8.staticflickr.com/7193/6773522086_11be626a55.jpg" alt="" />
+  <img src="http://farm8.staticflickr.com/7181/6773521364_b10bb6fae4_z.jpg" alt="" />
+  <img src="http://farm8.staticflickr.com/7196/6919637765_5e9ee91319.jpg" alt="" />
+  <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="general foundicon-left-arrow"></i></a>
+  <a href="#" class="slidesjs-next slidesjs-navigation"><i class="general foundicon-right-arrow"></i></a>
+</div>
 
-
-
-
-
-<ul class="clearing-thumbs" data-clearing="">
-  <li><a class="th" href="http://farm8.staticflickr.com/7070/6773517118_73536b5d98.jpg"><img data-caption="Beer Talk" src="http://foundation.zurb.com/docs/img/demos/demo1-th.jpg"></a></li>
-  <li><a class="th" href="http://farm8.staticflickr.com/7196/6919637765_5e9ee91319.jpg"><img data-caption="Hunter Blanks" src="http://foundation.zurb.com/docs/img/demos/demo2-th.jpg"></a></li>
-  <li><a class="th" href="http://farm8.staticflickr.com/7189/6773518210_c0038e5af9.jpg"><img data-caption="Redsnake Attendees" src="http://foundation.zurb.com/docs/img/demos/demo3-th.jpg"></a></li>
-  <li><a class="th" href="http://farm8.staticflickr.com/7181/6773521364_b10bb6fae4.jpg"><img data-caption="Dustin Getz" src="http://foundation.zurb.com/docs/img/demos/demo4-th.jpg"></a></li>
-  <li><a class="th" href="http://farm8.staticflickr.com/7053/6773520580_4d298315db.jpg"><img data-caption="Kyle Gorman" src="http://foundation.zurb.com/docs/img/demos/demo5-th.jpg"></a></li>
-  <li><a class="th" href="http://farm8.staticflickr.com/7062/6919634927_acdd8100da.jpg"><img data-caption="John Granieri" src="http://foundation.zurb.com/docs/img/demos/demo5-th.jpg"></a></li>
-  <li><a class="th" href="http://farm8.staticflickr.com/7202/6919635183_443c158d19.jpg"><img data-caption="Monetate" src="http://foundation.zurb.com/docs/img/demos/demo5-th.jpg"></a></li>
-</ul>
+I think they turned out OK for the most part - although the EF 70-200 L saved my arse in the end. It was difficult shooting with the lighting setup at the venue, but I'll be back there to get some more practice.
 
 All of the photos are <a href="http://www.flickr.com/photos/brianly/sets/72157629426130039/">over on Flickr</a> and they were even <a href="http://technicallyphilly.com/2012/02/24/10-presenters-bring-ruby-and-python-knowledge-to-second-annual-redsnake-philly-meetup-video">linked to</a> by Technically Philly!

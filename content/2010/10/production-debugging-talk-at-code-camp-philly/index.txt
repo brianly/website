@@ -4,19 +4,19 @@ date: 2010-10-10 18:08
 tags: [asp-net, codecamp, debugging, fiddler, http, philadelphia, presentation, sharepoint, talk]
 ---
 <p>Thanks to everyone who attended my talk on Production Debugging. You can now download <a href="/downloads/presentations/PhillyCodeCampProductionDebugging.pdf">my slides</a> and <a href="/downloads/examples/CodeCampProductionDebugging2010.zip">code samples</a> from the talk. I have listed some questions and answers from the talk at the bottom.</p>
-<div style="width:425px" id="__ss_5406451"><strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/blytt/cc-prod-dbg-final" title="Production Debugging at Code Camp Philly">Production Debugging at Code Camp Philly</a></strong><object id="__sse5406451" width="425" height="355"><param name="movie" value="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=ccproddbg-final-101010123525-phpapp01&stripped_title=cc-prod-dbg-final&userName=blytt" /><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/><embed name="__sse5406451" src="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=ccproddbg-final-101010123525-phpapp01&stripped_title=cc-prod-dbg-final&userName=blytt" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="355"></embed></object><div style="padding:5px 0 12px">View more <a href="http://www.slideshare.net/">presentations</a> from <a href="http://www.slideshare.net/blytt">blytt</a>.</div></div>
+<script async class="speakerdeck-embed" data-id="dfe047d0814b013083cb22000a9d03e8" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
-<h5>Where can I get Reflector?</h5>
+<h3>Where can I get Reflector?</h3>
 
 <p>It is a <a href="http://www.red-gate.com/products/reflector/">free download</a> on Red Gate's site. You don't have to buy the Visual Studio integration. When it starts up you are asked for the version of .NET to use. I always select the latest version as .NET backwards compatibility is good. Of course this can be changed later.</p>
 
-<h5>How do you stop someone from decompiling your code with Reflector?</h5>
+<h3>How do you stop someone from decompiling your code with Reflector?</h3>
 
 <p>The truth is that you cannot stop a determined hacker from getting at your code. Your best option is to make it harder by using an obfuscation tool such as <a href="http://www.preemptive.com/products/dotfuscator">PreEmptive Dotfuscator</a>, <a href="http://www.red-gate.com/products/smartassembly/">Red Gate SmartAssembly</a>, <a href="http://www.remotesoft.com/salamander/obfuscator.html">Remotesoft Salamander</a>, <a href="http://xheo.com/products/code-protection">Xheo Code Protection</a>, or one of the many other .NET obfuscators.</p>
 
 <p>You should be aware that obfuscators can make your life more difficult. One way they make code harder to read in Reflector is through method renaming. This can result in the stack traces from the obfuscated code being out of sync with your code.</p>
 
-<h5>Can I use ELMAH with Windows apps?</h5>
+<h3>Can I use ELMAH with Windows apps?</h3>
 
 <p>Not easily. <a href="http://code.google.com/p/elmah/">ELMAH</a> relies on various features of ASP.NET to do a lot of it's work. Some people have make their own modifications, but it not something that a beginning developer might want to attempt.</p>
 
