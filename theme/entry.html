@@ -1,26 +1,12 @@
 <article>
+    <h1><a href="{{ env.path + entry.permalink }}">{{ entry.title }}</a></h1>
+    <h6>{{ entry.date.strftime("%B")}}&nbsp;{{ entry.date.day }}, {{entry.date.year}}</h6>
+    <div class="row">
+      <div class="twelve columns">
 
-<h3><a href="{{ env.path + entry.permalink }}">{{ entry.title }}</a></h3>
-<h6>{{ entry.date.strftime("%B")}}&nbsp;{{ entry.date.day }}, {{entry.date.year}}</h6>
+        {{ entry.content }}
 
-<div class="row">
-  <div class="twelve columns">
-
-    {{ entry.content }}
-
-    {% if 'tag' in env.views and entry.tags %}
-        <p>Tagged with
-            {% for link in entry.tags | tagify -%}
-                <a href="{{ env.path + link.href }}">{{ link.title }}</a>
-                {%- if loop.revindex > 2 -%}
-                ,
-                {%- elif loop.revindex == 2 %}
-                and
-                {% endif %}
-            {% endfor %}
-        </p>
-    {% endif %}
-  </div>
-</div>
-
+        {% include "fragments/tagged-with.html" ignore missing %}
+      </div>
+    </div>
 </article>

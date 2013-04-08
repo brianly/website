@@ -1,0 +1,8 @@
+---
+title: 404
+type: page
+date: 2014-04-07 14:02
+---
+Whatever you were hoping to find here is gone. Better luck next time.
+
+<img src="/images/404a.gif" />

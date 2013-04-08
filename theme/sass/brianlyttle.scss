@@ -1,0 +1,308 @@
+/* --------------------------------------------------
+   Colours
+-----------------------------------------------------
+#B83B3F red
+#D66145 orange
+#D6BE6B dust
+#067A73 green
+#08425C blue ->0A506E  ---------- 08445E 0A506E / 094763
+*/
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+a:hover {
+    color: #B83B3F;
+}
+
+a {
+    color: #08425C;
+}
+
+.floatright {
+    float: right;
+}
+
+.floatleft {
+    float: left;
+}
+
+.blog-nav {
+    border: solid 1px #e6e6e6;
+    padding: 10px;
+}
+
+pre {
+    margin-bottom: 15px;
+    border: solid 1px #e6e6e6;
+    padding: 5px;
+    font-size: 80%;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.img-left {
+    float: left;
+    margin: 0 5px 10px 0;
+}
+
+.img-right {
+    float: right;
+    margin: 0 5px 0 10px;
+}
+
+.img-left, .img-right {
+    box-sizing: border-box;
+    padding: 3px;
+    border: 1px solid #e6e6e6;
+}
+
+/* -----------------------------------------
+   Top Bar
+----------------------------------------- */
+
+.top-bar {
+    background: #08425C;
+    margin: 0px 0 10px 0;
+}
+
+.top-bar ul > li:not(.name):hover a, .top-bar ul > li:not(.name).active a {
+    color: white;
+}
+
+.top-bar ul > li.active, .top-bar ul > li:hover {
+    background: #0A506E;
+
+}
+
+.top-bar ul > li:not(.name):hover, .top-bar ul > li:not(.name).active {
+    background: #0A506E;
+}
+
+.top-bar ul > li.has-dropdown .dropdown {
+    background: #08425C;
+}
+.top-bar ul > li.has-dropdown .dropdown li {
+    background: #08425C;
+}
+.top-bar ul > li.has-dropdown .dropdown li a:hover {
+    background: #0A506E;
+}
+.top-bar ul > li.has-dropdown .dropdown li label {
+    color: #CBDDEF;
+}
+
+/* -----------------------------------------
+   Logo Area
+----------------------------------------- */
+#logo {
+ /*    height: 100px;
+*/overflow:hidden;
+margin-bottom:6px;
+}
+
+#logo .outer {
+    font-size: 22px;
+    width:100%;
+    margin-bottom:5px;
+}
+
+#logo .inner {
+    width: 70px;
+    float:left;
+
+}
+
+#logo .inner img {
+    border-radius: 2px;
+    margin: 10px 10px 0px 15px;
+}
+
+#logo .bits {
+  margin-left: 82px;
+  padding-top: 16px;
+}
+
+#logo .outer p {
+    font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight:normal;
+}
+
+#logo .outer a {
+    font-family: "stratum-2-web", "klavika-web-condensed","ff-meta-web-pro","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+    font-weight: bolder;
+    font-size: 54px;
+    letter-spacing:-3px;
+}
+
+#logo .outer a:hover {
+    color: #08425C;;
+}
+
+/* -----------------------------------------
+   Sidebar Styles
+----------------------------------------- */
+
+#sidebar {
+    padding-top: 12px;
+}
+
+#sidebar ul {
+    list-style-type: none;
+}
+
+#sidebar h5, article h1 {
+    font-family: "stratum-2-web","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+}
+
+article h1 {
+  font-size: 26px;
+}
+
+article h2 {
+  font-size: 20px;
+}
+
+article h3 {
+  font-size: 17px;
+}
+
+article h4 {
+  font-size: 17px;
+}
+
+article h5 {
+  font-size: 14px;
+}
+
+article h6 {
+  font-size: 12px;
+}
+
+#sidebar h5 {
+  font-size: 20px;
+}
+
+.twitter-meta  {
+    padding: 3px 0px 10px 0px;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.archive-posts li, .links li, .recent-posts li  {
+    padding: 0px 0px 5px 0px;
+}
+
+.twitter li:last-child, .recent-posts li:last-child,
+.links li:last-child, .archive-posts li:last-child {
+    padding-bottom: 0px;
+}
+
+.panel {
+/*border-bottom:2px solid #08425C;*/
+border-top:4px solid #B83B3F;
+}
+
+.panel .links {
+  border-top:thick solid #08425C;
+}
+
+/* -----------------------------------------
+   The shits inline
+----------------------------------------- */
+article blockquote {
+    margin: 0 0 1px;
+    padding: 9px 18px 0 17px;
+    border-left: 3px solid #ddd;
+}
+
+article h6 {
+    margin-top: -5px;
+}
+
+article h6 {
+    margin-bottom: 10px;
+}
+
+aside img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul, ol, dl {
+  list-style-position: inside;
+}
+
+ul {
+  list-style-type:square;
+}
+
+/* -----------------------------------------
+   SlidesJS
+----------------------------------------- */
+
+#slides {
+  display: none
+}
+
+#slides .slidesjs-navigation {
+  margin-top:3px;
+}
+
+#slides .slidesjs-previous {
+  margin-right: 5px;
+  float: left;
+}
+
+#slides .slidesjs-next {
+  margin-right: 5px;
+  float: left;
+}
+
+.slidesjs-pagination {
+  margin: 6px 0 0;
+  float: right;
+  list-style: none;
+}
+
+.slidesjs-pagination li {
+  float: left;
+  margin: 0 1px;
+}
+
+.slidesjs-pagination li a {
+  display: block;
+  width: 13px;
+  height: 0;
+  padding-top: 13px;
+  background-image: url(/images/pagination.png);
+  background-position: 0 0;
+  float: left;
+  overflow: hidden;
+}
+
+.slidesjs-pagination li a.active,
+.slidesjs-pagination li a:hover.active {
+  background-position: 0 -13px
+}
+
+.slidesjs-pagination li a:hover {
+  background-position: 0 -26px
+}
+
+#slides a:link,
+#slides a:visited {
+  color: #333
+}
+
+#slides a:hover,
+#slides a:active {
+  color: #9e2020
+}

@@ -5,4 +5,4 @@ date: 2012-06-14 14:02
 tags: [Brian Lyttle, Lyttle, Brian]
 ---
 
-You can email me at website@brianlyttle.com.
+You can reach me via <a href="http://twitter.com/brianly">Twitter</a> (@brianly).
