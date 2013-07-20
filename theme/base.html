@@ -9,14 +9,8 @@
     <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
   <title>{% block title %}{% endblock %}</title>
-
-  <!-- Included CSS Files (Compressed) -->
-  <link rel="stylesheet" href="{{ env.path + '/stylesheets/foundation.min.css' }}">
-  <!--<link rel="stylesheet" href="{{ env.path + '/stylesheets/app.css' }}"> -->
-  <link rel="stylesheet" href="{{ env.path + '/stylesheets/general_enclosed_foundicons.css' }}">
-  <link rel="stylesheet" href="{{ env.path + '/stylesheets/social_foundicons.css' }}">
-  <link rel="stylesheet" href="{{ env.path + '/stylesheets/brianlyttle.css' }}">
-
+  <link rel="stylesheet" href="{{ conf.cdn_root + '/stylesheets/foundation.min.css' }}">
+  <link rel="stylesheet" href="{{ '/stylesheets/brianlyttle.css' + '?4' }}">
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-39924652-1']);
@@ -28,7 +22,6 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
   </script>
-
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -38,36 +31,31 @@
     ga('create', 'UA-39924652-1', 'brianlyttle.com');
     ga('send', 'pageview');
   </script>
-
   <!-- IE Fix for HTML5 Tags -->
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-
   <script type="text/javascript" src="//use.typekit.net/dsg0qbk.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
   {%- if entry is defined %}
-    <meta name="description" content="{{ entry.description | e }}" />
-    <meta name="keywords" content="{{ entry.tags | join(', ') }}, brian, lyttle, brian lyttle" />
-    <meta property="og:title" content="{% block ogtitle %}{% endblock %}" />
-    <meta property="og:type" content="article" />
+  <meta name="description" content="{{ entry.description | e }}" />
+  <meta name="keywords" content="{{ entry.tags | join(', ') }}, brian, lyttle, brian lyttle" />
+  <meta property="og:title" content="{% block ogtitle %}{% endblock %}" />
+  <meta property="og:type" content="article" />
   {%- endif -%}
-
   <meta property="og:site_name" content="{{ conf.sitename }}" />
   <meta property="og:image" content="{{ conf.www_root + '/images/bl2011_bw_225x150.jpg' }}" />
   <meta property="og:url" content="{{ conf.www_root + env.route }}" />
   <link rel="shortcut icon" href="{{ env.path + '/images/favicon.ico' }}">
   <link rel="openid2.provider" href="https://www.google.com/accounts/o8/ud" />
   {%- endblock %}
-
 </head>
 <body id="page" class="antialiased">
   <div class="row">
       <nav id="logo">
           <div class="outer">
             <a href="{{ env.path + '/' }}"><div class="inner">
-              <img src="{{ env.path + '/images/logo05c.png' }}" />
+              <img src="{{ conf.cdn_root + '/images/logo05c.png' }}" />
             </div></a>
             <div class="bits"><a href="{{ env.path + '/' }}">Brian Lyttle</a>
           </div>
@@ -157,8 +145,8 @@
   </div>
   </footer>
   <!-- End Footer -->
-  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-  <script src="/javascripts/vendor/jquery.slides.min.js"></script>
+  <script src="{{ conf.cdn_root + '/javascripts/vendor/jquery-1.9.1.min.js' }}"></script>
+  <script src="{{ conf.cdn_root + '/javascripts/vendor/jquery.slides.min.js' }}"></script>
   <script>
     $(function() {
       $('#slides').slidesjs({

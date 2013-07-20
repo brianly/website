@@ -3,6 +3,7 @@
 
 SITENAME = 'Brian Lyttle'
 WWW_ROOT = 'http://www.brianlyttle.com'
+CDN_ROOT = 'http://cdn.brianlyttle.com'
 
 AUTHOR = 'Brian Lyttle'
 EMAIL = 'blog@brianlyttle.com'

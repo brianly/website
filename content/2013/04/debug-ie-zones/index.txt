@@ -1,0 +1,29 @@
+---
+title: "Debugging problems with IE Security Zones"
+date: 2013-04-23 20:46
+slug: debugging-problems-with-ie-zones
+tags: [internet-explorer, javascript, debugging]
+---
+Internet Explorer has quite a complex security model compared to other browsers. One unique feature is the infamous [Security Zone](http://support.microsoft.com/kb/174360). Zones apply different policies to code based on the URL. By default, you have the following zones: Internet, Local Intranet, Trusted Sites, Restricted Sites, and My Computer.
+
+<img src="/images/ie-zones-dialog.png" alt="IE Zones Dialog screenshot." style="width: 300px;" class="img-right"/>
+
+Each of these zones has a slightly different configuration depending on the intended usage. For example, the Internet zone is designed to handle untrusted code from the internet. The settings are locked down  tightly, and recent versions of IE run this code in a sandbox with [Protected Mode](http://msdn.microsoft.com/en-us/library/bb250462(v=vs.85).aspx).
+
+Compare this to the Intranet zone which has a more relaxed configuration. If a URL is included in this zone it is considered to be trusted to a greater degree than one in the Internet zone. IE will even respond differently to authentication requests for sites in the Intranet zone to support Windows Authentication (see [IWA](http://en.wikipedia.org/wiki/Integrated_Windows_Authentication), [NTLM](http://en.wikipedia.org/wiki/NTLM), [Kerberos](http://en.wikipedia.org/wiki/Kerberos_(protocol)), and [SPEGNO](http://en.wikipedia.org/wiki/SPNEGO).)
+
+Everything is fine and dandy when your application has code that only loads from URLs belonging to a single zone. However, things will start to go pear-shaped when you have code loading from different zones. The exact behaviour will depend on your application, but you'll often see inconsistent behaviour between environments. The explanation for this is often the application of group policy resulting in different connfigurations across machines.
+
+So how do you go about debugging these issues? My approach is to start with the following:
+
+1. **Make sure the problem only happens in IE.** Doing this will save you a lot of pain as debugging with the Chrome developer tools is often a more pleasant experience than using the IE tools.
+2. **Identify all of the domains hosting your code.** Understand what zones contain your host page, and which ones contain other scripts or code that you are pulling in.
+3. **Temporarily move all of the code into a single zone**. If you move all of your code into a single zone for testing you can confirm whether Protected Mode issues are at the heart of your problem. You may need to tweak some IE zone settings to get the features you need, but it's a good start.
+4. **Disable compatibility view**. Sites in the Intranet zone use [this feature](http://windows.microsoft.com/en-us/internet-explorer/use-compatibility-view#ie=ie-10) by default, and it can cause problems. Temporarily turn it completely off for the Intranet Zone so that that things are consistent across zones.
+5. **Use IE Zone Analyzer**. This tool allows you to review the configuration of zones in great detail, and help with bugs that only appear in certain environments. It is [available for free](http://blogs.technet.com/b/fdcc/archive/2011/04/14/iezoneanalyzer-v3.aspx) from Microsoft.
+
+
+<img src="/images/ie-zone-analyzer.png" alt="IE Zone Analyzer screenshot." style="display: block;margin-left: auto;margin-right: auto;" />
+
+At this point you'll be in a better position to debug specific code in IE, but how do you remediate the problem? Well you have to make a change somewhere. It is common for admins to add wildcards like _*.domain.com_ to the Intranet zone. Naturally this will not discriminate between Intranet sites, and cause a lot of problems if you have modern code that doesn't run well under Compatibility View. Try to educate your admins on the appropriate configuration so that your environment will be more secure, and you'll also spend less time debugging!
+
