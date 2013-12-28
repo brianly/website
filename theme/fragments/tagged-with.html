@@ -1,12 +1,7 @@
 {% if 'tag' in env.views and entry.tags %}
     <p>Tagged with
+        {% set loop_max = entry.tags | length %}
         {% for link in entry.tags | tagify -%}
-            <a href="{{ env.path + link.href }}">{{ link.title }}</a>
-            {%- if loop.revindex > 2 -%}
-            ,
-            {%- elif loop.revindex == 2 %}
-            and
-            {% endif %}
-        {% endfor %}
-    </p>
+            {%- if loop.index == loop_max %}<a href="{{ env.path + link.href }}">{{ link.title }}</a>.   {% else %}<a href="{{ env.path + link.href }}">{{ link.title }}</a>{% endif %}{%- if loop.revindex > 2 -%}, {%- elif loop.revindex == 2 %}and{% endif %}
+        {% endfor %}</p>
 {% endif %}
