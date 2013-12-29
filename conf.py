@@ -14,7 +14,7 @@ VIEWS = {
     # Home
     '/': {'view': 'index',
           'pagination': '/page/:num/',
-          'items_per_page': 5,
+          'items_per_page': 4,
           'template': 'main.html'},
 
     # Individual posts
@@ -73,6 +73,6 @@ SUMMARIZE_LINK = '<span>&#8230; <a href="%s" class="continue">Continue reading</
 DEPLOYMENT = {
     "ls": "ls $OUTPUT_DIR",
     "echo": "echo '$OUTPUT_DIR'",
-    "production": "rsync -av --delete $OUTPUT_DIR brianly@brianlyttle.com:~/sites/blweb/www",
-    "default": "rsync -av --delete $OUTPUT_DIR brianly@brianlyttle.com:~/sites/beta/www"
+    "production": "rsync --verbose -av $OUTPUT_DIR brianly@brianlyttle.com:~/sites/blweb/www",
+    "default": "rsync --verbose -av $OUTPUT_DIR brianly@brianlyttle.com:~/sites/beta/www"
 }
