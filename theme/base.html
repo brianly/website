@@ -9,8 +9,8 @@
     <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
   <title>{% block title %}{% endblock %}</title>
-  <link rel="stylesheet" href="{{ conf.cdn_root + '/stylesheets/foundation.min.css' }}">
-  <link rel="stylesheet" href="{{ '/stylesheets/brianlyttle.css' + '?4' }}">
+  <link rel="stylesheet" href="{{ conf.cdn_root + '/stylesheets/foundation.min.css' + '?9' }}">
+  <link rel="stylesheet" href="{{ '/stylesheets/brianlyttle.css' + '?9' }}">
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-39924652-1']);
@@ -57,7 +57,7 @@
             <a href="{{ env.path + '/' }}"><div class="inner">
               <img src="{{ conf.cdn_root + '/images/logo05c.png' }}" />
             </div></a>
-            <div class="bits"><a href="{{ env.path + '/' }}">Brian Lyttle</a>
+            <div class="bits"><a href="{{ env.path + '/' }}">Expat Coder</a>
           </div>
           </div>
       </nav>
@@ -75,6 +75,11 @@
             <li class="has-dropdown">
               <a class="active" href="{{ env.path + '/photography/' }}">Photography</a>
               <ul class="dropdown">
+                <li><label>2013</label></li>
+                <li><a href="http://www.flickr.com/photos/brianly/sets/72157638026683406/">Spain &amp; Morocco</a></li>
+                <li><a href="http://www.flickr.com/photos/brianly/sets/72157633069656111/">PyCon 2013</a></li>
+                <li class="divider"></li>
+                <li class="divider"></li>
                 <li><label>2012</label></li>
                 <li><a href="http://www.flickr.com/photos/brianly/sets/72157631865804889/">Hacktoberfest</a></li>
                 <li><a href="http://www.flickr.com/photos/brianly/sets/72157629897305524/">Machu Picchu</a></li>
