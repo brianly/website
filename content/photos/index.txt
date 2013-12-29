@@ -4,5 +4,29 @@ type: page
 date: 2012-06-14 14:02
 tags: [Brian Lyttle, Lyttle, Brian]
 ---
+My [latest photos](http://www.flickr.com/photos/brianly) are always posted over on [Flickr](http://www.flickr.com/photos/brianly). Here are some recent shots from [Spain &amp; Morocco](http://www.flickr.com/photos/brianly/sets/72157638026683406/):
 
-Coming soon.
+<div id="slides">
+  <img src="http://farm8.staticflickr.com/7325/11044024486_824f58599e_c.jpg" alt="" />
+  <img src="http://farm3.staticflickr.com/2837/11040839736_0da61b921c_z.jpg" alt="" />
+  <img src="http://farm6.staticflickr.com/5524/11043518494_b987e2be10_c.jpg" alt="" />
+  <img src="http://farm4.staticflickr.com/3796/11042749386_d009ab05de_c.jpg" alt="" />
+  <img src="http://farm4.staticflickr.com/3789/11042683013_7fdbbda5b2_c.jpg" alt="" />
+  <img src="http://farm4.staticflickr.com/3691/11041723743_d6bfba67d6_c.jpg" alt="" />
+  <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="general foundicon-left-arrow"></i></a>
+  <a href="#" class="slidesjs-next slidesjs-navigation"><i class="general foundicon-right-arrow"></i></a>
+</div>
+
+##Equipment##
+
+I don't think any photography page is complete without an equipment list. It's always cool to geek out, even though I've come to realise good technique has a much bigger impact on shots.
+
+<ul>
+<li><a href="http://www.amazon.com/Canon-CMOS-Digital-Camera-3-Inch/dp/B002NEGTTW">Canon EOS 7d</a></li>
+<li><a href="http://www.amazon.com/Canon-Standard-Medium-Telephoto-Cameras/dp/B00009XVCZ">Canon EF 50mm f/1.4 USM lens</a></li>
+<li><a href="http://www.amazon.com/Canon-EF-S-10-22mm-3-5-4-5-Digital/dp/B0002Y5WXE">Canon EF-S 10-22mm f/3.5-4.5 USM</a></li>
+<li><a href="http://www.amazon.com/gp/product/B00006I53S/ref=wms_ohs_product?ie=UTF8&psc=1">Canon EF 28-135mm f/3.5-5.6 IS USM</a></li>
+</ul>
+
+When I need fancier glass like the [Canon EF 24-105mm f/4 L IS USM](http://www.amazon.com/Canon-24-105mm-USM-Lens-Cameras/dp/B000AZ57M6) for a trip I rent it from the amazing people at [BorrowLenses.com](http://www.BorrowLenses.com).
+
