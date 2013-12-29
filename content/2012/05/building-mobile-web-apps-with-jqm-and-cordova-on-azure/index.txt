@@ -5,4 +5,4 @@ tags: [azure, cloud, cordova, jquery, mobile, phonegap]
 ---
 Thanks for attending my talk if you were able to make it over to Abington. I had to leave after my presentation so I didn't get a chance to see any of the other presentations, but the consensus appears to be that it was another great event. The <a href="https://speakerdeck.com/brianly/building-mobile-web-apps-with-jqm-and-cordova-on-azure">slides</a> are posted below for anyone that wants to reference them.
 
-<script async class="speakerdeck-embed" data-id="4ff73efe67027100c2019195" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<div style="margin-bottom:10px"><script async class="speakerdeck-embed" data-id="4ff73efe67027100c2019195" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></div>

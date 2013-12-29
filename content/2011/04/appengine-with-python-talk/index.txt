@@ -5,7 +5,7 @@ tags: [appengine, codecamp, google, googleappengine, talk]
 ---
 Thanks to everyone who attended my talk. I hope it was useful! If you haven't done so already please <a href="http://codecamp.phillydotnet.org/2011-1/Lists/Evaluation/Item/newifs.aspx?source=/2011-1/sitepages/thankyou.aspx">complete an evaluation form</a>.
 
-<script async class="speakerdeck-embed" data-id="5428db80814e013083ca22000a9d03e8" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<div style="margin-bottom:10px"><script async class="speakerdeck-embed" data-id="5428db80814e013083ca22000a9d03e8" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></div>
 
 I've uploaded the presentation to <a href="https://speakerdeck.com/brianly/google-app-engine-programming">Speaker Deck</a> and you can <a href="/downloads/GoogleAppEngineIntroPythonCodeCamp2011.pdf">download a PDF</a> from my site too. The <a href="http://hg.killaloo.org/bookmarkz/src">code sample</a> I used during the presentation is available on BitBucket, and I'm going to be making various improvements to it over the coming weeks.
 

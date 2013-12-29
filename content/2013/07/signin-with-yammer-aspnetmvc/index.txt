@@ -1,0 +1,32 @@
+---
+title: Adding "Sign-in with Yammer" to ASP.NET MVC apps
+date: 2013-07-25 20:07
+slug: signin-with-yammer-aspnetmvc
+tags: [yammer, oauth, rest, authentication, security]
+---
+
+One of the biggest pain points with enterprise web applications is user engagement stemming from another logon to remember, and mountain of profile fields to complete. Fortunately there are ways to improve this experience.<img src="/images/sched-do-signin.png" alt="Sign-in with Yammer button." height="204px" width="240px" class="img-right"/>Depending on the situation you might be able to take advantage of Integrated Windows Authentication with access to Active Directory profiles, or have another identity service deployed. In my experience these can have a range of limitations including poor data quality, and a heavyweight programming model.It would be nice to be able to implement something along the lines of [Facebook Login](https://www.facebook.com/about/login/). ASP.NET MVC 4.0 provides [great support](http://msdn.microsoft.com/en-us/magazine/dn198238.aspx) for social authentication providers, but out of the box it doesn’t provide support for any enterprise social networks. These building blocks are, however, an excellent foundation for implementing support for a [Yammer](https://www.yammer.com) provider.Yammer is an [enterprise social network](http://en.wikipedia.org/wiki/Enterprise_social_networking) (ESN) and at the core of the functionality is a user profile for each user within your organization. These profiles are controlled by users, and often have content that is more up-to-date than internal directories. In many cases customers are also using [Directory Sync](http://success.yammer.com/integrations/directory-sync/) to update profile fields.
+I took some time to implement an OAuth 2.0 client which is compatible with Yammer, and I'm sharing the details below. This can be used in ASP.NET MVC sites, but it is something that you could modify to work with other types of .NET applications. There are however [better choices for Windows Phone](https://developer.yammer.com/mobile/) where an SDK is available.##Implementing the client##As ASP.NET MVC builds on functionality from DotNetOpenAuth the focus is on extending** OAuth2Client** as YammerClient. The [complete implementation](https://gist.github.com/brianly/5670410) is available online, but the methods you need to implement are:
+
+<ol>
+  <li><strong>Get­Ser­viceL­ogin­Url()</strong> which is re­spon­si­ble for preparing the URL to redirect the user so that they can authorize your ap­pli­ca­tion.</li>
+  <li><strong>Query­Ac­cessTo­ken()</strong> which executes a callback to Yammer in exchange for an OAuth access token.</li>
+  <li><strong>Ge­tUser­Da­ta()</strong> which is re­spon­si­ble for querying profile data.</li>
+</ol>
+
+Something worth noting is that if you want to be able to make Yammer API calls, or silently check for profile updates, then you may need to modify GetUserData() to persist the token.##Using the client##Using the client in a new [ASP.NET MVC Internet Application project](http://www.asp.net/mvc/tutorials/mvc-4/getting-started-with-aspnet-mvc4/intro-to-aspnet-mvc-4) is straightforward. Before going any further there are some steps you need to take to register an application on the Yammer site. These steps can be completed through the [registered applications](https://www.yammer.com/client_applications) page, and [detailed instructions](http://developer.yammer.com/introduction/) are provided on the developer site.
+It is very important that you set a Redirect URI for your Yammer application. The format will be along the lines of http://localhost:31074/ for your development site in Visual Studio (adjust the port!), but you'll need to change it to something like https://www.myapp.com/authorize for production.Back in Visual Studio you simply need to instantiate an instance of the YammerClient class, and register it in AuthConfig.cs:
+<pre>
+public static void RegisterAuth()
+{
+    const string appId = "<Your Application ID>";
+    const string appSecret = "<Your Application Secret>";
+
+    var client = new YammerClient(appId, appSecret);
+    
+    OAuthWebSecurity.RegisterClient(client, "Yammer", null);
+}</pre>
+
+When your application is launched it'll offer the ability to sign in with Yammer and any other OAuth authentication clients that you have registered. It really is very slick!
+
+A good next step is to modify your controllers and views to take advantage of the profile information beyond basic profile fields. That seems like good fodder for a future blog post. 
