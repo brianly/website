@@ -74,5 +74,5 @@ DEPLOYMENT = {
     "ls": "ls $OUTPUT_DIR",
     "echo": "echo '$OUTPUT_DIR'",
     "production": "rsync --verbose -av $OUTPUT_DIR brianly@brianlyttle.com:~/sites/blweb/www",
-    "default": "rsync --verbose -av $OUTPUT_DIR brianly@brianlyttle.com:~/sites/beta/www"
+    "default": "rsync --delete --verbose -av $OUTPUT_DIR brianly@brianlyttle.com:~/sites/beta/www"
 }
