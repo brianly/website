@@ -1,156 +1,163 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ conf.lang }}"> <!--<![endif]-->
-<head>
-  {% block head -%}
-  <meta charset="utf-8" />
-    <!-- Set the viewport width to device width for mobile -->
-  <meta name="viewport" content="width=device-width" />
-  <title>{% block title %}{% endblock %}</title>
-  <link rel="stylesheet" href="{{ conf.cdn_root + '/stylesheets/foundation.min.css' + '?9' }}">
-  <link rel="stylesheet" href="{{ '/stylesheets/brianlyttle.css' + '?9' }}">
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-39924652-1']);
-    _gaq.push(['_trackPageview']);
 
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-  <!-- IE Fix for HTML5 Tags -->
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-  <script type="text/javascript" src="//use.typekit.net/dsg0qbk.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  {%- if entry is defined %}
-  <meta name="description" content="{{ entry.description | e }}" />
-  <meta name="keywords" content="{{ entry.tags | join(', ') }}, brian, lyttle, brian lyttle" />
-  <meta property="og:title" content="{% block ogtitle %}{% endblock %}" />
-  <meta property="og:type" content="article" />
-  {%- endif -%}
-  <meta property="og:site_name" content="{{ conf.sitename }}" />
-  <meta property="og:image" content="{{ conf.www_root + '/images/bl2011_bw_225x150.jpg' }}" />
-  <meta property="og:url" content="{{ conf.www_root + env.route }}" />
-  <link rel="shortcut icon" href="{{ env.path + '/images/favicon.ico' }}">
-  <link rel="openid2.provider" href="https://www.google.com/accounts/o8/ud" />
-  {%- endblock %}
+<html class="no-js" lang="en">
+<head>
+    {% block head -%}
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>{% block title %}{% endblock %}</title>
+    <link href="/stylesheets/app.css" rel="stylesheet">
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+
+    {%- if entry is defined %}
+    <meta name="description" content="{{ entry.description | e }}" />
+    <meta name="keywords" content="{{ entry.tags | join(', ') }}, brian, lyttle, brian lyttle" />
+    <meta property="og:title" content="{% block ogtitle %}{% endblock %}" />
+    <meta property="og:type" content="article" />
+    {%- endif -%}
+    <meta property="og:site_name" content="{{ conf.sitename }}" />
+    <meta property="og:image" content="{{ conf.www_root + '/images/bl2011_bw_225x150.jpg' }}" />
+    <meta property="og:url" content="{{ conf.www_root + env.route }}" />
+    <link rel="shortcut icon" href="{{ env.path + '/images/favicon.ico' }}">
+    <link rel="openid2.provider" href="https://www.google.com/accounts/o8/ud" />
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-39924652-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    {%- endblock %}
 </head>
 <body id="page" class="antialiased">
-  <div class="row">
-      <nav id="logo">
-          <div class="outer">
-            <a href="{{ env.path + '/' }}"><div class="inner">
-              <img src="{{ conf.cdn_root + '/images/logo05c.png' }}" />
-            </div></a>
-            <div class="bits"><a href="{{ env.path + '/' }}">Expat Coder</a>
-          </div>
-          </div>
-      </nav>
-  </div>
-  <!-- Nav Bar -->
-  <header id="header" class="row">
-    <div class="twelve columns">
-      <nav class="top-bar">
-        <section>
-          <!-- Left Nav Section -->
-          <ul class="left">
-            <li>
-              <a href="{{ env.path + '/' }}">Home</a>
-            </li>
-            <li class="has-dropdown">
-              <a class="active" href="{{ env.path + '/photography/' }}">Photography</a>
-              <ul class="dropdown">
-                <li><label>2013</label></li>
-                <li><a href="http://www.flickr.com/photos/brianly/sets/72157638026683406/">Spain &amp; Morocco</a></li>
-                <li><a href="http://www.flickr.com/photos/brianly/sets/72157633069656111/">PyCon 2013</a></li>
-                <li class="divider"></li>
-                <li class="divider"></li>
-                <li><label>2012</label></li>
-                <li><a href="http://www.flickr.com/photos/brianly/sets/72157631865804889/">Hacktoberfest</a></li>
-                <li><a href="http://www.flickr.com/photos/brianly/sets/72157629897305524/">Machu Picchu</a></li>
-                <li><a href="http://www.flickr.com/photos/brianly/sets/72157629549361847/">PyCon 2012</a></li>
-                <li class="divider"></li>
-                <li><label>2011</label></li>
-                <li><a href="http://www.flickr.com/photos/brianly/sets/72157627724689431/">Helicoptering</a></li>
-                <li class="divider"></li>
-                <li><a href="http://www.flickr.com/photos/brianly">See all &rarr;</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="{{ env.path + '/about/' }}">About</a>
-            </li>
-            <li>
-              <a href="{{ env.path + '/contact/' }}">Contact</a>
-            </li>
-          </ul>
-          <!-- Right Nav Section -->
-          <ul class="right">
-            <li class="has-dropdown">
-              <a class="active" href="#">Follow Me</a>
-              <ul class="dropdown">
-        <li><a class="social foundicon-twitter" href="http://www.twitter.com/brianly"> Twitter</a></li>
-        <li><a class="social foundicon-github" href="http://github.com/brianly"> GitHub</a></li>
-        <li><a class="social foundicon-rss" href="http://www.brianlyttle.com/feed/"> RSS Feed</a></li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-      </nav>
-    </div>
-  </header>
-  <!-- End Nav -->
-  <!-- Main Page Content and Sidebar -->
-  <div class="row">
-    <!-- Main Blog Content -->
-    <div class="nine columns" role="content">
-      {%- block content -%}
-      {%- endblock -%}
-    </div>
-    <!-- End Main Content -->
-    <!-- Sidebar -->
-    <aside id="sidebar" class="three columns">
-        {%- block sidebar -%}
-        {%- endblock -%}
-    </aside>
-    <!-- End Sidebar -->
-  </div>
-  <!-- Footer -->
-  <footer class="row">
-  <div class="twelve columns">
-    <hr />
     <div class="row">
-      <div class="six columns">
-        <p>&copy; 1999-2013 Brian Lyttle</p>
+    <div class="large-12 columns">
+          <div class="logo">
+            <p><a href="{{ env.path + '/' }}"><img alt="{{ conf.sitename }}" src="/images/logo05c.png" width="60" height="60" />Expat Coder</a><p>
+          </div>
       </div>
-      <div class="six columns">
-        <ul class="link-list right">
-          <li><a href="http://twitter.com/brianly">Twitter</a></li>
-          <li><a href="http://github.com/brianly">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/brianlyttle/">LinkedIn</a></li>
-          <li><a href="http://stackoverflow.com/users/636/brian-lyttle">StackOverflow</a></li>
-          <li><a href="http://flickr.com/photos/brianly">Flickr</a></li>
-        </ul>
-      </div>
-    </div>
   </div>
-  </footer>
-  <!-- End Footer -->
-  <script src="{{ conf.cdn_root + '/javascripts/vendor/jquery-1.9.1.min.js' }}"></script>
-  <script src="{{ conf.cdn_root + '/javascripts/vendor/jquery.slides.min.js' }}"></script>
-  <script>
-    $(function() {
-      $('#slides').slidesjs({
-        width: 940,
-        height: 528,
-        navigation: false
-      });
-    });
-  </script>
+    <div class="row">
+        <div class="large-12 columns">
+            <nav class="top-bar" data-topbar="">
+          <ul class='title-area'>
+            <li class='name'>
+              <h1>
+                <a href='{{ env.path + '/' }}'>Home</a>
+              </h1>
+            </li>
+            <li class='toggle-topbar menu-icon' >
+              <a href='#'>
+                <span>Menu</span>
+              </a>
+            </li>
+          </ul>
+                <section class="top-bar-section">
+                    <!-- Left Nav Section -->
+                    <ul class="left">
+                        <li class="has-dropdown">
+                            <a href="/photography/">Photography</a>
+                            <ul class="dropdown">
+                                <li><label>2013</label></li>
+                                <li><a href=
+                                "http://www.flickr.com/photos/brianly/sets/72157638026683406/">
+                                Spain &amp; Morocco</a></li>
+                                <li><a href=
+                                "http://www.flickr.com/photos/brianly/sets/72157633069656111/">
+                                PyCon 2013</a></li>
+
+                                <li><label>2012</label></li>
+                                <li><a href=
+                                "http://www.flickr.com/photos/brianly/sets/72157631865804889/">
+                                Hacktoberfest</a></li>
+                                <li><a href=
+                                "http://www.flickr.com/photos/brianly/sets/72157629897305524/">
+                                Machu Picchu</a></li>
+                                <li><a href=
+                                "http://www.flickr.com/photos/brianly/sets/72157629549361847/">
+                                PyCon 2012</a></li>
+
+                                <li><label>2011</label></li>
+                                <li><a href=
+                                "http://www.flickr.com/photos/brianly/sets/72157627724689431/">
+                                Helicoptering</a></li>
+
+                <li class="divider"></li>
+                                <li><a href=
+                                "http://www.flickr.com/photos/brianly">See all →</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                    <!-- Right Nav Section -->
+                    <ul class="right">
+                        <li class="has-dropdown">
+                            <a href="#">Follow Me</a>
+                            <ul class="dropdown">
+                                <li><a href="http://www.twitter.com/brianly"><i class="fi-social-twitter"></i> Twitter</a></li>
+                                <li><a href="http://github.com/brianly"><i class="fi-social-github"></i> GitHub</a></li>
+                                <li><a href="http://www.brianlyttle.com/feed/"><i class="fi-rss"></i> RSS Feed</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+            <div class="row">
+                <div class="large-9 medium-9 columns">
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <div class="row">
+                                <div class="twelve columns">
+{%- block content -%}
+{%- endblock -%}
+                                </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="large-3 medium-3 columns"> <!-- Right column -->
+                    <!-- Sidebar -->
+                    <aside id="sidebar">
+{%- block sidebar -%}
+{%- endblock -%}
+                        <div class="show-for-medium-up">
+                          <a href="http://www.python.org/"><img alt=
+                          "Python-powered logo." src=
+                          "http://cdn.brianlyttle.com/images/python-powered-w-140x56.png" class="banner" width="140" height="56"></a>
+                        </div>
+                    </aside>
+                    <!-- End sidebar -->
+                </div> <!-- End right column -->
+            </div>
+      <!-- Footer -->
+      <footer class="row">
+        <div class="twelve columns">
+          <hr />
+          <div class="row">
+            <div class="six columns">
+              <ul class="show-for-medium-up">
+                <li><a href="http://twitter.com/brianly"><i class="fi-social-twitter"></i> Twitter</a></li>
+                <li><a href="http://github.com/brianly"><i class="fi-social-github"></i> GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/brianlyttle/"><i class="fi-social-linkedin"></i> LinkedIn</a></li>
+                <li><a href="http://stackoverflow.com/users/636/brian-lyttle"><i class="fi-social-stack-overflow"></i> StackOverflow</a></li>
+                <li><a href="http://flickr.com/photos/brianly"><i class="fi-social-flickr"></i> Flickr</a></li>
+              </ul>
+              <p class="copyright">&copy; 1999&ndash;2014 Brian Lyttle</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <!-- End footer -->
+        </div>
+    </div>
+    <script src="/bower_components/jquery/jquery.min.js"></script>
+    <script src="/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 </html>

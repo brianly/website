@@ -1,0 +1,64 @@
+a:hover {
+	color: #B83B3F;
+}
+
+a {
+	color: #08425C;
+}
+
+.logo {
+	margin: 0px 0px 20px 0px;
+	height: 60px;
+}
+.logo img {
+	margin: 0px 10px 0px 0px;
+}
+.logo p {
+	padding: 0px 0px 0px 0px;
+	display: inline;
+	font-family: 'klavika-web-condensed2','ff-meta-web-pro',Helvetica,Arial,sans-serif;
+	font-weight: bolder;
+	font-size: 3.3rem;
+	letter-spacing:0;
+}
+.logo a:hover {
+	color: #08425C;
+}
+
+footer .copyright {
+	float:left;
+}
+
+footer ul {
+	list-style: none outside none;
+	overflow: hidden;
+	padding: 0;
+	float: right;
+}
+
+footer li {
+	display: inline;
+	margin-left:17px;
+}
+footer li:first {
+	display: inline;
+	margin-left:0px;
+}
+
+@media only screen and (max-width: 40em) {
+	.logo {
+		margin: 10px 0px 10px 0px;
+	}
+	.logo img {
+		margin: 0px 5px 0px 0px;
+	}
+
+	.logo p {
+		padding: 0px 0px 0px 0px;
+		font-size:2.2rem;
+	}
+
+	.top-bar-section ul li > a {
+		font-size: 13px;
+	}
+}

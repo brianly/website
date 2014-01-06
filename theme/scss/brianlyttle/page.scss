@@ -1,0 +1,111 @@
+article blockquote {
+    margin: 0 0 1px;
+    padding: 9px 18px 0 17px;
+    border-left: 3px solid #ddd;
+}
+
+article h1 { /* =25px */
+	font-size: 25px;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+article h2 {
+	font-size: 20px;
+	font-size: 1.25rem;
+	font-weight: normal;
+	margin-bottom: 1.0em;
+}
+
+article h3 {
+	font-size: 15px;
+	font-size: 1.12rem;
+	margin-bottom: 0.7em;
+}
+
+article h4 {
+	font-size: 14px;
+	font-size: 1.09rem;
+	margin-bottom: 0.4em;
+}
+
+article .metadata {
+	margin-bottom: rem-calc(25);
+}
+
+article ul, article ol, article dl {
+	list-style-position: inside;
+	padding: 0px;
+	margin-left: 0;
+	counter-reset: foo;
+	display: table;
+}
+
+article li {
+    counter-increment: foo;
+    display: table-row;
+}
+
+article li:before {
+	content: counter(foo) ".";
+	display: table-cell; /* aha! */
+	text-align: right;
+	padding-right: .5em;
+	padding-bottom: .6em;
+}
+
+article ul {
+	list-style-type:square;
+}
+
+pre {
+	padding: 0px 0px 0px 15px;
+	font-size: 90%;
+	font-family: Consolas, "Liberation Mono", Courier, monospace;
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	background:url("/images/code.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(/images/code.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(/images/code.svg);
+	background-image: linear-gradient(transparent, transparent), url(/images/code.svg);
+}
+
+pre code {
+	font-color: #646464;
+	font-weight:normal;
+	padding: 0px 6px 15px 6px;
+	border: solid 1px #e6e6e6;
+	display: block;
+	color: #222222;
+}
+
+.floatright {
+	float: right;
+}
+
+.floatleft {
+	float: left;
+}
+
+.blog-nav {
+	border: solid 1px #e6e6e6;
+}
+
+.img-left {
+	float: left;
+	margin: 0 5px 10px 0;
+}
+
+.img-right {
+	float: right;
+	margin: 0 5px 0 10px;
+}
+
+.img-left, .img-right {
+	box-sizing: border-box;
+	padding: 3px;
+	border: 1px solid #e6e6e6;
+}

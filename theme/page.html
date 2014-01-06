@@ -5,14 +5,12 @@
 
 {% block content %}
     {% for entry in env.entrylist %}
-      <article>
-        <h1><a href="{{ env.path + entry.permalink }}">{{ entry.title }}</a></h1>
-        <div class="row">
-          <div class="twelve columns">
-            {{ entry.content }}
-          </div>
-        </div>
-      </article>
+<article>
+    <h1><a href="{{ env.path + entry.permalink }}">{{ entry.title }}</a></h1>
+
+    {{ entry.content }}
+
+</article>
     {% endfor %}
 {% endblock %}
 

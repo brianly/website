@@ -1,0 +1,27 @@
+aside .banner {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#sidebar ul {
+	list-style-type: none;
+	margin-left:0px;
+}
+
+#sidebar h5 {
+	font-weight:400;
+}
+
+#sidebar .panel {
+	border-top:4px solid #B83B3F;
+}
+
+#sidebar .panel li  {
+	padding: 0px 0px 5px 0px;
+	font-size: 0.85rem;
+}
+
+#sidebar .panel li:last-child {
+	padding-bottom: 0px;
+}

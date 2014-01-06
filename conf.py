@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 # See http://posativ.org/acrylamid/conf.py.html
 
-SITENAME = 'Brian Lyttle'
+SITENAME = 'Expat Coder ≡ Brian Lyttle'
 WWW_ROOT = 'http://www.brianlyttle.com'
 CDN_ROOT = 'http://cdn.brianlyttle.com'
 
