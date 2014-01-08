@@ -5,14 +5,7 @@
 
 {% block content %}
     {% for entry in env.entrylist %}
-<article>
-    <h1><a href="{{ env.path + entry.permalink }}">{{ entry.title }}</a></h1>
-    <div class="metadata"><time datetime="{{entry.date.year}}10{{ entry.date.day }}, ">{{ entry.date.strftime("%B")}}&nbsp;{{ entry.date.day }}, {{entry.date.year}}</time></div>
-
-    {{ entry.content }}
-
-    {% include "fragments/tagged-with.html" ignore missing %}
-</article>
+        {% include 'entry.html' %}
     {% endfor %}
 {% endblock %}
 
