@@ -1,11 +1,10 @@
 <article>
     <h1><a href="{{ env.path + entry.permalink }}">{{ entry.title }}</a></h1>
-    <div class="metadata"><time datetime="{{ entry.date.strftime("%B")}}&nbsp;{{ entry.date.day }}, {{entry.date.year}}" pubdate="">{{ entry.date.strftime("%B")}}&nbsp;{{ entry.date.day }}, {{entry.date.year}}</time></div>
+    <div class="metadata">
+        <time datetime="{{entry.date.year}}-{{ entry.date.strftime("%m")}}-{{ entry.date.strftime("%d")}}">{{ entry.date.strftime("%B")}}&nbsp;{{ entry.date.day }}, {{entry.date.year}}</time>
+    </div>
 
     {{ entry.content }}
 
     {% include "fragments/tagged-with.html" ignore missing %}
 </article>
-
-
-
