@@ -1,9 +1,16 @@
 # -*- encoding: utf-8 -*-
 # See http://posativ.org/acrylamid/conf.py.html
 
+import imp
+blogutils = imp.load_source('blogutils', 'blogutils.py')
+
 SITENAME = 'Expat Coder ≡ Brian Lyttle'
 WWW_ROOT = 'http://www.brianlyttle.com'
+NONCE = blogutils.nonce()
+CSS_FILE = '%s.css' % NONCE
+
 CDN_ROOT = 'http://cdn.brianlyttle.com'
+# CDN_ROOT = ''
 
 AUTHOR = 'Brian Lyttle'
 EMAIL = 'blog@brianlyttle.com'
@@ -73,6 +80,9 @@ SUMMARIZE_LINK = '<span>&#8230; <a href="%s" class="continue">Continue reading</
 DEPLOYMENT = {
     "ls": "ls $OUTPUT_DIR",
     "echo": "echo '$OUTPUT_DIR'",
-    "production": "rsync --verbose -av $OUTPUT_DIR brianly@brianlyttle.com:~/sites/blweb/www",
+    "production": "rsync -av $OUTPUT_DIR brianly@brianlyttle.com:~/sites/blweb/www",
     "default": "rsync --delete --verbose -av $OUTPUT_DIR brianly@brianlyttle.com:~/sites/beta/www"
 }
+
+# Copy the current CSS build to a randomly named file.
+blogutils.invalidate_css(CSS_FILE)
