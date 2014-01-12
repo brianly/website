@@ -7,8 +7,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>{% block title %}{% endblock %}</title>
-    <link href="/stylesheets/app.css" rel="stylesheet">
-    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <link href="{{ conf.cdn_root }}/stylesheets/{{ conf.css_file }}" rel="stylesheet">
+    <script src="{{ conf.cdn_root }}/bower_components/modernizr/modernizr.js"></script>
 
     {%- if entry is defined %}
     <meta name="description" content="{{ entry.description | e }}" />
@@ -156,8 +156,8 @@
     <!-- End footer -->
         </div>
     </div>
-    <script src="/bower_components/jquery/jquery.min.js"></script>
-    <script src="/bower_components/foundation/js/foundation.min.js"></script>
-    <script src="/js/app.js"></script>
+    <script src="{{ conf.cdn_root }}/bower_components/jquery/jquery.min.js"></script>
+    <script src="{{ conf.cdn_root }}/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="{{ conf.cdn_root }}/js/app.js?n={{ conf.nonce }}"></script>
 </body>
 </html>
