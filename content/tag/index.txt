@@ -1,0 +1,12 @@
+---
+title: Topics
+type: page
+date: 2014-1-11 17:58
+slug: tag
+filters: jinja2
+---
+<ul>
+{% for tag in env.tag_cloud %}
+    <li class="tag-{{ tag.step }}"><a href="/tag/{{ tag.name | safeslug }}/">{{ tag.name }}</a></li>
+{% endfor %}
+</ul>
