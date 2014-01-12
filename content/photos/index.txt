@@ -4,18 +4,46 @@ type: page
 date: 2012-06-14 14:02
 tags: [Brian Lyttle, Lyttle, Brian]
 ---
-My [latest photos](http://www.flickr.com/photos/brianly) are always posted over on [Flickr](http://www.flickr.com/photos/brianly). Here are some recent shots from [Spain &amp; Morocco](http://www.flickr.com/photos/brianly/sets/72157638026683406/):
+My [latest photos](http://www.flickr.com/photos/brianly) are always posted over on [Flickr](http://www.flickr.com/photos/brianly). Here are some recent shots from [Spain &amp; Morocco](http://www.flickr.com/photos/brianly/sets/72157638026683406/).
 
-<div id="slides">
-  <img src="http://farm8.staticflickr.com/7325/11044024486_824f58599e_c.jpg" alt="" />
-  <img src="http://farm3.staticflickr.com/2837/11040839736_0da61b921c_z.jpg" alt="" />
-  <img src="http://farm6.staticflickr.com/5524/11043518494_b987e2be10_c.jpg" alt="" />
-  <img src="http://farm4.staticflickr.com/3796/11042749386_d009ab05de_c.jpg" alt="" />
-  <img src="http://farm4.staticflickr.com/3789/11042683013_7fdbbda5b2_c.jpg" alt="" />
-  <img src="http://farm4.staticflickr.com/3691/11041723743_d6bfba67d6_c.jpg" alt="" />
-  <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="general foundicon-left-arrow"></i></a>
-  <a href="#" class="slidesjs-next slidesjs-navigation"><i class="general foundicon-right-arrow"></i></a>
-</div>
+<ul id="orbital" class="example-orbit" data-orbit>
+    <li>
+        <img alt="Incredible dunes at Erg Chebbi." src="/images/photos/ergchebbi.jpg">
+        <div class="orbit-caption">
+            Incredible dunes at Erg Chebbi.
+        </div>
+    </li>
+    <li>
+        <img alt="Snakes in Jemaa el-Fnaa, Marrakech." src="/images/photos/jemaa-el-fnaa-snakes.jpg">
+        <div class="orbit-caption">
+            Snakes in Jemaa el-Fnaa, Marrakech.
+        </div>
+    </li>
+    <li>
+        <img alt="Desert camp at night." src="/images/photos/ergchebbi-night.jpg">
+        <div class="orbit-caption">
+            Desert camp at night.
+        </div>
+    </li>
+    <li>
+        <img alt="Aït Benhaddou, a fortified ksar." src="/images/photos/aitbenhaddou.jpg">
+        <div class="orbit-caption">
+            Aït Benhaddou, a fortified ksar.
+        </div>
+    </li>
+    <li>
+        <img alt="Essaouira on the Atlantic coast." src="/images/photos/essaouira.jpg">
+        <div class="orbit-caption">
+            Essaouira on the Atlantic coast.
+        </div>
+    </li>
+    <li>
+        <img alt="Jemaa el-Fnaa at night." src="/images/photos/jemaa-el-fnaa-night.jpg">
+        <div class="orbit-caption">
+            Jemaa el-Fnaa at night.
+        </div>
+    </li>
+</ul>
 
 ##Equipment##
 

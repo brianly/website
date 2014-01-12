@@ -9,8 +9,10 @@ Given that all my machines have a lot of cores, it would be better if the tar co
 
 There are 2 parts to the setup for pigz: get the utility, and force tar to use it. On my Mac I grabbed pigz from brew:
 
-<pre>brew install pigz</pre>
+<pre><code>brew install pigz</code></pre>
 
-Then I added an alias so that tar uses this by default.
-<pre>alias tar='tar --use-compress-program=pigz'</pre>
+Then I added an alias so that tar uses this by default:
+
+<pre><code>alias tar='tar --use-compress-program=pigz'</code></pre>
+
 Remember that you might not want to use an alias if your profile travels with you to environments where the use of all cores could create problems.

@@ -11,8 +11,7 @@ Up next: a similar script to process my latest bookmarks on <a href="http://deli
 
 <strong>Main script (tweets.py)</strong>
 
-<pre>
-#!/usr/bin/python
+<pre><code>#!/usr/bin/python
 
 import codecs, re, getopt, sys, twitter
 
@@ -37,12 +36,12 @@ def Usage():
 def FetchTwitter(user, output):
   assert user
   statuses = twitter.Api().GetUserTimeline(user=user, count=7)
-  
+
   xhtml = []
   for status in statuses:
   	  status.text = Linkify(status.text)
   	  xhtml.append(TEMPLATE % (status.text, status.user.screen_name, status.id, status.relative_created_at))
-  
+
   if output:
     Save(''.join(xhtml), output)
   else:
@@ -79,11 +78,8 @@ def main():
   FetchTwitter(user, output)
 
 if __name__ == "__main__":
-  main()
-</pre>
+  main()</code></pre>
 
 <strong>Shell script executed as cron job (tweets.sh)</strong>
 
-<pre>
-/usr/bin/python /path/to/tweets.py brianly --output /path/to/output/twittertimeline.htm
-</pre>
+<pre><code>/usr/bin/python /path/to/tweets.py brianly --output /path/to/output/twittertimeline.htm</code></pre>

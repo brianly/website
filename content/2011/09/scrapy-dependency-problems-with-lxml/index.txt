@@ -7,44 +7,41 @@ tags: [lxml, python, scrapy, scripting]
 <p>It seems that the compilation problems experienced when installing with <em>pip</em> result from an attempt to build a universal binary. If you have Xcode 4 installed then you lose some of this capability and need to make sure that the correct architecture is specified.</p>
 <h3>Architecture Fix</h3>
 <p>Setting the architecture is something you can do in your bash profile, executing it under a new bash ensures that the build script picks it up.</p>
-<pre>
-sudo bash
+<pre><code>sudo bash
 export ARCHFLAGS='-arch i386 -arch x86_64'
 pip install lxml # test it
-pip install scrapy --upgrade # fix the failed scrapy install
-</pre>
+pip install scrapy --upgrade # fix the failed scrapy install</code></pre>
 
 <h3>Original Error</h3>
 
-<pre>
-brianly$ sudo pip install lxml --upgrade
+<pre><code>brianly$ sudo pip install lxml --upgrade
 Downloading/unpacking lxml
-  Downloading lxml-2.3.tar.gz (3.2Mb): 3.2Mb downloaded
-  Running setup.py egg_info for package lxml
-    Building lxml version 2.3.
-    Building without Cython.
-    Using build configuration of libxslt 1.1.24
-    warning: no previously-included files found matching '*.py'
+Downloading lxml-2.3.tar.gz (3.2Mb): 3.2Mb downloaded
+Running setup.py egg_info for package lxml
+  Building lxml version 2.3.
+  Building without Cython.
+  Using build configuration of libxslt 1.1.24
+  warning: no previously-included files found matching '*.py'
 Installing collected packages: lxml
-  Found existing installation: lxml 2.2.2
-    Uninstalling lxml:
-      Successfully uninstalled lxml
-  Running setup.py install for lxml
-    Building lxml version 2.3.
-    Building without Cython.
-    Using build configuration of libxslt 1.1.24
-    building 'lxml.etree' extension
-    gcc-4.2 -fno-strict-aliasing -fno-common -dynamic -DNDEBUG -g -fwrapv -Os -Wall -Wstrict-prototypes -DENABLE_DTRACE -arch i386 -arch ppc -arch x86_64 -pipe -I/usr/include/libxml2 -I/System/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6 -c src/lxml/lxml.etree.c -o build/temp.macosx-10.6-universal-2.6/src/lxml/lxml.etree.o -w -flat_namespace
-    /usr/libexec/gcc/powerpc-apple-darwin10/4.2.1/as: assembler (/usr/bin/../libexec/gcc/darwin/ppc/as or /usr/bin/../local/libexec/gcc/darwin/ppc/as) for architecture ppc not installed
-    Installed assemblers are:
-    /usr/bin/../libexec/gcc/darwin/x86_64/as for architecture x86_64
-    /usr/bin/../libexec/gcc/darwin/i386/as for architecture i386
-    src/lxml/lxml.etree.c:161594: fatal error: error writing to -: Broken pipe
-    compilation terminated.
-    lipo: can't open input file: /var/tmp//ccYr9GpX.out (No such file or directory)
-    error: command 'gcc-4.2' failed with exit status 1
-    Complete output from command /usr/bin/python -c "import setuptools;__file__='/Users/brianly/dev/github/pyconscrape/build/lxml/setup.py';exec(compile(open(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" install --single-version-externally-managed --record /tmp/pip-axeEA7-record/install-record.txt:
-    Building lxml version 2.3.
+Found existing installation: lxml 2.2.2
+  Uninstalling lxml:
+    Successfully uninstalled lxml
+Running setup.py install for lxml
+  Building lxml version 2.3.
+  Building without Cython.
+  Using build configuration of libxslt 1.1.24
+  building 'lxml.etree' extension
+  gcc-4.2 -fno-strict-aliasing -fno-common -dynamic -DNDEBUG -g -fwrapv -Os -Wall -Wstrict-prototypes -DENABLE_DTRACE -arch i386 -arch ppc -arch x86_64 -pipe -I/usr/include/libxml2 -I/System/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6 -c src/lxml/lxml.etree.c -o build/temp.macosx-10.6-universal-2.6/src/lxml/lxml.etree.o -w -flat_namespace
+  /usr/libexec/gcc/powerpc-apple-darwin10/4.2.1/as: assembler (/usr/bin/../libexec/gcc/darwin/ppc/as or /usr/bin/../local/libexec/gcc/darwin/ppc/as) for architecture ppc not installed
+  Installed assemblers are:
+  /usr/bin/../libexec/gcc/darwin/x86_64/as for architecture x86_64
+  /usr/bin/../libexec/gcc/darwin/i386/as for architecture i386
+  src/lxml/lxml.etree.c:161594: fatal error: error writing to -: Broken pipe
+  compilation terminated.
+  lipo: can't open input file: /var/tmp//ccYr9GpX.out (No such file or directory)
+  error: command 'gcc-4.2' failed with exit status 1
+  Complete output from command /usr/bin/python -c "import setuptools;__file__='/Users/brianly/dev/github/pyconscrape/build/lxml/setup.py';exec(compile(open(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" install --single-version-externally-managed --record /tmp/pip-axeEA7-record/install-record.txt:
+  Building lxml version 2.3.
 
 Building without Cython.
 
@@ -184,5 +181,4 @@ Traceback (most recent call last):
     pth.rollback()
 AttributeError: 'str' object has no attribute 'rollback'
 
-Storing complete log in /Users/brianly/.pip/pip.log
-</pre>
+Storing complete log in /Users/brianly/.pip/pip.log</code></pre>

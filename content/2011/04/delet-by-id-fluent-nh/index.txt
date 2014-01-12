@@ -5,23 +5,20 @@ tags: [databases, fluent-nhibernate, nhibernate, orm]
 ---
 I wasn't a big fan of so-called <a href="http://en.wikipedia.org/wiki/Fluent_interface">Fluent Interfaces</a> but my fondness is growing as I use <a href="http://fluentnhibernate.org/">Fluent NHibernate</a> on an ASP.NET MVC project. When I started on my project I checked out the <a href="http://nhibernate-repository-example.googlecode.com/svn/trunk/RepositoryExample/">repository pattern example</a> from Google Code to see how this was being implemented. The supplied repository interface provided the following interface:
 
-<pre>
-public interface IRepository<T>
+<pre><code>public interface IRepository<T>
 {
     T Get(object id);
     void Save(T value);
     void Update(T value);
     void Delete(T value);
     IList<T> GetAll();
-}
-</pre>
+}</code></pre>
 
-Looks great apart from the fact that you need to pass an entity to the Delete() method, which would in turn result in iteration over a large number of objects if I had to do a lot of deletes. If I received an integer with an ID from an ASP.NET MVC controller I'd have to retrieve the object before sending it to the Delete() method. This is not very efficient. 
+Looks great apart from the fact that you need to pass an entity to the Delete() method, which would in turn result in iteration over a large number of objects if I had to do a lot of deletes. If I received an integer with an ID from an ASP.NET MVC controller I'd have to retrieve the object before sending it to the Delete() method. This is not very efficient.
 
 To remedy this problem I added an additional Delete() method to the interface taking an object ID as the only parameter:
 
-<pre>
-public void Delete<TEntity>(object id)
+<pre><code>public void Delete<TEntity>(object id)
 {
     using (var session = sessionFactory.OpenSession())
     using (var transaction = session.BeginTransaction())
@@ -31,9 +28,8 @@ public void Delete<TEntity>(object id)
                .SetParameter("id", id)
                .ExecuteUpdate();
 
-        transaction.Commit();                
+        transaction.Commit();
     }
-}
-</pre>
+}</code></pre>
 
 This is a very simple method that will generate more efficient SQL under the covers for deletion of objects from the database.

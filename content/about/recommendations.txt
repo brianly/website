@@ -1,0 +1,31 @@
+---
+title: "Recommended Things"
+date: 2013-12-29 20:46
+type: page
+slug: about/recommendations
+---
+Perhaps you'll find a few of these things just as useful or interesting as I did. I have separate [Windows](/tools/windows), [OS X](/about/tools/osx), and [webdev](/about/tools/webdev) pages that you might be interested in too.
+
+##Reading##
+* [The Shah](http://www.amazon.com/The-Shah-Abbas-Milani/dp/0230340385) by Abbas Milani
+* [Programming Pearls](http://www.cs.bell-labs.com/cm/cs/pearls/) by Jon Bentley
+* [Effective Programming: More Than Writing Code](http://www.amazon.com/Effective-Programming-More-Than-Writing-ebook/dp/B008HUMTO0/ref=sr_1_1?s=digital-text&ie=UTF8&qid=1388341155&sr=1-1&keywords=Effective+Programming%3A+More+Than+Writing+Code) by Jeff "[Coding Horror](http://www.codinghorror.com/blog/)" Atwood
+* [The Pragmatic Programmer: From Journeyman to Master](http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X)
+* [Seven Pillars of Wisdom](http://www.amazon.com/Seven-Pillars-Wisdom-Triumph-Complete/dp/1617201839/ref=sr_1_1?s=books&ie=UTF8&qid=1388341739&sr=1-1&) by T. E. Lawrence
+* [Beyond Software Architecture](http://www.amazon.com/Beyond-Software-Architecture-Sustaining-Solutions/dp/0201775948/ref=sr_1_1?s=books&ie=UTF8&qid=1388341820&sr=1-1&) by Luke Hohmann
+* [Refactoring: Improving the Design of Existing Code](http://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672/) by Martin Fowler.
+* [Web Operations](http://www.amazon.com/Web-Operations-Keeping-Data-Time/dp/1449377440/) by John Allspaw
+
+##Hardware##
+* [Dell Studio XPS 9000](http://www.dell.com/us/dfh/p/studio-xps-9000/pd)
+* [Sans Digital TowerRAID TR4M-B](http://www.amazon.com/Sans-Digital-TowerRAID-TR4M-B-Multiplier/dp/B001GXLDMO/ref=cm_cr-mr-title)
+* [Apple iPhone 5s](http://www.apple.com/iphone)
+* [Shure SE210 Sound Isolating Earphones](http://www.amazon.com/Shure-SE210-Sound-Isolating-Earphone/dp/B0013JT3XC/ref=sr_1_1?s=electronics&ie=UTF8&qid=1388340840&sr=1-1)
+* [Filco Ninja Majestouch-2 NKR keyboard](http://www.amazon.com/gp/product/B004Z0XR2O/ref=wms_ohs_product?ie=UTF8&psc=1)
+* [11" Apple MacBook Air](http://support.apple.com/kb/sp631) with i7 CPU (2011)
+* [Brother MFC-8890DW Laser Printer and Scanner](http://www.amazon.com/Brother-MFC-8890DW-High-Performance-Laser-Printer/dp/B0020CL9VK/ref=fn_ink_ft_tit) 
+
+##Travel Gear##
+* [Crumpler C List Celebrity Backpack (small)](http://www.amazon.com/Crumpler-Celebrity-Backpack-Laptops-CLC001-B00130/dp/B003NFMEQM)
+* [Spire Torq Backpack](http://www.spireusa.com/products/torq) (2006 and 2012)
+* [Outlets To Go Power Strip with USB](http://www.amazon.com/gp/product/B0018MEBNG/ref=wms_ohs_product?ie=UTF8&psc=1)

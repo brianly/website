@@ -3,29 +3,60 @@ title: "Getting the most out of PyCon"
 date: 2011-03-08 04:33
 tags: [conferences, pycon, pycon2010]
 ---
-<p>Van Lindberg recently tweeted <ahref="http://twitter.com/VanL/status/41217905408344064">a link</a> to some tips on <a href="http://swombat.com/2011/2/25/kevin-mcdonagh-how-to-attend-a-conference">how to attend a conference</a>. The advice in that article is pretty sound for a business person looking to build up their network to find sales opportunities, but it doesn&#8217;t cover any PyCon-specifics.</p>
-<p>After a little thinking I've come up with my own list of tips for new PyCon attendees:</p>
-<h3>Attend some open space sessions</h3>
-<p><a href="http://www.flickr.com/photos/brianly/3395569416/in/set-72157615936113009/"><img src="/images/cassandra.jpg" alt="" class="portrait_r" /></a><a href="http://us.pycon.org/2010/openspace/">Open spaces</a> are now    happening at a lot of conferences but the PyCon ones    have been the best I've seen. These are ad hoc discussions on a common topic    with participants joining and leaving whenever they want. These sessions are a    lot of fun and you'll make a lot of friends in the process. Even if you aren't    the most talkative person, or know little about a subject, you are free to just    hang out and listen.</p>
-<p>Whilst there is a page on the PyCon website for    these sessions, it is normally best to check the boards outside the rooms    assigned to open space use. You should also monitor the <ahref="https://convore.com/pycon-2011/">Convore backchannel</a> and <a href="http://twitter.com/#search?q=%23pycon">#pycon</a> on Twitter.</p>
-<p>If you don't see any open space sessions related to your favourite topic just post a session in one of the available time slots. In almost all    cases some likeminded individuals will turn up.</p>
-<p><a href="http://www.flickr.com/photos/brianly/3395568732/in/set-72157615936113009/"><img src="/images/openspace-board-closeup.jpg" alt="" class="portrait" /></a>Scheduled talks are normally recorded for viewing later so I'd recommend    that you try to decide ahead of time which talks are must see, and which ones    could be skipped. That way you can make the most of the open space sessions as    some of these will overlap with scheduled talks, especially on Saturday and    Sunday.</p>
-<h3>Help the PyCon staff</h3>
-<p>Putting on a conference PyCon is an enormous    effort. They are often looking for runners and other helpers. Spending a little    time helping out introduces you to many interesting people and you'll probably    learn a bit too about how conferences run.</p>
-<p>Follow <a href="http://twitter.com/pyconvolunteers">@pyconvolunteers</a>,    talk to the organisers, and lurk on the <ahref="http://mail.python.org/mailman/listinfo/pycon-organizers">pycon-organizer</a> mailing list.</p>
-<h3>Check out the    lightning talks</h3>
-<p>These are very short talks on a variety of Python-related subjects scheduled    at the beginning and end of conference days. If you have something to say to    the community they are a good way to let people know about your project or    passion. For everyone else they are a good way to find out about lesser known    projects, and they are often quite humorous.</p>
-<h3>Go off track</h3>
-<p>PyCon like many other conferences has tracks with    related content and there are <ahref="http://us.pycon.org/2011/blog/2011/02/28/10-python-conferences-happening-pycon-2011-part-1/">10    virtual tracks </a>for 2011. These are really helpful for finding things that    you are likely to be interested in, but sometimes it is good to check out    something a little bit different. </p>
-<p>In particular, veteran PyCon speakers like Alex Martelli, David Beazley, and Raymond Hettinger fill rooms    each year and are always worth watching.</p>
-<h3>Chat with    presenters</h3>
-<p><a href="http://www.flickr.com/photos/brianly/3395569320/in/set-72157615936113009/"><img class="portrait_r" src="/images/michael-foord.jpg" alt=""/></a>On the topic of presenters there are a lot of opportunities to talk to    presenters at PyCon, either right after a talk, or    later at the conference. If you have questions on their area of expertise or    feedback on their talk it is worth taking some time to talk to them.</p>
-<h3>Spend time on    things that are valuable to you</h3>
-<p>Sometimes you'll end up in a talk or open space session that isn't exactly    what you expected. It is best if you go to something more to your taste than    waste your time on a talk that is too basic or not as described. Sometimes this    can be a little difficult if a session is packed with people, but you can do    things to make your exit a little bit more comfortable.</p>
-<p>First of all if you have an inkling that you are going to want to leave a    talk don't pick a seat in the middle of a row. Instead sit somewhere that that    has easier access to the exit at the back of the room. If there are video    cameras in the talk you might not want to be &quot;the dude that left in the    middle of a talk&quot;. In reality you will likely not be noticed as the    cameras are directed at the speaker.</p>
-<p>Second, make sure to pack up your laptop and other things in your bag before    exiting. It's kind of annoying to get clobbered with a laptop as someone exits    past you. The same thing goes for anyone sitting in the row. Don't make    unnecessary obstacles for anyone that gets out. Move your power cord and move    closer to power strips rather than pulling them out of place.</p>
-<h3>Find a group for    dinner in Atlanta</h3>
-<p>Watch the <a href="https://convore.com/pycon-2011/">Convore</a> and <a href="http://twitter.com/#search?q=%23pycon">Twitter</a> for information    on groups who are going out for the evening in Atlanta. In many cases an open    space session will continue over dinner!</p>
-<h3>Don't have too good a time at night</h3>
-<p>It is way too easy to have a good time on Friday and Saturday nights, but don't stay out too late or get too hammered. This seems like a bit silly but you need quite a bit of energy to make it all the way through a conference like PyCon.</p>
-<p>I'm sure there are many things that I've missed here. Please post other tips on Twitter under the <a href="http://twitter.com/#search?q=%23pycon">#pycon</a> hash tag, on your blog, or post a comment below for others to read.</p>
+Van Lindberg recently tweeted [a link](http://twitter.com/VanL/status/41217905408344064) to some tips on [how to attend a conference](http://swombat.com/2011/2/25/kevin-mcdonagh-how-to-attend-a-conference). The advice in that article is pretty sound for a business person looking to build up their network to find sales opportunities, but it doesn't cover any PyCon-specifics.
+
+After a little thinking I've come up with my own list of tips for new PyCon attendees:
+
+###Attend some open space sessions###
+
+[<img src="/images/cassandra.jpg" alt="" class="portrait_r" />](http://www.flickr.com/photos/brianly/3395569416/in/set-72157615936113009/)
+
+[Open spaces](http://us.pycon.org/2010/openspace/) are now happening at a lot of conferences but the PyCon ones have been the best I've seen. These are ad hoc discussions on a common topic with participants joining and leaving whenever they want. These sessions are a lot of fun and you'll make a lot of friends in the process. Even if you aren't the most talkative person, or know little about a subject, you are free to just hang out and listen.
+
+Whilst there is a page on the PyCon website for these sessions, it is normally best to check the boards outside the rooms assigned to open space use. You should also monitor the [Convore backchannel](https://convore.com/pycon-2011/) and [#pycon](http://twitter.com/#search?q=%23pycon) on Twitter.
+
+If you don't see any open space sessions related to your favourite topic just post a session in one of the available time slots. In almost all cases some likeminded individuals will turn up.
+
+<a href="http://www.flickr.com/photos/brianly/3395568732/in/set-72157615936113009/"><img src="/images/openspace-board-closeup.jpg" alt="" class="portrait" /></a>
+
+Scheduled talks are normally recorded for viewing later so I'd recommend that you try to decide ahead of time which talks are must see, and which ones could be skipped. That way you can make the most of the open space sessions as some of these will overlap with scheduled talks, especially on Saturday and Sunday.
+
+###Help the PyCon staff###
+
+Putting on a conference PyCon is an enormous effort. They are often looking for runners and other helpers. Spending a little time helping out introduces you to many interesting people and you'll probably learn a bit too about how conferences run.
+
+Follow [@pyconvolunteers](http://twitter.com/pyconvolunteers), talk to the organisers, and lurk on the [pycon-organizers](http://mail.python.org/mailman/listinfo/pycon-organizers) mailing list.
+
+###Check out the lightning talks###
+
+These are very short talks on a variety of Python-related subjects scheduled at the beginning and end of conference days. If you have something to say to the community they are a good way to let people know about your project or passion. For everyone else they are a good way to find out about lesser known projects, and they are often quite humorous.
+
+###Go off track###
+
+PyCon like many other conferences has tracks with related content and there are [10 virtual tracks](http://us.pycon.org/2011/blog/2011/02/28/10-python-conferences-happening-pycon-2011-part-1/) for 2011. These are really helpful for finding things that you are likely to be interested in, but sometimes it is good to check out something a little bit different.
+
+In particular, veteran PyCon speakers like Alex Martelli, David Beazley, and Raymond Hettinger fill rooms each year and are always worth watching.
+
+###Chat with presenters###
+
+<a href="http://www.flickr.com/photos/brianly/3395569320/in/set-72157615936113009/"><img class="portrait_r" src="/images/michael-foord.jpg" alt=""/></a>
+
+On the topic of presenters there are a lot of opportunities to talk to presenters at PyCon, either right after a talk, or later at the conference. If you have questions on their area of expertise or feedback on their talk it is worth taking some time to talk to them.
+
+###Spend time on things that are valuable to you###
+
+Sometimes you'll end up in a talk or open space session that isn't exactly what you expected. It is best if you go to something more to your taste than waste your time on a talk that is too basic or not as described. Sometimes this can be a little difficult if a session is packed with people, but you can do    things to make your exit a little bit more comfortable.
+
+First of all if you have an inkling that you are going to want to leave a talk don't pick a seat in the middle of a row. Instead sit somewhere that that    has easier access to the exit at the back of the room. If there are video cameras in the talk you might not want to be &quot;the dude that left in the    middle of a talk&quot;. In reality you will likely not be noticed as the cameras are directed at the speaker.
+
+Second, make sure to pack up your laptop and other things in your bag before exiting. It's kind of annoying to get clobbered with a laptop as someone exits past you. The same thing goes for anyone sitting in the row. Don't make unnecessary obstacles for anyone that gets out. Move your power cord and move closer to power strips rather than pulling them out of place.
+
+###Find a group for dinner in Atlanta###
+
+Watch the [Convore](https://convore.com/pycon-2011/) and [Twitter](http://twitter.com/#search?q=%23pycon) for information on groups who are going out for the evening in Atlanta. In many cases an open space session will continue over dinner!
+
+###Don't have too good a time at night###
+
+It is way too easy to have a good time on Friday and Saturday nights, but don't stay out too late or get too hammered. This seems like a bit silly but you need quite a bit of energy to make it all the way through a conference like PyCon.
+
+I'm sure there are many things that I've missed here. Please post other tips on Twitter under the [#pycon](http://twitter.com/#search?q=%23pycon) hash tag, on your blog, or post a comment below for others to read.

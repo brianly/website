@@ -6,12 +6,18 @@ tags: [powershell, problem, solaris, subversion, svn, windows]
 Recently I was migrating several Subversion repositories from a Windows server over to a Solaris one and ran into a rather frustrating issue. Actually it's quite an interesting problem, but was frustrating due to the size of the repositories involved, and my fear that repositories were borked.
 
 It all started with my decision to fire up PowerShell rather than cmd.exe to do the initial dump of the repostories. The following code was executed to dump a repository:
-<pre>svnadmin dump repositorypath > repository.dump</pre>
+
+<pre><code>svnadmin dump repositorypath > repository.dump</code></pre>
+
 All seems to go to plan but this is where a silent corruption of the dump file occurs. Not suspecting that the dump file was malformed, I copied repository.dump over to the Solaris box. I issued the standard commands to create a new repository and load the dump file:
-<pre>svnadmin create repository/path
-svnadmin load repository/path < repository.dump</pre>
+
+<pre><code>svnadmin create repository/path
+svnadmin load repository/path < repository.dump</code></pre>
+
 After executing the second command I got an error from svnadmin complaining about a malformed header on the dump file:
-<pre>svnadmin: Malformed dumpfile header</pre>
+
+<pre><code>svnadmin: Malformed dumpfile header</code></pre>
+
 My first instinct was to re-copy the dump file and try again, but I thought I should dump and load the repository on my Windows server. Lo and behold this fell over with the same error. At this point I was thinking something was really wrong with my SVN install and repositories, but then I stumbled on <a href="http://www.microsoft.com/communities/newsgroups/en-us/default.aspx?dg=microsoft.public.windows.powershell&tid=e4cd89e9-427b-407d-a94f-c24be3f1e36f&cat=&lang=&cr=&sloc=&p=1">this</a> newsgroup discussion.
 
 It turns out that my problems were the result of how Windows PowerShell handles binary data that is piped on the command line. I really want to look into the details of this, but it would appear that the new found ability to pass .NET objects on the command line can mess with old school expectations of how the command line works.
